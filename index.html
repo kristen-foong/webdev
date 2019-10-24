@@ -22,9 +22,15 @@ body::-webkit-scrollbar-thumb {
 
 .lacuna {
   --bg:url(https://i.gyazo.com/9665a5e5712ed41395b6905c741f3f46.jpg);
+  --accent:#B79A43;
 }
 .cabeswater {
   --bg:url(https://i.gyazo.com/631a68060155bef54c7c1a7a6c5d03e4.png);
+  --accent:#DF9E75;
+}
+.tempo {
+  --bg:url(https://i.gyazo.com/e60a3ef94c104b0053155183fcc1b677.jpg);
+  --accent:#ffcc00;
 }
 
 .ppwd-head {
@@ -202,12 +208,14 @@ body::-webkit-scrollbar-thumb {
 .ppwd-pdate {
   padding:15px 20px;
   background:var(--accent);
-  color:#ddd;
+  color:#000;
   font-family:'Roboto Condensed',Arial;
-  font-size:18px;
-  font-weight:400;
+  font-size:15px;
+  font-weight:600;
   position:absolute;
   top:0px;
+  text-transform:uppercase;
+  line-height:100%;
 }
 </style>
 
@@ -225,11 +233,35 @@ body::-webkit-scrollbar-thumb {
     <div class="ppwd-line"></div>
     <div class="ppwd-hdesc">
       These projects consist of <b>explorative web designs</b> with the purpose of increasing my knowledge of <b>HTML, CSS, JavaScript, jQuery, BootStrap</b>, and other web dev languages. Much of these were coded extracurricularly; some of these codes date back to 2015.
-      <br><br>
-      This is still a work in progress.
+      <br><br>This is a work in progress.
     </div>
   </div>
   
+  <div class="ppwd-proj tempo">
+    <div class="ppwd-pdesc one">
+      <div class="ppwd-pdate two">
+        2019
+      </div>
+      <h1><a href="">Tempo</a></h1>
+      <hr>
+      <p>
+        Completed as a project in a <b>web development</b> class, this design experimented with <b>flex</b> and <b>imported font icons</b>, as well as attaching a <b>gif</b> as a background image.
+      </p>
+      <p>
+        Inspired by <b>Spotify</b>.
+      </p>
+      <p>
+        <span>html</span>
+        <span>css</span>
+        <span>flex</span>
+      </p>
+    </div>
+    <div class="ppwd-pimg two">
+      <img src="https://i.gyazo.com/537531be8d83882fdada729692234f1a.gif">
+    </div>
+  </div>
+  
+
   <div class="ppwd-proj cabeswater">
     <div class="ppwd-pdesc two">
       <div class="ppwd-pdate one">
@@ -241,8 +273,12 @@ body::-webkit-scrollbar-thumb {
         A full-page design exploring <b>vh</b> and <b>vw</b> units as well as <b>fixed backgrounds</b> and <b>filters</b>. This design also takes into consideration user screen size without the use of max-media to create a responsive web page.
       </p>
       <p>
+        Inspired by Maggie Stiefvater's <b><i>The Raven Cycle</i></b>.
+      </p>
+      <p>
         <span>html</span>
         <span>css</span>
+        <span>flex</span>
       </p>
     </div>
     <div class="ppwd-pimg one">
@@ -258,11 +294,12 @@ body::-webkit-scrollbar-thumb {
       <h1><a href="">Lacuna</a></h1>
       <hr>
       <p>
-        A full-page design testing <b>vh</b> and <b>vw</b> units, as well as <b>x-overflow</b> and <b>transform</b>. This design considered responsiveness on varying screen sizes, and experimented with largely <b>transparent</b> elements on a background.
+        A full-page design testing <b>vh</b> and <b>vw</b> units, <b>css variables</b>, <b>x-overflow</b>, and <b>transform</b>. This design considered responsiveness on varying screen sizes, and experimented with largely <b>transparent</b> elements on a background.
       </p>
       <p>
         <span>html</span>
         <span>css</span>
+        <span>flex</span>
       </p>
     </div>
     <div class="ppwd-pimg two">
