@@ -1,0 +1,584 @@
+<style>
+  body {
+    position:relative;
+    background:#050505;
+    margin: 0px;
+    overflow-y:scroll;
+    font-family:Montserrat, Arial;
+  }
+  body::-webkit-scrollbar {width:10px;}
+  body::-webkit-scrollbar-track{background:#050505;}
+  body::-webkit-scrollbar-thumb {background:#ffcc00;}
+  nav {
+    padding:20px 0px 20px 0px;
+    line-height:100%;
+    width:100%;
+    background:#050505;
+    text-align:center;
+    position:fixed;
+    top:0; left:0;
+    z-index:10;
+  }
+  nav a {
+    color:#fff;
+    letter-spacing:3px;
+    margin:0px 20px 0px 20px;
+    font-family:Montserrat;
+    font-weight:700;
+    font-size:10px;
+    text-decoration:none;
+    transition:all 0.3s ease-in-out;
+    text-transforM:uppercase;
+  }
+  nav a:hover {
+    color:#ffcc00;
+  }
+  .top {
+    width:100%;
+    height:calc(100vh - 40px);
+    position:relative;
+    background-image:url(https://78.media.tumblr.com/8e782da8bb14a7c56fe18247af8059a9/tumblr_nhw7qoJEJT1thk6vpo1_1280.gif);
+    background-position:center center;
+    background-size:cover;
+    background-attachment:fixed;
+    padding-top:50px;
+    line-height:100%;
+    position:relative;
+    display:flex;
+    flex-wrap:no-wrap;
+    align-content:center;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+  }
+  .title {
+    background:#ffcc00;
+    width:300px;
+    height:300px;
+    border-radius:100%;
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+  }
+  .tempo {
+    font-family:Montserrat;
+    font-weight:900;
+    color:#000;
+    text-align:center;
+    width:300px;
+    font-size:60px;
+    position:absolute;
+    top:145px; left:5px;
+    transition:all 1s ease-in-out;
+    opacity:0;
+  }
+  .tempolog {
+    font-size:150px;
+    color:#000;
+    text-align:center;
+    width:300px;
+    position:absolute;
+    top:75px; left:5px;
+    transition:all 1s ease-in-out 0.5s;
+  }
+  .title:hover .tempolog {
+    opacity:0;
+    transition:all 1s ease-in-out;
+  }
+  .title:hover .tempo {
+    opacity:1;
+    transition:all 1s ease-in-out 0.5s;
+  }
+  
+  #wrapper {
+    width:100%;
+    position:relative;
+  }
+  
+  .about {
+    background:#050505;
+    padding:50px 0px 50px 0px;
+    width:100%;
+    text-align:center;
+  }
+  .aboutdesc {
+    margin:0 auto;
+    line-height:100%;
+    padding:30px;
+    font-family:Montserrat;
+    font-weight:700;
+    font-size:30px;
+    color:#fff;
+    text-align:center;
+  }
+  .about p {
+    margin:20px 0px 20px 0px;
+    font-family:Montserrat;
+    font-weight:400;
+    font-size:15px;
+    color:#fff;
+    text-align:center;
+  }
+  .about i {
+    font-size:30px;
+    margin:0px 20px 0px 20px;
+    transition:all 0.5s ease-in-out;
+  }
+  .about i:hover {
+    color:#ffcc00;
+  }
+  
+  .signup {
+    padding:15px;
+    border-radius:25px;
+    background:#ffcc00;
+    text-align:center;
+    width:300px;
+    color:#000;
+    font-family:Montserrat;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin: 0 auto;
+    margin-top:35px;
+    transition:all 0.5s ease-in-out;
+  }
+  .signup:hover {
+    background:#FFE066;
+  }
+  
+  .instructions {
+    height:100vh;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-items:center;
+    align-content:center;
+    justify-content:center;
+    width:100%;
+    background-image:url(https://images.complex.com/complex/image/upload/c_limit,w_680/fl_lossy,pg_1,q_auto/sdmdakiygwe80r9kxyyu.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center center;
+    text-align:center;
+    font-family:Montserrat;
+    font-size:55px;
+    color:#fff;
+    font-weight:800;
+    letter-spacing:2px;
+  }
+  .instructionsin {
+    margin:70px 100px 20px 100px;
+    display:flex;
+    flex-wrap:no-wrap;
+    justify-content:space-evenly;
+  }
+  .instructbox {
+    border:1px dashed #fff;
+    border-radius:25px;
+    background:rgba(0,0,0,0.6);
+    padding:55px 50px 50px 50px;
+    font-family:Montserrat;
+    font-size:15px;
+    letter-spacing:0px;
+    color:#fff;
+    font-weight:400;
+    width:30%;
+    text-align:justify;
+    position:relative;
+    margin:0px 20px 0px 20px;
+    line-height:25px;
+  }
+  .instructnum {
+    font-family:Montserrat;
+    font-weight:900;
+    color:#fff;
+    font-size:40px;
+    background:#050505;
+    border-radius:100%;
+    border:1px dashed #fff;
+    width:40px;
+    height:40px;
+    padding:15px;
+    text-align:center;
+    line-height:100%;
+    position:absolute;
+    top:-35px; left:38%;
+  }
+  
+  .news {
+    width:100%;
+    height:450px;
+    display:flex;
+    flex-wrap:no-wrap;
+  }
+  .news1 {
+    width:34%;
+    height:450px;
+    background-image:url(http://images5.fanpop.com/image/answers/2227000/2227899_1323359755864.33res_500_483.jpg);
+    background-position:center center;
+    background-size:cover;
+    filter:brightness(50%);
+    transition:all 0.5s ease-in-out;
+  }
+  .news1:hover {
+    filter:brightness(80%);
+  }
+  .news2 {
+    width:34%;
+    height:450px;
+    background-image:url(https://wwctfm.com/wp-content/uploads/2015/07/sam-smith.jpg);
+    background-position:center center;
+    background-size:cover;
+    filter:brightness(50%);
+    transition:all 0.5s ease-in-out;
+  }
+  .news2:hover {
+    filter:brightness(80%);
+  }
+  .news3 {
+    width:34%;
+    height:450px;
+    background-image:url(https://ronemycolumbuspower.files.wordpress.com/2019/07/1561991288397.jpg);
+    background-position:center center;
+    background-size:cover;
+    filter:brightness(50%);
+    transition:all 0.5s ease-in-out;
+  }
+  .news3:hover {
+    filter:brightness(80%);
+  }
+  .newscaption {
+    margin:200px 50px 0px 50px;
+    text-align:center;
+    padding:15px;
+    color:#fff;
+    font-family:Montserrat;
+    font-weight:800;
+    letter-spacing:2px;
+    font-size:15px;
+    transition:all 0.5s ease-in-out;
+    background:rgba(0,0,0,0.4);
+  }
+  .news1:hover .newscaption {opacity:1;}
+  .news2:hover .newscaption {opacity:1;}
+  .news3:hover .newscaption {opacity:1;}
+  
+  .rating {
+    background:#050505;
+    padding:80px 0px 100px 0px;
+    text-align:center;
+  }
+  .ratingtxt {
+    font-family:Montserrat;
+    font-weight:700;
+    font-size:30px;
+    line-height:35px;
+    color:#fff;
+    text-align:justify;
+    margin:0px 100px 0px 100px;
+  }
+  
+  .devices {
+    padding:50px 0px 100px 0px;
+    background:#050505;
+    text-align:center;
+    line-height:100%;
+  }
+  .devices h1 {
+    font-family:Montserrat;
+    font-size:40px;
+    color:#fff;
+    line-height:100%;
+    font-weight:700;
+  }
+  .devices p {
+    margin:10px 0px 30px 0px;
+    font-family:Montserrat;
+    font-weight:400;
+    font-size:15px;
+    color:#fff;
+    text-align:center;
+  }
+  .devices i {
+    margin:0px 15px 0px 15px;
+    transition:all 0.5s ease-in-out;
+    color:#fff;
+    font-size:35px;
+  }
+  .devices i:hover {
+    color:#ffcc00;
+  }
+  
+  .download {
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(https://static.pexels.com/photos/783243/pexels-photo-783243.jpeg);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    padding:150px 0px 150px 0px;
+    width:100%;
+    position:relative;
+  }
+  .downloaddesc {
+    margin-left:60%;
+    background:#ffcc00;
+    padding:50px;
+    color:#000;
+    width:250px;
+    font-family:Montserrat;
+    font-size:12px;
+    line-height:18px;
+    font-weight:700;
+    text-transform:uppercase;
+    text-align:justify;
+    box-shadow: 10px 10px 0px #050505;
+    border-radius:10px;
+    opacity:0.5;
+    transition:all 0.5s ease-in-out;
+  }
+  .downloadimg {
+    margin-left:60%;
+    width:250px;
+    padding:20px 0px 20px 0px;
+    text-align:left;
+    opacity:0.5;
+    transition:all 0.5s ease-in-out;
+  }
+  .downloadimg i {
+    margin-right:10px;
+    padding:10px;
+    border:5px solid #ffcc00;
+    background:#050505;
+    color:#ffcc00;
+    font-size:30px;
+    border-radius:10px;
+    opacity:1;
+    transition:all 0.5s ease-in-out;
+    box-shadow:5px 5px 0px #050505;
+  }
+  .download:hover .downloaddesc {
+    opacity:1;
+  }
+  .download:hover .downloadimg {
+    opacity:1;
+  }
+  .downloadimg i:hover {
+    color:#fff;
+    border:5px solid #fff;
+  }
+  
+  footer {
+    padding:0px 0px 15px 0px;
+    text-align:center;
+    font-family:Montserrat;
+    font-size:8px;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    line-height:100%;
+    color:#fff;
+  }
+  
+  .footmenu {
+    background:#050505;
+    position:relative;
+    display:flex;
+    flex-wrap:no-wrap;
+    justify-content:center;
+  }
+  .footlogo {
+    font-size:30px;
+    font-family:Montserrat;
+    font-weight:900;
+    color:#000;
+    padding:11px 15px 11px 20px;
+    background:#ffcc00;
+    text-align:center;
+    line-height:100%;
+    margin:19px 0px 20px 0px;
+  }
+  .footmenuin {
+    padding:30px;
+    color:#ccc;
+    text-align:center;
+    line-height:100%;
+    text-transform:uppercase;
+    font-family:Montserrat;
+    font-size:15px;
+    position:relative;
+  }
+  .footmenuin h3 {
+    color:#fff;
+    font-weight:700;
+    font-family:Montserrat;
+    font-size:20px;
+    text-align:center;
+    text-transform:uppercase;
+    padding:17px;
+    border:1px dotted #ffcc00;
+  }
+  .footmenuin a {
+    text-decoration:none;
+    color:#fff;
+    font-size:10px;
+    font-weight:400;
+    letter-spacing:2px;
+    transition:all 0.3s ease-in-out;
+  }
+  .footmenuin a:hover {
+    color:#ffcc00;
+  }
+  
+  .footmedia {
+    width:100%;
+    padding:0px 0px 50px 0px;
+    text-align:center;
+    color:#fff;
+  }
+  .footmedia i {
+    font-size:25px;
+    margin:0px 15px 0px 15px;
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+<body>
+  <nav>
+    <a href="">HOME</a>
+    <a href="">BROWSE</a>
+    <a href="">DOWNLOAD</a>
+    <a href="">REGISTER</a>
+    <a href="">LOGIN</a>
+  </nav>
+  <div class="top">
+    <a href="">
+      <div class="title">
+        <div class="tempolog">
+          <i class="fa fa-angle-double-right"></i>
+        </div>
+        <div class="tempo">
+          TEMPO
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div id="wrapper">
+    
+    <div class="devices">
+      <h1>#1 <span style="color:#ffcc00">world-wide</span> music resource.</h1>
+      <p>Using your Tempo account, you can access Tempo from any device and get music free of charge.</p>
+        <p><i class="fab fa-bluetooth-b"></i>
+        <i class="fa fa-mobile-alt"></i>
+        <i class="fa fa-laptop"></i>
+        <i class="fa fa-tv"></i>
+        <i class="fa fa-gamepad"></i></p>
+        <div class="signup">
+          SIGN UP NOW
+        </div>
+    </div>
+    
+    <div class="instructions">
+      It's easy as 1, 2, 3.
+      <div class="instructionsin">
+        <div class="instructbox">
+          <div class="instructnum">1</div>
+          Download the TEMPO app on Google Play or the Apple Store.
+        </div>
+        <div class="instructbox">
+          <div class="instructnum">2</div>
+          Sign up with an email — no payment required!
+        </div>
+        <div class="instructbox">
+          <div class="instructnum">3</div>
+          Start downloading music and listening to the latest hits for free.
+        </div>
+      </div>
+    </div>
+    
+    <div class="about">
+      <div class="aboutdesc">
+        Free music on the go. <span style="color:#ffcc00">Use Tempo anywhere</span>.
+        <p>Listen to the latest music, delve into symphonies, or find undiscovered artists. Tempo offers  <span style="color:#ffcc00">over 1 billion songs</span> and counting.</p>
+        <i class="fa fa-car"></i>
+        <i class="fa fa-bus"></i>
+        <i class="fa fa-plane"></i>
+        <i class="fa fa-motorcycle"></i>
+        <i class="fa fa-subway"></i>
+        <i class="fa fa-ship"></i>
+        <i class="fa fa-globe"></i>
+        <br><br>
+      </div>
+    </div>
+    
+    <div class="news">
+      <div class="news1">
+        <div class="newscaption">DOWNLOAD TOP HITS</div>
+      </div>
+      <div class="news2">
+        <div class="newscaption">DISCOVER NEW RELEASES</div>
+      </div>
+      <div class="news3">
+        <div class="newscaption">GET ALL-TIME FAVORITES</div>
+      </div>
+    </div>
+    
+    <div class="rating">
+      <div class="ratingtxt">
+        <i class="fa fa-quote-left" style="color:#050505;background:#ffcc00;padding:15px;line-height:100%;border-radius:100%;"></i>&nbsp;&nbsp;The <span style="color:#ffcc00">hottest</span> music library for <span style="color:#ffcc00;">generations</span> to come.
+        <br><span style="font-style:italic;float:right">— The <span style="color:#ffcc00">Guardian</span></span>
+      </div>
+    </div>
+    
+    <div class="download">
+      <div class="downloaddesc">
+        Download the TEMPO app on the Google PlayStore or the Apple Store free today .
+      </div>
+      <div class="downloadimg">
+        <a href=""><i class="fab fa-app-store"></i></a>
+        <a href=""><i class="fab fa-google-play"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class="footmenu">
+    <div class="footmenuin">
+      <div class="footlogo">
+        TEMPO
+      </div>
+      <p><a href="">legal</a></p>
+      <p><a href="">privacy</a></p>
+      <p><a href="">ads</a></p>
+    </div>
+    <div class="footmenuin">
+      <h3>company</h3>
+      <p><a href="">about</a></p>
+      <p><a href="">jobs</a></p>
+      <p><a href="">news</a></p>
+    </div>
+    <div class="footmenuin">
+      <h3>community</h3>
+      <p><a href="">artists</a></p>
+      <p><a href="">developers</a></p>
+      <p><a href="">brands</a></p>
+    </div>
+    <div class="footmenuin">
+      <h3>connect</h3>
+      <p><a href="">help</a></p>
+      <p><a href="">media</a></p>
+      <p><a href="">gift</a></p>
+    </div>
+  </div>
+  <div class="footmedia">
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  copyright &copy; 2018 Kristen Foong
+</footer>
