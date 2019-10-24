@@ -1,0 +1,245 @@
+<style>
+body {
+  background:#fafafa;
+  overflow:auto;
+  margin:0px;
+  padding:0px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  width:100%;
+  height:100%;
+}
+body::-webkit-scrollbar {display:none;}
+#nav {
+  width:100%;
+  margin:15px 0px 15px 0px;
+  padding:10px 0px 10px 0px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  font-size:2em;
+  line-height:100%;
+  z-index:10;
+  position:sticky;
+  top:0px;
+  background:#fafafa;
+}
+#nav a {
+  line-height:100%;
+  color:#FFB68B;
+  background:-webkit-linear-gradient(left, #80EEFF, #FFB919, #FF1100);
+  background-position:right center;
+  background-size:180%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  transition:all 0.5s ease-in-out;
+  font-family:Poppins;
+  font-size:0.4em;
+  font-weight:400;
+  letter-spacing:10px;
+  padding:10px 0px 10px 10px;
+  margin:0px 25px 0px 25px;
+  text-decoration:none;
+  border:1px solid transparent;
+  text-align:center;
+}
+#nav a:hover {
+  background-position:left center;
+  border:1px solid #FFCFB4;
+}
+#wrapper {
+  margin:0px;
+  padding:0px;
+  line-height:100%;
+}
+#header {
+  background:#333;
+  background-image:url(https://duncan.co/wp-content/uploads/2014/04/Duncan-Rawlinson-Photo-52597-Boracay-Aklan-Philippines-20100702-IMG_2274-Clouds-At-Sunset-Over-The-Ocean-1024x574.jpg);
+  background-size:cover;
+  background-position:center center;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-attachment:fixed;
+  font-size:350px;
+  font-size:27vw;
+  font-family:Poppins;
+  font-weight:900;
+  line-height:75%;
+  text-transform:uppercase;
+  letter-spacing:-20px;
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  margin-left:-20px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+#wrapper h1 {
+  padding:70px 100px 70px 100px;;
+  margin:0px;
+  background:#333;
+  background-image:url(https://duncan.co/wp-content/uploads/2014/04/Duncan-Rawlinson-Photo-52597-Boracay-Aklan-Philippines-20100702-IMG_2274-Clouds-At-Sunset-Over-The-Ocean-1024x574.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+  text-align:left;
+  font-family:'Poppins';
+  font-weight:200;
+  font-size:2.3vw;
+  color:#fafafa;
+  text-transform:uppercase;
+  text-align:center;
+  line-height:100%;
+  letter-spacing:1em;
+  transition:all 0.5s ease-in-out;
+}
+#quickies {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:30px 0px 50px 0px;
+}
+.quickinfo {
+  background:#fafafa;
+  padding:20px 50px;
+  flex-grow:1;
+  flex-basis:50%;
+  max-width:400px;
+}
+.quickinfo b {
+  color:#FF7F00;
+  font-family:Poppins;
+  font-weight:600;
+}
+.quickinfospan {
+  background:-webkit-linear-gradient(left,#FFB919, #FF1100);
+  background-position:center center;
+  background-size:30px;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-size:1.8em;
+  text-align:center;
+  margin:20px 50px 30px 50px;
+}
+.quickdesc {
+  margin:0px 50px 0px 50px;
+  text-align:center;
+  font-size:0.8em;
+  font-family:Karla;
+  color:#888;
+  line-height:1.4em;
+}
+#greeting {
+  background-image:url(https://duncan.co/wp-content/uploads/2014/04/Duncan-Rawlinson-Photo-52597-Boracay-Aklan-Philippines-20100702-IMG_2274-Clouds-At-Sunset-Over-The-Ocean-1024x574.jpg);
+  background-size:cover;
+  background-position:center center;
+  padding:200px 100px 200px 100px;
+  background-attachment:fixed;
+  text-align:center;
+  color:#fff;
+  font-family:Poppins;
+  font-size:1.6vw;
+  font-weight:200;
+  letter-spacing:0.5em; 
+  line-height:200%;
+  text-transform:uppercase;
+  text-shadow:0px 0px 5px rgba(0,0,0,0.5);
+}
+#greeting b {
+  font-weight:800;
+  letter-spacing:1em;
+}
+#greeting span {
+  font-size:2.5vw;
+}
+footer{
+  padding:10px;
+  margin:0px;
+  text-align:center;
+  font-family:Poppins;
+  font-size:8px;
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:300;
+  letter-spacing:3px;
+  background-image:url(https://duncan.co/wp-content/uploads/2014/04/Duncan-Rawlinson-Photo-52597-Boracay-Aklan-Philippines-20100702-IMG_2274-Clouds-At-Sunset-Over-The-Ocean-1024x574.jpg);
+  background-size:cover;
+  background-position:center center;
+}
+footer p {
+  margin:5px 0px 0px 0px;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kristen Foong</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800|Karla:400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="//dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="top">
+      <div id="header">
+        KRISTEN<br>FOONG
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="nav">
+        <a href="index.html" title="index">HOME</a>
+        <a href="education.html" title="education">EDUCATION</a>
+        <a href="portfolio.html" title="portfolio">PORTFOLIO</a>
+        <a href="contact.html" title="contact">CONTACT</a>
+      </div>
+      <div id="greeting">
+        <span class="sf sf-diamond-o"></span>
+        <br><br>Hello! I'm Kristen.
+        <br><br>Let's create something
+        <br><b>stunning.</b>
+      </div>
+      
+      <h1>about</h1>
+      <div id="quickies">
+        <div class="quickinfo">
+          <div class="quickinfospan">
+            <span class="sf sf-user-o"></span>
+          </div>
+          <div class="quickdesc">
+            I'm an aspiring <b>web developer</b> and <b>designer</b> with an interest in <b>engineering</b>.
+          </div>
+        </div>
+        <div class="quickinfo">
+          <div class="quickinfospan">
+            <span class="sf sf-certificate-o"></span>
+          </div>
+          <div class="quickdesc">
+            I'm studying <b>Computer Science</b> at the <b>University of British Columbia</b>. Coding began as a hobby for me. Now, it's becoming a career.
+          </div>
+        </div>
+        <div class="quickinfo">
+          <div class="quickinfospan">
+            <span class="sf sf-screen-o"></span>
+          </div>
+          <div class="quickdesc">
+            Six years ago, I taught myself how to code <b>HTML & CSS</b>, and have since pursued other languages such as <b>Java</b>, <b>JavaScript</b>, and <b>C++</b>.
+          </div>
+        </div>
+        <div class="quickinfo">
+          <div class="quickinfospan">
+            <span class="sf sf-palette-o"></span>
+          </div>
+          <div class="quickdesc">
+            Art and music are pastimes I dearly love, and <b>design</b> has been one of my passions since an early age. Every now and then, I jam out on the <b>piano</b> or <b>violin</b>.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+  <footer>
+    <p>&copy;2018 Kristen Foong.</p>
+  </footer>
+</html>
