@@ -1,0 +1,652 @@
+<style>
+  @font-face {
+  font-family: "vogue"; /*the font name can be whatever you want*/
+  src: url("https://dl.dropboxusercontent.com/s/m603ezrprsfzfux/Vogue.ttf") format("opentype");
+  }
+
+ body {
+   --accent:#1e2752;
+   --mid:#7396c8;
+   --mid-2:#53679e;
+   --light:#e6e6f5;
+   --bg:#F5F5FC;
+   padding:0px;
+   margin:0px;
+   background:var(--bg);
+ }
+ 
+ body::-webkit-scrollbar {display:none;}
+ 
+ #mercy-head {
+   width:100%;
+   height:550px;
+   background:url(https://i.imgur.com/6sFdF4K.png);
+   background-size:cover;
+   background-position:center center;
+   position:relative;
+ }
+ #mercy-title {
+   font-size:100px;
+   color:#fff;
+   font-family:'vogue';
+   position:absolute;
+   bottom:100px; left:0px;
+   font-style:italic;
+   padding-left:200px;
+   line-height:100%;
+   border-bottom:1px solid #fff;
+   text-shadow:3px 3px 0px rgba(0,0,0,0.5);
+ }
+ #mercy-synopsis {
+   position:absolute;
+   bottom:230px; left:12%;
+   color:#fff;
+   font-family:'Overpass',Arial;
+   font-weight:600;
+   font-size:10px;
+   letter-spacing:1px;
+   line-height:15.5px;
+   text-transform:uppercase;
+   max-width:250px;
+   text-align:justify;
+   height: 150px;
+   overflow:auto;
+   padding-right:15px;
+ }
+ #mercy-synopsis::-webkit-scrollbar {width:2px;}
+ #mercy-synopsis::-webkit-scrollbar-thumb {background:#fff;}
+ #mercy-synopsis::-webkit-scrollbar-track {background:rgba(250,250,250,0.3);}
+ 
+ #mercy-infos {
+   width:100%;
+   height:250px;
+   background:var(--light);
+   position:relative;
+ }
+ #mercy-welcome {
+   width:35%;
+   position:absolute;
+   top:20px; left:0px;
+   background:var(--accent);
+   color:#fff;
+   padding:10px 40px 10px 10px;
+   text-align:right;
+   letter-spacing:2px;
+   font-style:italic;
+   font-family:'Vogue',Arial;
+   font-size:15px;
+   text-transform:uppercase;
+   line-height:100%;
+   -webkit-clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+ }
+ #mercy-welcome a {
+   color:var(--mid);
+   text-decoration:none;
+   transition:all 0.5s ease-in-out;
+   font-weight:bold;
+ }
+ #mercy-welcome a:hover {
+   filter:brightness(125%);
+ }
+ #mercy-user-links {
+   max-width:65% - 50px;
+   position:absolute;
+   top:20px; left:40%;
+   line-height:100%;
+   font-size:10px;
+   padding:13px 0px;
+   color:var(--accent);
+   text-align:left;
+   text-transform:uppercase;
+   letter-spacing:1px;
+ }
+ #mercy-user-links a {
+   color:var(--mid);
+   text-decoration:none;
+   transition:all 0.5s ease-in-out;
+   margin-left:15px;
+   font-family:'Overpass',Arial;
+   font-weight:800;
+   padding:6px 5px 4px 5px;
+   border:1px solid transparent;
+ }
+ #mercy-user-links a:hover {
+   color:var(--mid-2);
+   border:1px solid var(--mid);
+ }
+ #mercy-updates {
+   width:15%;
+   height:130px;
+   overflow:auto;
+   font-family:'Overpass',Arial;
+   font-weight:400;
+   font-size:11px;
+   line-height:16px;
+   position:absolute;
+   top:85px; left:5%;
+   text-align:justify;
+   padding-right:10px;
+   color:#000;
+ }
+ #mercy-updates b {
+   font-weight:800;
+   color:var(--accent);
+ }
+ #mercy-updates a {
+   color:var(--mid);
+   text-decoration:none;
+ }
+ #mercy-updates::-webkit-scrollbar {display:none;}
+ #mercy-updates-line {
+   width:1px;
+   height:150px;
+   position:absolute;
+   top:75px; left:23%;
+   background:var(--accent);
+ }
+ #mercy-event {
+   width:25%;
+   border:5px solid #fff;
+   height:130px;
+   position:absolute;
+   top:80px; left:26%;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   overflow:hidden;
+ }
+ #mercy-event img {
+   width:100%;
+ }
+ #mercy-event-hover {
+   width:100%;
+   height:130px;
+   background:rgba(0,0,0,0.7);
+   position:absolute;
+   top:-130px; left:0px;
+   transition:all 0.5s ease-in-out;
+ }
+ #mercy-event:hover #mercy-event-hover {
+   top:0px; left:0px;
+ }
+ #mercy-event-desc {
+   height:100px;
+   position:absolute;
+   top:15px; left:0px;
+   padding:0px 15px;
+   color:#fff;
+   font-family:'Overpass',Arial;
+   font-size:11px;
+   line-height:15px;
+   overflow:auto;
+   text-align:justify;
+ }
+ #mercy-event-desc::-webkit-scrollbar {display:none;}
+ #mercy-event-desc a {
+   float:left;
+   margin-right:10px;
+   margin-bottom:0px;
+   background:var(--mid);
+   color:#fff;
+   padding:5px;
+   text-decoration:none;
+   font-size:12px;
+   font-weight:700;
+   text-transform:uppercase;
+   font-family:'Vogue',Arial;
+   letter-spacing:2px;
+ }
+ #mercy-qlinks {
+   width:12%;
+   height:142px;
+   position:absolute;
+   top:79px; left:54%;
+   overflow:hidden;
+   line-height:20px;
+ }
+ #mercy-qlinks a {
+   text-align:right;
+   margin:2px;
+   font-family:'Vogue',Arial;
+   text-transform:uppercase;
+   font-weight:bold;
+   color:var(--accent);
+   border-bottom:1px solid var(--mid);
+   padding:2px 0px 2px 20px;
+   text-decoration:none;
+   font-size:11px;
+   letter-spacing:3px;
+   transition:all 0.5s ease-in-out;
+ }
+ #mercy-qlinks a:hover {
+   font-style:italic;
+   padding-left:50px;
+ }
+ 
+ #mercy-staff-title {
+   width:30%;
+   padding:10px 10px 10px 40px;
+   -webkit-clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    color:#fff;
+    font-style:italic;
+    font-family:'Vogue',Arial;
+    font-size:15px;
+    letter-spacing:2px;
+    position:absolute;
+    bottom:20px; right:0px;
+    background:var(--accent);
+ }
+ #mercy-staff-c {
+   width:30%;
+   position:absolute;
+   bottom:80px; right:0px;
+   display:flex;
+   flex-wrap:no-wrap;
+   align-items:center;
+ }
+ .mercy-staff-img {
+   position:relative;
+   padding:10px;
+   background:#fff;
+   border:1px solid var(--mid);
+   margin:5px;
+   border-radius:100%;
+   width:50px;
+   height:50px;
+ }
+ .mercy-staff-img img {
+   width:50px;
+   height:50px;
+   border-radius:100%;
+ }
+ .mercy-staff-name {
+   line-height:100%;
+   position:absolute;
+   top:78px; left:0px;
+   width:70px;
+   text-align:center;
+   font-family:'Vogue',Arial;
+   font-weight:700;
+   font-size:12px;
+   letter-spacing:1px;
+   text-transform:uppercase;
+   color:var(--mid-2);
+   opacity:0.6;
+   transition:all 0.5s ease-in-out;
+ }
+ .mercy-staff-img:hover .mercy-staff-name {
+   opacity:1;
+   transform:translate(0px, 4px);
+  }
+  #mercy-info-icon {
+    position:absolute;
+    top:0px; right:0px;
+    color:var(--mid);
+    opacity:0.2;
+    font-size:150px;
+  }
+ 
+ #wrapper {
+   width:100%;
+   height:300px;
+   padding:0px 0px 20px 0px;
+ }
+ 
+ .mercy-cat {
+   width:100%;
+   position:relative;
+   padding:20px 0px;
+ }
+ .mercy-cat h1 {
+   border-bottom:1px solid var(--accent);
+   color:var(--accent);
+   padding:10px 0px;
+   margin:40px 0px 0px 0px;
+   width:90%;
+   text-align:right;
+   font-family:'Vogue',Arial;
+   font-size:80px;
+   font-style:italic;
+ }
+ 
+ .mercy-board-c {
+   width:100%;
+   max-width:1500px;
+   position:relative;
+   margin:0px auto;
+  }
+  .mercy-board {
+    width:95%;
+    height:150px;
+    position:relative;
+    margin: 60px 0px 50px 5%;
+    background:#fff;
+    transition:all 0.5s ease-in-out;
+  }
+  .mercy-board-image {
+    position:absolute;
+    top:0px; left:0px;
+    width:300px;
+    height:150px;
+  }
+  .mercy-board-image img {
+    width:350px;
+    height:150px;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  .mercy-board-tri {
+    width:100px;
+    height:151px;
+    position:absolute;
+    top:-1px; left:-1px;
+    background:var(--bg);
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+  }
+  .mercy-board-title {
+    position:absolute;
+    top:-20px; right:0px;
+    width:50%;
+    height:15px;
+    line-height:100%;
+    background:var(--accent);
+    padding:10px 0px 10px 50px;;
+    font-family:'Vogue',Arial;
+    font-size:15px;
+    color:#fff;
+    font-style:italic;
+    letter-spacing:2px;
+    -webkit-clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index:1;
+  }
+  .mercy-board-icon {
+    position:absolute;
+    bottom:0px; left:300px;
+    overflow:hidden;
+    width:100px;
+    height:100px;
+  }
+  .mercy-board-icon-in {
+    position:absolute;
+    bottom:8px; left:0px;
+    line-height:100%;
+    font-size:50px;
+    color:var(--light);
+  }
+  .mercy-board-topic {
+    width:35%;
+    border-bottom:1px solid var(--accent);
+    padding:5px 0px;
+    position:absolute;
+    top:45px; right:33%;
+    line-height:30px;
+    overflow:hidden;
+    text-transform:uppercase;
+    font-family:'Vogue',Arial;
+    font-size:25px;
+    color:var(--accent);
+    text-align:left;
+    height:25px;
+  }
+  .mercy-board-topic a {
+    color:var(--accent);
+    text-decoration:none;
+    transition:all 0.5s ease-in-out;
+  }
+  .mercy-board-author {
+    line-height:100%;
+    font-family:'Overpass',Arial;
+    font-size:10px;
+    font-weight:700;
+    color:var(--accent);
+    position:absolute;
+    top:85px; right:33%;
+    padding:5px 0px;
+    width:35%;
+    text-align:left;
+    text-transform:uppercase;
+  }
+  .mercy-board-author a {
+    color:var(--mid);
+    text-decoration:none;
+  }
+  .mercy-board-desc {
+    position:absolute;
+    top:40px; right:13%;
+    width:15%;
+    height:80px;
+    overflow:auto;
+    font-family:'Overpass',Arial;
+    font-size:11px;
+    color:var(--accent);
+    line-height:14px;
+    text-align:justify;
+    padding:0px 2% 0px 3%;
+    border-left:1px solid var(--accent);
+  }
+  .mercy-board-desc::-webkit-scrollbar {width:2px;}
+  .mercy-board-desc::-webkit-scrollbar-thumb {background:var(--accent);}
+  .mercy-board-desc::-webkit-scrollbar-track {background:rgba(0,0,0,0.1);}
+  .mercy-subboard {
+    position:absolute;
+    bottom:-15px; right:0px;
+    height:10px;
+    width:70%;
+    line-height:100%;
+    padding:10px 0px 10px 50px;;
+    font-family:'Overpass',Arial;
+    font-size:10px;
+    color:#fff;
+    font-weight:700;
+    letter-spacing:1px;
+    z-index:1;
+  }
+  .mercy-subboard a {
+    color:#fff;
+    background:var(--mid);
+    padding:6px 8px 5px 8px;
+    margin:0px 1px;
+    text-decoration:none;
+    text-transform:uppercase;
+    text-align:center;
+    transition:all 0.5s ease-in-out;
+  }
+  .mercy-subboard a:nth-child(even){
+    background:var(--mid-2);
+  }
+  .mercy-subboard a:hover {
+    background:var(--accent);
+  }
+  .mercy-board-info {
+    position:absolute;
+    top:40px; right:3%;
+    height:80px;
+    color:var(--accent);
+    font-family:'Overpass',Arial;
+    font-size:10px;
+    font-weight:800;
+    line-height:16px;
+    text-transform:uppercase;
+    text-align:center;
+    width:8%;
+    letter-spacing:1px;
+  }
+  .mercy-board-info span {
+    font-size:30px;
+    line-height:21px;
+    font-family:'Vogue',Arial;
+    color:var(--mid-2);
+    letter-spacing:0px;
+    text-align:center;
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<body>
+  <div id="mercy-head">
+    <div id="mercy-title">
+      MERCY
+    </div>
+    <div id="mercy-synopsis">
+      Having survived until modern times, the Institute has shifted the rules. They now also accept human allies and more troubled sorts while still operating on their base principle: creating a safe haven for the otherwordly. Unfortunately, while students, faculty, and members of the town around them are able to live their lives out in peace, certain members of the administration suffer from the same problems of desire, corruption, and lust for power as humans do, and it brings the question: How long can something like this truly last?
+    </div>
+  </div>
+  <div id="mercy-infos">
+    <div id="mercy-info-icon">
+      <span class="th th-stars-o"></span>
+    </div>
+    <div id="mercy-welcome">
+      Welcome, <a href="">mercedes strata</a>
+    </div>
+    
+    <div id="mercy-user-links">
+      <a href="">settings</a>
+      <a href="">alerts</a>
+      <a href="">inbox</a>
+      <a href="">shop</a>
+      <a href="">log out</a>
+    </div>
+    
+    <div id="mercy-updates">
+      <b>01.19 //</b> Some updates can go here. This will serve to help site users know what's new and what's been changed. This box scrolls, so add as much as you'd like. New staff, perhaps? Or changes in battle systems?
+    </div>
+    <div id="mercy-updates-line"></div>
+    
+    <div id="mercy-event">
+      <img src="https://data.whicdn.com/images/295921817/original.gif">
+      <div id="mercy-event-hover">
+        <div id="mercy-event-desc">
+          <a href="">event title</a> blah blah about the event this goes on and on and on. Having survived until modern times, the Institute has shifted the rules. They now also accept human allies and more troubled sorts while still operating on their base principle: creating a safe haven for the otherwordly.
+        </div>
+      </div>
+    </div>
+    
+    <div id="mercy-qlinks">
+      <a href="">rules</a><br>
+      <a href="">synopsis</a><br>
+      <a href="">groups</a><br>
+      <a href="">faceclaim</a><br>
+      <a href="">applicaton</a><br>
+      <a href="">affiliate</a><br>
+      <a href="">advertise</a>
+    </div>
+    
+    <div id="mercy-staff-title">
+      site staff
+    </div>
+    <div id="mercy-staff-c">
+      <div class="mercy-staff-img">
+        <img src="https://66.media.tumblr.com/7212a98a6e0b144cc8d5b9681b59284a/tumblr_orq0knXRWD1res6yqo3_250.png">
+        <div class="mercy-staff-name">
+          Merc
+        </div>
+      </div>
+      <div class="mercy-staff-img">
+        <img src="https://66.media.tumblr.com/6f01b651641e8d8ead5d1702f305f498/tumblr_orq0knXRWD1res6yqo4_250.png">
+        <div class="mercy-staff-name">
+          Sade
+        </div>
+      </div>
+      <div class="mercy-staff-img">
+        <img src="https://pbs.twimg.com/media/C0FbKWpXEAEyVJk.jpg">
+        <div class="mercy-staff-name">
+          Evie
+        </div>
+      </div>
+      <div class="mercy-staff-img">
+        <img src="https://myvideogamelist.com/images/userpics/1ccb691103tumbl.jpg">
+        <div class="mercy-staff-name">
+          Roan
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="wrapper">
+    <div class="mercy-cat">
+      <h1>beginning</h1>
+    </div>
+    <div class="mercy-board-c">
+    
+      <div class="mercy-board">
+        <div class="mercy-board-title">
+          information
+        </div>
+        <div class="mercy-board-tri"></div>
+        <div class="mercy-board-icon">
+          <div class="mercy-board-icon-in">
+            <span class="th th-stars-o"></span>
+          </div>
+        </div>
+        <div class="mercy-board-image">
+          <img src="https://wallpapercave.com/wp/wp1951584.jpg">
+        </div>
+        <div class="mercy-board-desc">
+          Board description goes here. Write about whatever you'd like. mostly you'll have a short description concerning what the board is about, then you could elaborate further with information on the region perhaps. And subregions! And who lives there and how this place is culturally significant and things like that.
+        </div>
+        <div class="mercy-board-line"></div>
+        <div class="mercy-board-topic">
+          <a href="">guidebook</a>
+        </div>
+        <div class="mercy-board-author">
+          last post by <a href="">sade</a> on january 1, 2019
+        </div>
+        <div class="mercy-board-info">
+          <span>6</span><br>topics
+            <br><br><span>15</span><br>replies
+        </div>
+        <div class="mercy-subboard">
+          <a href="">rules</a>
+          <a href="">synopsis</a>
+          <a href="">groups</a>
+          <a href="">abilities</a>
+          <a href="">positions</a>
+        </div>
+      </div>
+      
+      <div class="mercy-board">
+        <div class="mercy-board-title">
+          registration
+        </div>
+        <div class="mercy-board-tri"></div>
+        <div class="mercy-board-icon">
+          <div class="mercy-board-icon-in">
+            <span class="th th-stars-o"></span>
+          </div>
+        </div>
+        <div class="mercy-board-image">
+          <img src="https://i.pinimg.com/originals/72/18/da/7218da15a449e134985f46abfcd9a43e.jpg">
+        </div>
+        <div class="mercy-board-desc">
+          Board description goes here. Write about whatever you'd like. Like how this is just for registering characters.
+        </div>
+        <div class="mercy-board-line"></div>
+        <div class="mercy-board-topic">
+          <a href="">witch, evangeline mcdowell</a>
+        </div>
+        <div class="mercy-board-author">
+          last post by <a href="">evangeline mcdowell</a> on january 10, 2019
+        </div>
+        <div class="mercy-board-info">
+          <span>54</span><br>topics
+            <br><br><span>123</span><br>replies
+        </div>
+        <div class="mercy-subboard">
+          <a href="">claims</a>
+          <a href="">directory</a>
+          <a href="">notification</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
