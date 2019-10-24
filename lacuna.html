@@ -1,0 +1,906 @@
+<style>
+
+body {
+  padding:0px;
+  margin:0px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  background:url(https://pbs.twimg.com/media/C2Mf-bxUoAAA3sv?format=jpg&name=large);
+  background-size:cover;
+  background-position:center top;
+  background-attachment:fixed;
+  --accent:#B79A43;
+  --dark:#324A4E;
+  --transparent:url(https://www.transparenttextures.com/patterns/arches.png);
+}
+body::-webkit-scrollbar {
+  width:5px;
+}
+body::-webkit-scrollbar-thumb {
+  background:var(--accent);
+}
+body::-webkit-scrollbar-track {
+  background:#111;
+}
+
+.jarl-top {
+  width:100vw;
+  height:100vh;
+  position:relative;
+  margin:0px auto;
+}
+
+.jarl-head {
+  width:40vw;
+  height:100vh;
+  margin-left:10vw;
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  align-content:center;
+}
+
+.jarl-title {
+  font-family:'Roboto',Arial;
+  font-size:100px;
+  font-weight:800;
+  color:#fff;
+  text-transform:uppercase;
+  width:100%;
+  line-height:100%;
+  text-shadow:5px 0px 5px rgba(0,0,0,0.5);
+}
+
+.jarl-subt {
+  margin-left:10px;
+  color:rgba(250,250,250,0.7);
+  font-family:'Roboto',Arial;
+  font-weight:200;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  line-height:100%;
+}
+.jarl-subt b {
+  font-weight:600;
+}
+
+.jarl-links {
+  margin-top:20px;
+  position:relative;
+  width:95%;
+  margin-left:5%;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  justify-items:start;
+  grid-column-gap:30px;
+  grid-row-gap:10px;
+  line-height:100%;
+  font-size:10px;
+}
+.jarl-links a {
+  color:#fff;
+  font-family:'Roboto',Arial;
+  text-transform:uppercase;
+  font-weight:500;
+  letter-spacing:3px;
+  text-decoration:none;
+  padding:5px 0px;
+  border-bottom:1px solid var(--accent);
+  text-align:center;
+  text-shadow:0px 0px 5px rgba(0,0,0,0.5);
+  transition:all 0.5s ease-in-out;
+}
+.jarl-links a:hover {
+  transform:translate(10px, 0px);
+}
+
+.jarl-panel {
+  position:absolute;
+  padding:20px;
+  top:0px;
+  right:0px;
+  font-size:20px;
+  color:#fff;
+  text-shadow:5px 0px 0px rgba(0,0,0,0.5);
+  z-index:100;
+}
+
+.jarl-side {
+  width:300px;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  position:absolute;
+  top:0px; right:0px;
+}
+.jarl-logout {
+  line-height:100%;
+  position:absolute;
+  top:0px; right:40px;
+  padding:20px;
+  color:var(--accent);
+  font-size:20px;
+  text-align:center;
+}
+.jarl-icon {
+  width:100px;
+  height:100px;
+  border:15px solid #fff;
+  position:absolute;
+  top:100px; left:85px;
+  border-radius:100%;
+  overflow:hidden;
+}
+.jarl-icon img {
+  width:100px;
+  border-radius:100%;
+}
+.jarl-welcome {
+  width:200px;
+  position:absolute;
+  top:260px; left:50px;
+  text-align:center;
+  color:var(--accent);
+  font-family:'Roboto',Arial;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:22px;
+  font-size:18px;
+  text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+.jarl-welcome a {
+  color:#fff;
+  padding-bottom:3px;
+  text-decoration:none;
+  font-weight:600;
+  line-height:100%;
+}
+.jarl-break {
+  width:50px;
+  background:var(--accent);
+  height:2px;
+  position:absolute;
+  top:335px; left:125px;
+}
+.jarl-ulinks {
+  width:200px;
+  height:120px;
+  position:absolute;
+  top:380px; left:50px;
+}
+.jarl-ucp {
+  padding:10px;
+  border:1px solid var(--accent);
+  background:rgba(0,0,0,0.5);
+  width:15px;
+  height:15px;
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:10px; left:50px;
+}
+.jarl-ulinks span {
+  transform:rotate(45deg);
+}
+.jarl-ulinks a {
+  color:#fff;
+  text-decoration:none;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-ulinks a:hover {
+  color:var(--accent);
+}
+.jarl-alerts {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  background:rgba(0,0,0,0.5);
+  height:15px;
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:10px; left:110px;
+}
+.jarl-mail {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  height:15px;
+  font-size:15px;
+  background:rgba(0,0,0,0.5);
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:40px; left:80px;
+}
+.jarl-shop {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  height:15px;
+  background:rgba(0,0,0,0.5);
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:70px; left:50px;
+}
+.jarl-posts {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  height:15px;
+  background:rgba(0,0,0,0.5);
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:70px; left:110px;
+}
+
+
+.jarl-admin {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  height:15px;
+  background:rgba(0,0,0,0.5);
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:40px; left:20px;
+}
+.jarl-mod {
+  padding:10px;
+  border:1px solid var(--accent);
+  width:15px;
+  height:15px;
+  background:rgba(0,0,0,0.5);
+  font-size:15px;
+  transform:rotate(-45deg);
+  color:#fff;
+  position:absolute;
+  top:40px; left:140px;
+}
+
+.jarl-info {
+  position:relative;
+  width:100vw;
+  height:200px;
+  background:rgba(0,0,0,0.5);
+}
+.jarl-plot-t {
+  height:200px;
+  display:flex;
+  align-items:center;
+  font-family:'Roboto',Arial;
+  font-size:60px;
+  font-weight:600;
+  color:#fff;
+  position:absolute;
+  top:0px; left:4vw;
+  text-align:center;
+  line-height:48px;
+  text-shadow:5px 0px 0px var(--dark);
+}
+.jarl-plot {
+  width:27vw;
+  height:100px;
+  overflow:auto;
+  position:absolute;
+  top:30px; left: 22vw;
+  color:rgba(250,250,250,0.7);
+  font-size:9px;
+  font-family:'Roboto',Arial;
+  text-align:justify;
+  line-height:15px;
+  letter-spacing:2px;
+  font-weight:400;
+  text-transform:uppercase;
+  text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+  padding-right:15px;
+}
+.jarl-plot::first-line {color:var(--accent)}
+.jarl-plot::-webkit-scrollbar {width:2px;}
+.jarl-plot::-webkit-scrollbar-thumb {background:var(--accent);}
+.jarl-split {
+  width:25vw;
+  background:var(--dark);
+  height:1px;
+  position:absolute;
+  top:143px; left:22vw;
+}
+.jarl-update-t {
+  position:absolute;
+  top:158px; left:22vw;
+  font-family:'Roboto',Arial;
+  font-weight:600;
+  font-size:20px;
+  text-transform:uppercase;
+  color:#fff;
+  line-height:100%;
+}
+.jarl-update {
+  position:absolute;
+  top:160px; left:29vw;
+  width:20vw;
+  height:17px;
+  line-height:9px;
+  color:rgba(250,250,250,0.7);
+  font-family:'Roboto',Arial;
+  font-size:8px;
+  overflow:auto;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:400;
+  padding-right:15px;
+}
+.jarl-update::-webkit-scrollbar {width:2px;}
+.jarl-update::-webkit-scrollbar-thumb {background:var(--accent);}
+
+
+.jarl-event-c {
+  width:40vw;
+  height:200px;
+  position:absolute;
+  top:0px; right:0px;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+.jarl-event-c::-webkit-scrollbar {height:5px;}
+.jarl-event-c::-webkit-scrollbar-thumb {background:var(--accent)}
+.jarl-event-c::-webkit-scrollbar-track {background:#111}
+.jarl-event-in {
+  width:120vw;
+  height:200px;
+  position:relative;
+}
+.jarl-event {
+  background:var(--dark);
+  width:40vw;
+  height:200px;
+  position:absolute;
+  top:0px; left:0px;
+  background-size:cover;
+  background-position:center center;
+  overflow:hidden;
+}
+.jarl-event-t {
+  text-align:right;
+  position:absolute;
+  bottom:-5px; right:10px;
+  color:#fff;
+  font-family:'Roboto',Arial;
+  font-size:60px;
+  line-height:100%;
+  font-weight:600;
+  text-transform:uppercase;
+  text-shadow:5px 0px 0px rgba(0,0,0,0.5);
+  z-index:10;
+}
+.jarl-event-title {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  flex-wrap:no-wrap;
+  opacity:1;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-event-title span {
+  width:100%;
+  text-transform:uppercase;
+  text-align:center;
+  font-family:'Roboto',Arial;
+  font-size:20px;
+  color:#fff;
+  margin:0px 5vw;
+  padding:10px;
+  font-weight:100;
+  letter-spacing:2px;
+  text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+  text-decoration:none;
+  line-height:100%;
+}
+.jarl-event-desc {
+  opacity:0;
+  position:absolute;
+  top:0px; left:0px;
+  width:40vw;
+  height:200px;
+  transition:all 0.5s ease-in-out;
+  background:rgba(0,0,0,0.5);
+}
+.jarl-event:hover .jarl-event-desc {
+  opacity:1;
+}
+.jarl-event:hover .jarl-event-title {
+  opacity:0;
+}
+.jarl-desc-in {
+  position:absolute;
+  top:50px; left:5vw;
+  width:28vw;
+  height:90px;
+  color:rgba(250,250,250,0.8);
+  overflow:auto;
+  font-size:9px;
+  line-height:15px;
+  font-family:'Roboto',Arial;
+  text-align:justify;
+  padding-right:10px;
+  font-weight:400;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+.jarl-desc-in a {
+  background:var(--accent);
+  color:#fff;
+  font-weight:500;
+  text-decoration:none;
+  padding:8px;
+  line-height:100%;
+  text-transform:uppercase;
+  margin-right:10px;
+  float:left;
+}
+.jarl-desc-in::-webkit-scrollbar {width:2px;}
+.jarl-desc-in::-webkit-scrollbar-thumb {background:var(--accent)}
+.jarl-census {
+  position:absolute;
+  top:0px; left:40vw;
+  background:var(--dark);
+  width:40vw;
+  height:200px;
+  background-image:var(--transparent);
+  background-repeat:repeat;
+  overflow:hidden;
+}
+.jarl-count-c {
+  width:100%;
+  height:100px;
+  position:absolute;
+  top:50px; left:0px;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  justify-content:center;
+  justify-items:center;
+}
+.jarl-count {
+  color:#fff;
+  font-family:'Roboto',Arial;
+  font-size:10px;
+  text-align:center;
+  line-height:100%;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:400;
+  margin:0px 20px;
+}
+.jarl-count span {
+  font-size:50px;
+  font-weight:600;
+  letter-spacing:-2px;
+}
+.jarl-staff {
+  position:absolute;
+  top:0px; left:80vw;
+  background:var(--accent);
+  width:40vw;
+  height:200px;
+  background-image:var(--transparent);
+  background-repeat:repeat;
+  overflow:hidden;
+}
+.jarl-staff-c {
+  width:100%;
+  height:100px;
+  position:absolute;
+  top:40px; left:0px;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  justify-content:center;
+  justify-items:center;
+  flex-wrap:no-wrap;
+}
+.jarl-staff-icons {
+  width:80px;
+  height:80px;
+  border:10px solid #fff;
+  margin:0px 10px;
+  border-radius:100%;
+  overflow:hidden;
+}
+.jarl-staff-icons img {
+  width:80px;
+}
+
+.jarl-pips {
+  width:10px;
+  height:160px;
+  position:absolute;
+  top:17px; right:42vw;
+  z-index:10;
+}
+.jarl-dot-line {
+  position:absolute;
+  top:0px; left:5px;
+  width:0px;
+  height:160px;
+  border-right:1px dashed var(--dark);
+}
+.jarl-pip {
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  transform:rotate(-45deg);
+  position:absolute;
+  top:0px; left:0px;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-pip:hover {
+  background:var(--dark);
+}
+.jarl-pip2 {
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  transform:rotate(-45deg);
+  position:absolute;
+  top:78px; left:0px;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-pip2:hover {
+  background:var(--dark);
+}
+.jarl-pip3 {
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  transform:rotate(-45deg);
+  position:absolute;
+  top:155px; left:0px;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-pip3:hover {
+  background:var(--dark);
+}
+
+.jarl-click-more {
+  width:80px;
+  height:200px;
+  position:absolute;
+  top:0px; right:43vw;
+}
+.jarl-click-t {
+  width:150px;
+  height:100px;
+  line-height:25px;
+  font-size:30px;
+  color:#fff;
+  font-family:'Roboto',Arial;
+  font-weight:600;
+  transform:rotate(-90deg);
+  position:absolute;
+  bottom:40px; left:0px;
+  text-shadow:5px 0px 0px var(--dark);
+}
+
+#nav {
+  position:relative;
+  padding:50px 10vw;
+}
+#nav a {
+  line-height:100%;
+  color:#fff;
+  text-decoration:none;
+  padding:5px 0px;
+  margin:0px 10px;
+  border-bottom:1px solid var(--accent);
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:600;
+  font-family:'Roboto',Arial;
+}
+
+#wrapper {
+  position:relative;
+  width:100vw;
+}
+
+.jarl-cat {
+  width:100vw;
+  position:relative;
+  background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
+  line-height:100%;
+}
+.jarl-cat h1 {
+  font-family:'Roboto',Arial;
+  font-size:60px;
+  color:#fff;
+  text-shadow:5px 0px 0px rgba(0,0,0,0.5);
+  font-weight:600;
+  text-align:center;
+  width:100vw;
+  text-transform:uppercase;
+  margin:0px;
+  padding:50px 0px;
+}
+
+.jarl-board {
+  width:100vw;
+  height:200px;
+  position:relative;
+  background:rgba(0,0,0,0.5);
+}
+.jarl-board-in {
+  width:100%;
+  max-width:1200px;
+  height:200px;
+  position:relative;
+  margin:0px auto;
+  border:1px solid var(--accent);
+}
+.jarl-board-img {
+  width:500px;
+  height:200px;
+  position:absolute;
+  top:0px; left:0px;
+  background-size:100%;
+  background-position:center center;
+  transition:all 0.5s ease-in-out;
+}
+.jarl-board:hover .jarl-board-img {
+  background-size:110%;
+  filter:brightness(70%);
+}
+.jarl-board-t {
+  position:absolute;
+  top:0px; left:0px;
+  width:500px;
+  height:200px;
+}
+.jarl-b-title {
+  position:absolute;
+  bottom:0px; right:10px;
+  font-family:'Roboto',Arial;
+  font-size:50px;
+  font-weight:600;
+  color:#fff;
+  text-shadow:5px 0px 0px rgba(0,0,0,0.5);
+  line-height:100%;
+  text-transform:uppercase;
+  text-align:right;
+}
+.jarl-b-title a {
+  text-decoration:none;
+  color:#fff;
+  font-family:'Roboto',Arial;
+  font-weight:600;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700,800" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<body>
+  <div id="jarl-skin">
+  
+  
+    <div class="jarl-top">
+      <div class="jarl-head">
+        <div class="jarl-subt">
+          a modern dark fantasy rp
+        </div>
+        <div class="jarl-title">
+          Lacuna
+        </div>
+        <div class="jarl-subt">
+          <b>/ləˈk(y)o͞onə/</b> an empty space. A missing link. a gap.
+        </div>
+        <div class="jarl-links">
+          <a href="">rules</a>
+          <a href="">synopsis</a>
+          <a href="">groups</a>
+          <a href="">canons</a>
+          <a href="">face claim</a>
+          <a href="">directory</a>
+          <a href="">application</a>
+          <a href="">plotters</a>
+          <a href="">wanteds</a>
+          <a href="">affiliate</a>
+          <a href="">advertise</a>
+          <a href="">discord</a>
+        </div>
+      </div>
+      
+      <div class="jarl-panel">
+        <span class="fa fa-list"></span>
+      </div>
+      
+      <div class="jarl-side">
+        <div class="jarl-logout">
+          <span class="th th-power-o"></span>
+        </div>
+        <div class="jarl-icon">
+          <img src="https://i.pinimg.com/564x/9f/3b/43/9f3b43e9ebd50168ed02e6857bb81b85.jpg?b=t">
+        </div>
+        <div class="jarl-welcome">
+          Welcome,<br><a href="">roaming wanderer</a>
+        </div>
+        <div class="jarl-break"></div>
+        <div class="jarl-ulinks">
+          
+          <div class="jarl-ucp">
+            <a href=""><span class="th th-settings-o"></span></a>
+          </div>
+          <div class="jarl-alerts">
+            <a href=""><span class="th th-chat-bubbles"></span></a>
+          </div>
+          <div class="jarl-mail">
+            <a href=""><span class="th th-envelope-o"></span></a>
+          </div>
+          <div class="jarl-shop">
+            <a href=""><span class="th th-gift-o"></span></a>
+          </div>
+          <div class="jarl-posts">
+            <a href=""><span class="th th-newspaper-o"></span></a>
+          </div>
+          
+          <div class="jarl-admin">
+            <a href=""><span class="th th-worldwide-o"></span></a>
+          </div>
+          <div class="jarl-mod">
+            <a href=""><span class="th th-users-o"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    <div class="jarl-info">
+      <div class="jarl-plot-t">
+        THE<br>STORY
+      </div>
+      <div class="jarl-plot">
+        It is the first day of November and so, today, someone will die.
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: dark blue and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by
+countless hooves.
+They run the horses on the beach, a pale road between the
+black water and the chalk cliffs. It is never safe, but it’s never so
+dangerous as today, race day.
+      </div>
+      <div class="jarl-split"></div>
+      <div class="jarl-update-t">
+        UPDATE
+      </div>
+      <div class="jarl-update">
+        It is never safe, but it’s never so
+dangerous as today, race day.
+      </div>
+      
+      <div class="jarl-event-c">
+        <div class="jarl-event-in">
+        
+          <div class="jarl-event" style="background-image:url(https://gifimage.net/wp-content/uploads/2017/09/anime-magic-gif-5.gif);">
+            <div class="jarl-event-t">
+              EVENT
+            </div>
+            <div class="jarl-event-title">
+              <span>The Great Light Show</span>
+            </div>
+            <div class="jarl-event-desc">
+              <div class="jarl-desc-in">
+                <a href="">The Great Light Show</a>It is the first day of November and so, today, someone will die.
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: dark blue and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by
+countless hooves.
+They run the horses on the beach, a pale road between the
+black water and the chalk cliffs. It is never safe, but it’s never so
+dangerous as today, race day.
+              </div>
+            </div>
+          </div>
+        
+          <div class="jarl-census">
+            <div class="jarl-event-t">
+              CENSUS
+            </div>
+            <div class="jarl-count-c">
+              <div class="jarl-count">
+                <span>16</span>
+                <br>humans
+              </div>
+              <div class="jarl-count">
+                <span>20</span>
+                <br>spirits
+              </div>
+              <div class="jarl-count">
+                <span>07</span>
+                <br>espers
+              </div>
+              <div class="jarl-count">
+                <span>18</span>
+                <br>deities
+              </div>
+            </div>
+          </div>
+          
+          <div class="jarl-staff">
+            <div class="jarl-event-t">
+              STAFF
+            </div>
+            <div class="jarl-staff-c">
+              <div class="jarl-staff-icons">
+                <img src="https://66.media.tumblr.com/c60afece80872bdb46f5b38ac8fe23cb/tumblr_oppqgjs9EQ1w5f4jao2_250.png">
+              </div>
+              <div class="jarl-staff-icons">
+                <img src="https://pbs.twimg.com/profile_images/681893563827929088/qiRkHhpI_400x400.png">
+              </div>
+              <div class="jarl-staff-icons">
+                <img src="https://pbs.twimg.com/media/C1xO5p1XgAA_OTy.jpg">
+              </div>
+              <div class="jarl-staff-icons">
+                <img src="https://pbs.twimg.com/media/C9JqPBzXYAAXxCv.jpg">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="jarl-pips">
+        <div class="jarl-dot-line"></div>
+        <div class="jarl-pip"></div>
+        <div class="jarl-pip2"></div>
+        <div class="jarl-pip3"></div>
+      </div>
+      
+      <div class="jarl-click-more">
+        <div class="jarl-click-t">
+          TOGGLE FOR MORE
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    <div id="nav">
+      <a href="">Lacuna</a>
+    </div>
+    
+    
+    <div id="wrapper">
+      <div class="jarl-cat">
+        <h1>welcome</h1>
+      </div>
+      <div class="jarl-board">
+        <div class="jarl-board-in">
+          <div class="jarl-board-img" style="background-image:url(https://i.pinimg.com/originals/7c/90/15/7c9015b54b225985b6697b5331340d13.jpg);"></div>
+          <div class="jarl-board-t">
+            <div class="jarl-b-title">
+              guidebook
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
