@@ -1,0 +1,720 @@
+<style>
+  body {
+    margin:0px;
+    padding:0px;
+    background:#222;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    position:relative;
+  }
+  body::-webkit-scrollbar {
+    width:9px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background:#FF7657;
+  }
+  body::-webkit-scrollbar-track {
+    border:4px solid #222;
+    background:#666;
+  }
+  
+  /* group colors */
+  .group-1 {
+    --color:#ee3300;
+  }
+  .group-2 {
+    --color:#44aa88;
+  }
+  .group-3 {
+    --color:#bb7766;
+  }
+  
+  #jarhlogin {
+    height:50px;
+    background:#222;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  #jarhloginl {
+    height:100%;
+    line-height:100%;
+    margin-left:50px;
+    display:flex;
+    flex-wrap:no-wrap;
+    align-items:center;
+    color:#aaa;
+  }
+  #jarhloginl a {
+    font-family:'Rajdhani',Arial;
+    font-size:12px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#FF7657;
+    font-weight:500;
+    letter-spacing:2px;
+    margin:15px;
+    transition:all 0.5s ease-in-out;
+  }
+  #jarhloginl a:hover {
+    color:#fff;
+  }
+  #jarhheader {
+    position:relative;
+    width:100vw;
+    height:500px;
+    overflow:hidden;
+    background:url(https://cdn.discordapp.com/attachments/396242044575678465/520452783632285697/43098734_p0.jpg);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    line-height:100%;
+  }
+  #jarhheaderin {
+    width:100vw;
+    height:500px;
+    background:rgba(0,0,0,0.05);
+    transition:background 1s ease-in-out;
+    position:absolute;
+    top:0px; left:0px;
+    display:grid;
+    grid-template-columns:500px 1fr;
+    grid-template-areas:"title desc";
+    align-items:flex-end;
+    justify-content:center;
+  }
+
+  #jarhheader:hover #jarhheaderin {
+    background:rgba(0,0,0,0.2);
+  }
+  
+  #jarhtitle {
+    grid-area:title;
+    position:relative;
+    width:500px;
+    align-self:center;
+    text-align:left;
+    font-family:'Rajdhani',Arial;
+    font-size:280px;
+    color:#FF7657;
+    mix-blend-mode:color-burn;
+    overflow:hidden;
+    line-height:179px;
+    word-wrap:break-word;
+    animation-name:burn;
+    animation-duration:2s;
+    animation-direction:alternate;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+  }
+  #jarhsubt {
+    width:500px;
+    height:500px;
+    position:absolute;
+    top:0px; left:0px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+  }
+  #jarhsubtitle {
+    text-align:right;
+    color:#fff;
+    font-family:'Rajdhani',Arial;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:10px;
+    text-transform:uppercase;
+    line-height:100%;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.25);
+    padding:10px 20px;
+    width:100%;
+  }
+  @keyframes burn {
+    0% {
+      filter:brightness(100%);
+    }
+    100% {
+      filter:brightness(70%);
+    }
+  }
+  
+  /* nav */
+  #navbar {
+    width:100%;
+    background:#333;
+    position:sticky;
+    top:50px;
+    z-index:100;
+  }
+  #navin {
+    color:#aaa;
+    line-height:9px;
+    font-family:'Rajdhani',Arial;
+    font-weight:400;
+    font-size:10px;
+    text-transform:uppercase;
+    margin:0px 50px;
+    letter-spacing:2px;
+    padding:10px 0px;
+  }
+  #navbar a {
+    font-weight:600;
+    color:#FF7657;
+    text-decoration:none;
+    transition:all 0.5s ease-in-out;
+  }
+  #navbar a:hover {
+    color:#fff;
+  }
+  
+  /* wrapper*/
+  #wrapper {
+    width:100%;
+  }
+  .jarhcath {
+    width:100%;
+    height:200px;
+    position:relative;
+    display:flex;
+    flex-wrap:no-wrap;
+    align-items:center;
+    overflow:hidden;
+    background:#222;
+  }
+  .jarhcath h1 {
+    padding:0px;
+    margin:50px;
+    font-family:'Rajdhani',Arial;
+    font-weight:300;
+    font-size:40px;
+    text-transform:uppercase;
+    color:#FF7657;
+    line-height:100%;
+    letter-spacing:5px;
+  }
+  .jarhcath a {
+    text-decoration:none;
+    font-family:'Rajdhani',Arial;
+    font-size:25px;
+    text-transform:uppercase;
+    color:#FF7657;
+    line-height:100%;
+    letter-spacing:5px;
+  }
+  .jarhcathl {
+    height:1px;
+    width:150px;
+    background:#FF7657;
+  }
+  
+  /* boards */
+  .jarhboardc {
+    width:90%;
+    position:relative;
+    max-width:1700px;
+    margin:0px auto;
+  }
+  .jarhboard {
+    margin:30px auto;
+    position:relative;
+    overflow:hidden;
+    height:200px;
+    padding:20px;
+    border:1px solid #444;
+    transition:all 0.5s ease-in-out;
+  }
+  .jarhboard:hover {
+    box-shadow:5px 5px 0px rgba(250,250,250,0.1);
+  }
+  .jarhboardin {
+    width:100%;
+    height:200px;
+    display:grid;
+    grid-column-gap:10px;
+    grid-template-columns:65px 1fr 1fr 0.5fr;
+  }
+  .jarhboardtri {
+    width:35%;
+    height:240px;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+    background:#2a2a2a;
+    position:absolute;
+    top:0px; left:0px;
+    z-index:-1;
+    transition:all 0.5s ease-in-out;
+  }
+  .jarhboardimgc {
+    padding:5px;
+    border:3px double #444;
+    width:calc(100% - 15px);
+    background:#222;
+    height:185px;
+    position:relative;
+    transition:all 0.5s ease-in-out;
+  }
+  .jarhboardimg {
+    width:100%;
+    height:100%;
+    filter:brightness(50%);
+    background-color:#222;
+    background-size:100%;
+    background-position:center center;
+    transition:all 0.5s ease-in-out;
+  }
+  .jarhboard:hover .jarhboardimg {
+    background-size:110%;
+    filter:brightness(30%);
+  }
+  
+  /* board read/not  */
+  .jarhboardr {
+    width:50px;
+    border:3px double #444;
+    padding:5px;
+    transition:all 0.5s ease-in-out;
+    height:185px;
+  }
+  .jarhboardrin {
+    height:165px;
+    background:#FF7657;
+    color:#222;
+    padding:10px;
+    line-height:100%;
+    align-self:stretch;
+    display:flex;
+    flex-grow:1;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    font-size:30px;
+    flex-wrap:wrap;
+    text-align:center;
+  }
+  .jarhboardrl {
+    width:2px;
+    height:50px;
+    background:#222;
+  }
+  .jarhboardrin span {
+    width:100%;
+    line-height:100%;
+    margin:10px 0px;
+  }
+  
+  
+  /* board thread title thing */
+  .jarhboardth {
+    width:100%;
+    height:100%;
+    position:relative;
+  }
+  .jarhboardthin {
+    display:flex;
+    align-items:center;
+    align-content:center;
+    flex-wrap:wrap;
+    padding:20px 30px;
+    border:3px double #444;
+    height:50px;
+    transition:all 0.5s ease-in-out;
+  }
+  .jarhboardthread {
+    width:100%;
+    border-bottom:1px solid #444;
+    font-family:'Overpass',Arial;
+    font-size:13px;
+    color:#FF7657;
+    line-height:18px;
+    height:13px;
+    padding-bottom:6px;
+    overflow:hidden;
+  }
+  .jarhboardthread a {
+    color:#FF7657;
+    text-decoration:none;
+    font-weight:700;
+    text-transform:uppercase;
+    transition:color 0.5s ease-in-out;
+  }
+  .jarhboardthread a:hover {
+    color:#ccc;
+  }
+  .jarhboardauth {
+    width:100%;
+    margin-top:6px;
+    font-size:10px;
+    font-family:'Overpass',Arial;
+    text-transform:uppercase;
+    color:#aaa;
+    line-height:13px;
+    height:10px;
+    overflow:hidden;
+  }
+  .jarhboardauth a {
+    color:var(--color);
+    text-decoration:none;
+    font-weight:900;
+    transition:color 0.5s ease-in-out;
+  }
+  
+  /* board title */
+  .jarhboardt {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px; left:0px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    overflow:hidden;
+  }
+  .jarhboardtit {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    akign-content:center;
+    flex-wrap:wrap;
+    overflow:hidden;
+    line-height:100%;
+    font-family:'Rajdhani',Arial;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:300;
+    text-transform:uppercase;
+    color:#ccc;
+    text-align:center;
+    width:100%;
+  }
+  .jarhboardtit h1 {
+    width:100%;
+    margin:0px 30px;
+    padding:0px;
+    padding-top:10px;
+    font-size:30px;
+    font-weight:500;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+  }
+  .jarhboardtit a {
+    color:#fff;
+    text-decoration:none;
+    transition:all 0.5s ease-in-out;
+  }
+  
+  /* subboard list */
+  .jarhboardsb {
+    width:60%;
+    border-top:0.5px solid #FF7657;
+    padding:8px;
+    line-height:100%;
+    margin-top:10px;
+    font-size:10px;
+    line-height:100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    max-height:54px;
+    text-align:center;
+    overflow:auto;
+  }
+  .jarhboardsb::-webkit-scrollbar {display:none;}
+  .jarhboardsb a {
+    margin:2px;
+    padding:8px 7px 7px 9px;
+    letter-spacing:2px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    font-family:'Rajdhani',Arial;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .jarhboardsb a:hover {
+    background:#444;
+  }
+  
+  /* board tops/replies */
+  .jarhboardtr {
+    margin-top:12px;
+    max-height:90px;
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .jarhboardtop {
+    flex-grow:1;
+    border:3px double #444;
+    position:relative;
+    width:100%;
+    height:100%;
+    margin-right:5px;
+    display:flex;
+    overflow:hidden;
+    flex-wrap:no-wrap;
+    align-items:center;
+  }
+  .jarhboardtop h1 {
+    font-family:'Rajdhani',Arial;
+    font-weight:300;
+    font-size:140px;
+    color:#FF7657;
+    margin:0px;
+    letter-spacing:-15px;
+    padding:0px;
+    line-height:100%;
+    padding-top:10px;
+    opacity:0.5;
+    margin-left:-5px;
+  }
+  .jarhboardrep {
+    flex-grow:1;
+    border:3px double #444;
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    overflow:hidden;
+    flex-wrap:no-wrap;
+    align-items:center;
+    margin-left:5px;
+  }
+  .jarhboardrep h1 {
+    font-family:'Rajdhani',Arial;
+    font-weight:300;
+    font-size:140px;
+    color:#FF7657;
+    margin:0px;
+    letter-spacing:-15px;
+    padding:0px;
+    line-height:100%;
+    padding-top:10px;
+    opacity:0.5;
+    margin-left:-5px;
+  }
+  .jarhboardtrt {
+    width:100%;
+    padding:10px 0px;
+    font-family:'Overpass',Arial;
+    font-size:10px;
+    color:#fff;
+    font-weight:600;
+    background:rgba(0,0,0,0.3);
+    height:10px;
+    line-height:100%;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    position:absolute;
+    left:0px;
+    text-align:center;
+  }
+  
+  .jarhboarddesc {
+    width:calc(100%-6px);
+    height:195px;
+    border:3px double #444;
+    position:relative;
+  }
+  .jarhboarddescin {
+    margin:30px 20px 30px 30px;
+    height:140px;
+    overflow:auto;
+    padding-right:10px;
+    line-height:16px;
+    font-family:'Overpass',Arial;
+    font-size:10px;
+    color:#aaa;
+    text-align:justify;
+    font-weight:400;
+    text-transform:uppercase;
+  }
+  .jarhboarddescin::-webkit-scrollbar {width:2px;}
+  .jarhboarddescin::-webkit-scrollbar-thumb {background:#FF7657;}
+  .jarhboarddescin::-webkit-scrollbar-track {background:rgba(0,0,0,0.3);}
+  
+  /* board stats */
+  #jarhbs {
+    width:100%;
+    height:500px;
+    position:relative;
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Overpass:200,300,400,600,700,800,900|Rajdhani:300,400,500,600,700|Nunito:200,300,400,600,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<body>
+  <div id="jarhlogin">
+    <div id="jarhloginl">
+      <a href="">Login</a> /
+      <a href="">Register</a>
+    </div>
+  </div>
+  <div id="jarhheader">
+    <div id="jarhheaderin">
+      <div id="jarhtitle">
+        HARBINGER
+      </div>
+      <div id="jarhsubt">
+        <div id="jarhsubtitle">
+          a percy jackson rp
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- navbar -->
+  <div id="navbar">
+    <div id="navin">
+      <a href="">MY COMMUNITY</a>
+    </div>
+  </div>
+  
+  <div id="wrapper">
+    <div class="jarhcath">
+      <div class="jarhcathl"></div>
+      <h1>BEGINNING</h1>
+    </div>
+    <div class="jarhboardc">
+    
+      <div class="jarhboard">
+        <div class="jarhboardtri"></div>
+        <div class="jarhboardin">
+        
+          <!-- board read -->
+          <div class="jarhboardr">
+            <div class="jarhboardrin">
+              <div class="jarhboardrl"></div>
+              <span class="th th-sun-o"></span>
+              <div class="jarhboardrl"></div>
+            </div>
+          </div>
+          
+          <!-- board title -->
+          <div class="jarhboardimgc">
+            <div class="jarhboardimg" style="background-image:url(http://static.tumblr.com/3c51487aad8cf6cf61ce48fd2f1bb50c/wxfzyjp/UNPonv889/tumblr_static_1tbr22ts62as08sgc0woggsco_2048_v2.jpg);"></div>
+            <div class="jarhboardt">
+              <div class="jarhboardtit">
+                <h1><a href="">Guidebook</a></h1>
+                <div class="jarhboardsb">
+                  <a href="">rules</a>
+                  <a href="">premise</a>
+                  <a href="">setting</a>
+                  <a href="">groups</a>
+                  <a href="">abilities</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- board thread title & topics & replies -->
+          <div class="jarhboardth">
+            <div class="jarhboardthin">
+              <div class="jarhboardthread">
+                <a href="">thread title that is super duper long</a>
+              </div>
+              <div class="jarhboardauth">
+                <a href="" class="group-2">percy jackson</a> on november 15, 2018 at 7:45pm
+              </div>
+            </div>
+            <div class="jarhboardtr">
+              <div class="jarhboardtop">
+                <h1>10</h1>
+                <div class="jarhboardtrt">
+                  topics
+                </div>
+              </div>
+              <div class="jarhboardrep">
+                <h1>103</h1>
+                <div class="jarhboardtrt">
+                  replies
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- board desc -->
+          <div class="jarhboarddesc">
+            <div class="jarhboarddescin">
+              THE STARFIGHTER PILOT CLAMBERED OUT OF THE WRECKAGE ON SHAKY LEGS, BLOOD LEAKING FROM THE NUMEROUS WOUNDS THAT DOTTED HIS BODY. HE WASN'T WORRIED. IF HE GAVE THEM TIME TO HEAL, THEY WOULD SCAB OVER AND SCAR AND ADD TO HIS VAST COLLECTION. BUT THE PILOT DIDN'T HAVE TIME, SO HE DIDN'T CARE WHETHER THEY HEALED OR NOT.
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="jarhboard">
+        <div class="jarhboardtri"></div>
+        <div class="jarhboardin">
+        
+          <!-- board read -->
+          <div class="jarhboardr">
+            <div class="jarhboardrin">
+              <div class="jarhboardrl"></div>
+              <span class="th th-sun-o"></span>
+              <div class="jarhboardrl"></div>
+            </div>
+          </div>
+          
+          <!-- board title -->
+          <div class="jarhboardimgc">
+            <div class="jarhboardimg" style="background-image:url(https://s1.zerochan.net/Zelda.no.Densetsu%3A.Breath.of.the.Wild.600.2231318.jpg);"></div>
+            <div class="jarhboardt">
+              <div class="jarhboardtit">
+                <h1><a href="">REGISTRATION</a></h1>
+                <div class="jarhboardsb">
+                  <a href="">applications</a>
+                  <a href="">claims</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- board thread title & topics & replies -->
+          <div class="jarhboardth">
+            <div class="jarhboardthin">
+              <div class="jarhboardthread">
+                <a href="">female, aramintha soloyev</a>
+              </div>
+              <div class="jarhboardauth">
+                <a href="" class="group-1">aramintha soloyev</a> on november 15, 2018 at 7:45pm
+              </div>
+            </div>
+            <div class="jarhboardtr">
+              <div class="jarhboardtop">
+                <h1>59</h1>
+                <div class="jarhboardtrt">
+                  topics
+                </div>
+              </div>
+              <div class="jarhboardrep">
+                <h1>298</h1>
+                <div class="jarhboardtrt">
+                  replies
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- board desc -->
+          <div class="jarhboarddesc">
+            <div class="jarhboarddescin">
+              THE STARFIGHTER PILOT CLAMBERED OUT OF THE WRECKAGE ON SHAKY LEGS, BLOOD LEAKING FROM THE NUMEROUS WOUNDS THAT DOTTED HIS BODY. HE WASN'T WORRIED. IF HE GAVE THEM TIME TO HEAL, THEY WOULD SCAB OVER AND SCAR AND ADD TO HIS VAST COLLECTION. BUT THE PILOT DIDN'T HAVE TIME, SO HE DIDN'T CARE WHETHER THEY HEALED OR NOT.
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div id="jarhbs">
+    
+  </div>
+</body>
