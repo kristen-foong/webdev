@@ -1,0 +1,559 @@
+
+<style>
+  @font-face {
+    font-family:'dream';
+    src:url(https://files.jcink.net/uploads/jt/Dream_Only.ttf)format('truetype');
+  }
+  body {
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    background-image:url(https://www.transparenttextures.com/patterns/arches.png);
+    background-color:#fafafa;
+    background-repeat:repeat;
+  }
+  #jcdlskin {
+    margin:0px;
+    padding:0px;
+    position:relative;
+  }
+  
+  #jcdlskin {
+    --main-color:#958ACE;
+    --light:#CACDE4;
+  }
+  
+  #jcdlhead {
+    width:100%;
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    background:#eee;
+  }
+  #jcdlheadimg {
+    height:100%;
+    width:50%;
+    background-image:url(https://static.zerochan.net/Phosphophyllite.%28Houseki.no.Kuni%29.full.2247200.png);
+    background-size:cover;
+    background-position:center center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  #jcdltitle {
+    margin:0px 20px;
+    width:100%;
+    text-align:center;
+    font-family:'Raleway';
+    font-weight:100;
+    font-size:150px;
+    color:#fff;
+    line-height:130px;
+    text-transform:uppercase;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.3);
+  }
+  #jcdltitle span {
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:10px;
+    color:#fff;
+    font-weight:500;
+    line-height:100%;
+  }
+  #jcdlheadr {
+    width:50%;
+    height:100%;
+    position:relative;
+    overflow-x:hidden;
+    overflow-y:scroll;
+  }
+  #jcdldesc {
+    position:relative;
+    margin:0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:#666;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    flex-wrap:wrap;
+  }
+  #jcdldesc p {
+    font-family:'Montserrat',Arial;
+    font-weight:500;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:18px;
+    margin:10px 7vw;
+    padding:0px;
+  }
+  #jcdlheadr h1 {
+    font-size:20px;
+    font-weight:normal;
+    font-family:'dream',Arial;
+    text-transform:lowercase;
+    padding:0px;
+    margin:20px 0px;
+    width:100%;
+  }
+  #jcdlheadr span {
+    color:var(--main-color);
+  }
+  #jcdldescimg {
+    width:100%;
+    margin:20px 7vw;
+    height:100px;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    overflow:hidden;
+    border:5px solid rgba(0,0,0,0.1);
+  }
+  #jcdldescimg img {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    width:100%;
+  }
+  #jcdllinks {
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    flex-wrap:wrap;
+    text-align:center;
+    color:#666;
+  }
+  #jcdllinksc {
+    position:relative;
+    margin:20px 6vw;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-column-gap:10px;
+    font-family:Montserrat;
+    font-weight:500;
+    color:#666;
+    line-height:100%;
+    margin-bottom:50px;
+  }
+  #jcdllinksc a {
+    display:flex;
+    align-items:center;
+    font-size:12px;
+    text-transform:uppercase;
+    text-decoration:none;
+    letter-spacing:2px;
+    color:#666;
+    margin:10px 10px;
+    transition:all 0.5s ease-in-out;
+  }
+  #jcdllinksc a:hover {
+    color:var(--main-color);
+    transform:translate(0px, -5px);
+  }
+  #jcdllinksc span {
+    margin-right:10px;
+    font-size:15px;
+    transition:all 0.5s ease-in-out;
+  }
+  #jcdlstaff {
+    display:flex;
+    flex-wrap:no-wrap;
+    margin:20px 6vw;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+  }
+  .jcdlstaffin {
+    position:relative;
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    border:5px solid rgba(0,0,0,0.1);
+    margin:0px 5px;
+  }
+  .jcdlstaffin img {
+    width:100px;
+    height:100px;
+    z-index:-1;
+  }
+  .jcdlstaffn {
+    position:absolute;
+    top:0px; left:0px;
+    width:100px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.3);
+    color:#fff;
+    font-family:Raleway,Arial;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing:1px;
+    line-height:100%;
+    text-align:center;
+    opacity:0;
+    transition:all 0.5s ease-in-out;
+    z-index:1;
+  }
+  .jcdlstaffin:hover .jcdlstaffn {
+    opacity:1;
+  }
+  
+  #jcdlnews {
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    flex-wrap:wrap;
+    text-align:center;
+    color:#666;
+    line-height:100%;
+  }
+  #jcdlevent {
+    display:grid;
+    margin:20px 6vw;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap: 20px;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    margin-bottom:40px;
+  }
+  .jcdleventimg {
+    position:relative;
+    height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+  }
+  .jcdleventimg img {
+    flex-grow:1;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    max-height:130px;
+    border:5px solid rgba(0,0,0,0.1);
+  }
+  .jcdleventdesc h3 {
+    position:sticky;
+    top:0px;
+    padding: 5px 0px;
+    margin:0px;
+    margin-bottom:5px;
+    text-align:center;
+    background:#eee;
+    font-family:Raleway;
+    font-size:12px;
+    font-weight:700;
+    color:var(--main-color);
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+  .jcdleventdesc a {
+    text-decoration:none;
+    color:var(--main-color);
+  }
+  .jcdleventdesc {
+    font-family:Montserrat,arial;
+    font-weight:500;
+    font-size:11px;
+    line-height:14px;
+    text-align:justify;
+    flex-grow:1;
+    height:140px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding-right:10px;
+  }
+  .jcdleventdesc::-webkit-scrollbar {width:2px;}
+  .jcdleventdesc::-webkit-scrollbar-thumb {background:#aaa;border-radius:10px;}
+  .jcdleventdesc::-webkit-scrollbar-track {background:#ddd;border-radius:10px;}  
+  #jcdlupdates {
+    display:grid;
+    margin:20px 6vw;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap: 20px;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+  }
+  #jcdl-user {
+    width:100vw;
+    height:150px;
+    position:relative;
+    background:var(--light);
+    overflow:hidden;
+  }
+  #jcdl-icon {
+    width:80px;
+    height:80px;
+    border:10px solid #fff;
+    position:absolute;
+    top:25px; left:5vw;
+    border-radius:100%;
+    overflow:hidden;
+  }
+  #jcdl-icon img {
+    width:80px;
+  }
+  #jcdl-welcome {
+    height:150px;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    flex-wrap:wrap;
+    font-family:'Raleway',Arial;
+    font-weight:300;
+    color:#fff;
+    letter-spacing:1px;
+    position:absolute;
+    top:10px; left:16vw;
+    line-height:100%;
+  }
+  #jcdl-welcome b {
+    padding:5px 10px;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:600;
+    width:100%;
+    text-align:right;
+    margin-left:-40px;
+    margin-top:5px;
+    letter-spacing:5px;
+  }
+  #jcdl-welcome a {
+    width:100%;
+    font-size:20px;
+    text-transform:lowercase;
+    letter-spacing:0px;
+    text-decoration:none;
+    word-spacing:-10px;
+    color:var(--main-color);
+    font-family:'dream',Arial;
+    text-shadow:1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
+    z-index:1;
+  }
+  #jcdl-ulinks {
+    width:50vw;
+    position:absolute;
+    right:5vw; top:0px;
+    height:150px;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:flex-end;
+  }
+  #jcdl-ulinks a {
+    background:#fff;
+    font-size:20px;
+    width:20px;
+    height:20px;
+    padding:15px;
+    color:var(--main-color);
+    text-decoration:none;
+    border-radius:100%;
+    line-height:100%;
+    margin-left:20px;
+    border:5px solid #ddd;
+    transition:all 0.5s ease-in-out;
+  }
+  #jcdl-ulinks a:hover {
+    transform:translate(0px,-5px);
+    background:var(--main-color);
+    color:#fff;
+    filter:brightness(130%);
+  }
+  #jcdl-nav {
+    background:#fafafa;
+    padding:8px 20px;
+    line-height:100%;
+    color:#333;
+    font-family:'Montserrat',Arial;
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:1px;
+    font-weight:600;
+  }
+  #jcdl-nav a {
+    color:#333;
+    text-decoration:none;
+    transition:all 0.5s ease-in-out;
+    margin:0px 5px;
+  }
+  #jcdl-nav a:hover {
+    color:var(--main-color);
+  }
+  
+  .jcdl-cat {
+    position:relative;
+    border-top:10px solid var(--main-color);
+    padding:50px 0px;
+    font-family:'Raleway',Arial;
+    font-weight:200;
+    text-transform:lowercase;
+    text-align:center;
+    width:100%;
+    line-height:100%;
+    font-size:40px;
+    color:var(--main-color);
+    text-shadow:2px 2px 0px #fff, -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff;
+  }
+  .jcdl-cat-img {
+    position:absolute;
+    top:0px; right:0px;
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,800|Montserrat:300,400,500,600,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<body>
+  <div id="jcdlskin">
+  
+    <div id="jcdlhead">
+      <div id="jcdlheadimg">
+        <div id="jcdltitle">
+          <span>this is</span><br>
+          never<br>land
+          <br><span>a fantasy rp</span>
+        </div>
+      </div>
+      
+      <div id="jcdlheadr">
+        <div id="jcdldesc">
+         <h1>This is <span>neverland</span>,</h1>
+         <div id="jcdldescimg">
+           <img src="https://i.imgur.com/W5shBxd.png">
+         </div>
+         <p>But the neverland of fairy tales is <span>not what you think</span>. Beneath the bright, lustrous shine of the seas and golden forests lies a more sinister power. <span>The queen has gone mad</span>, and Neverland is amok as darkness threatens to destroy it.</p>
+         <p>Everything you do will shape Neverland's future. Will you return Neverland to its former glory? <span>Or plunge it into darkness?</span></p>
+        </div>
+        
+        <div id="jcdllinks">
+          <h1>site <span>links</span>.</h1>
+          <div id="jcdllinksc">
+            <a href=""><span class="th th-diamond-o"></span> rules</a>
+            <a href=""><span class="th th-forest-o"></span> synopsis</a>
+            <a href=""><span class="th th-share-o"></span> groups</a>
+            <a href=""><span class="th th-stars-o"></span> abilities</a>
+            <a href=""><span class="th th-holly-o"></span> faceclaim</a>
+            <a href=""><span class="th th-edit-o"></span> application</a>
+            <a href=""><span class="th th-earth-o"></span> wanteds</a>
+            <a href=""><span class="th th-butterfly-o"></span> affiliate</a>
+            <a href=""><span class="th th-toy-mouse-o"></span> advertise</a>
+          </div>
+          <h1>the <span>staff</span>.</h1>
+          <div id="jcdlstaff">
+            <div class="jcdlstaffin">
+              <img src="https://image.ibb.co/f9EhqG/art-by-Qimiao-De-Miao-Sheng-2.png">
+              <div class="jcdlstaffn">
+                bort
+              </div>
+            </div>
+            <div class="jcdlstaffin">
+              <img src="https://image.ibb.co/m09Znw/art-by-Pixiv-Id-2400318-1.png">
+              <div class="jcdlstaffn">
+                arctic
+              </div>
+            </div>
+            <div class="jcdlstaffin">
+              <img src="https://image.ibb.co/j9ygjb/art-by-Pixiv-Id-4568973-1.png">
+              <div class="jcdlstaffn">
+                lapis
+              </div>
+            </div>
+            <div class="jcdlstaffin">
+              <img src="https://66.media.tumblr.com/76cf7655409246a1dcbe18394ffdfd9c/tumblr_oncfamZxqX1w5f4jao2_400.png">
+              <div class="jcdlstaffn">
+                neko
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="jcdlnews">
+          <h1>site <span>event</span>.</h1>
+          <div id="jcdlevent">
+            <div class="jcdleventimg">
+              <img src="https://i.pinimg.com/originals/e1/70/53/e170532d232206adca1608ef5395d023.gif">
+            </div>
+            <div class="jcdleventdesc">
+              <h3>
+                <a href="">Grand Tournament</a>
+              </h3>
+              All subjects of Neverland attend this prestigious event, whether it be as a spectator or participant.
+              <p>Participants fight in grand gladiator-style matches until one warrior rules them all. No holds barred in these fights.</p>
+            </div>
+          </div>
+          <h1>some <span>notes</span>.</h1>
+          <div id="jcdlupdates">
+            <div class="jcdleventdesc">
+              <h3>
+                April 2019
+              </h3>
+              Welcome to Neverland's grand opening! We have an event up for newcomers and blah bla. Some sort of cool thing here. Feel free to join our discord.
+            </div>
+            <div class="jcdleventimg">
+              <img src="https://i.pinimg.com/originals/b5/42/ba/b542baab4e7be1821cc29df1f4020518.gif">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <div id="jcdl-user">
+      <div id="jcdl-icon">
+        <img src="https://image.ibb.co/kFKAcw/art-by-Pixiv-Id-2938201-3.png">
+      </div>
+      <div id="jcdl-welcome">
+        <a href="">queen of hearts</a>
+        <br><b>group</b>
+      </div>
+      <div id="jcdl-ulinks">
+        <a href=""><span class="th th-star-o"></span></a>
+        <a href=""><span class="th th-holly-o"></span></a>
+        <a href=""><span class="th th-atom-o"></span></a>
+        <a href=""><span class="th th-sun-o"></span></a>
+        <a href=""><span class="th th-wave-o"></span></a>
+      </div>
+    </div>
+    
+    <div id="jcdl-nav">
+      <a href="">neverland</a> -
+      <a href="">guidebook</a> -
+      <a href="">plot</a>
+    </div>
+    
+    <div class="jcdl-cat">
+      welcome to neverland
+    </div>
+    
+  </div>
+</body>
