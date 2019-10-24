@@ -1,0 +1,1266 @@
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:300,400,700|Roboto:100,200,300,400,500,600,700,900|Raleway:300,400,600,700,900|Calibri" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  @font-face {
+    font-family:'amethyst';
+    src:url(http://files.jcink.net/uploads/jt/Amethyst.ttf)format('truetype');
+  }
+  
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  
+  body{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(900,900,900,0.4)),url('https://i.pinimg.com/originals/7d/57/84/7d57841893f8b514ddb53a863faae3b8.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    padding:0px;
+  }
+  #wrapper {
+    width:100%;
+    margin:0 auto;
+    margin-top:20px;
+    background:linear-gradient(transparent,rgba(112,181,176,0.4));
+  }
+  #innerwrapper {
+    width:900px;
+    padding:30px;
+    margin:0 auto;
+    overflow:hidden;
+  }
+ .celestialhead {
+   width:100%;
+   background-size:cover;
+    height:650px;
+    position:relative;
+   overflow:hidden;
+  }
+  .celestialminititle {
+    font-family:'Amethyst';
+    font-size:18px;
+    color:#fff;
+    font-weight:300;
+    width:100%;
+    position:absolute;
+    top:250px;
+    text-align:center;
+    letter-spacing:20px;
+    text-transform:uppercase;
+    text-shadow:0px 5px 3px #888;
+    line-height:100%;
+  }
+  .celestialtitle {
+    font-family:'Amethyst';
+    font-size:90px;
+    color:#fff;
+    font-weight:300;
+    width:100%;
+    position:absolute;
+    top:280px;
+    text-align:center;
+    line-height:100%;
+    letter-spacing:25px;
+    text-transform:uppercase;
+    text-shadow:0px 5px 10px #888;
+    padding:20px;
+    background:rgba(900,900,900,0.2);
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+  }
+  .celestialubar {
+    width:100%;
+    background:#86B8B7;
+    border-bottom:1px solid #fff;
+    height:35px;
+    position:fixed;
+    line-height:100%;
+    top:0px; left:0px;
+    z-index:100;
+  }
+  .celestialubaricon {
+    width:60px;
+    height:60px;
+    padding:10px;
+    border:1px solid #fff;
+    position:fixed;
+    top:5px; left:50px;
+    border-radius:100%;
+    z-index:101;
+  }
+  .celestialubaricon img {
+    width:60px;
+    height:60px;
+    border-radius:100%;
+  }
+  .celestiallinks {
+    width:100%;
+    position:absolute;
+    top:425px;
+    text-align:center;
+  }
+  .celestiallinks a {
+    padding:5px;
+    line-height:100%;
+    border:1px solid #fff;
+    background:transparent;
+    font-family:Inconsolata;
+    font-weight:300;
+    text-shadow:0px 2px 4px #aaa;
+    text-transform:uppercase;
+    margin-left:2px;
+    margin-right:2px;
+    text-decoration:none;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:1px;
+    transition:all 0.5s ease-in-out;
+  }
+  .celestiallinks a:hover {
+    background:rgba(0,0,0,0.3);
+  }
+  .celestialbtitle {
+    overflow:hidden;
+    position:relative;
+    margin-bottom:-30px;
+    display:flex;
+  }
+  .celestialbtitlel {
+    border-bottom:1px dashed #fff;
+    position:relative;
+    margin-bottom:30px;
+    width:60px;
+  }
+  .celestialbtitlet {
+    font-weight:normal;
+    padding:15px;
+    border:1px solid #fff;
+    background:rgba(900,900,900,0.2);
+    font-family:'Amethyst';
+    font-size:25px;
+    color:#fff;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    text-align:right;
+    line-height:100%;
+    text-shadow:0px 5px 5px #888;
+  }
+  .celestialbtitlel2 {
+    border-bottom:1px dashed #fff;
+    position:relative;
+    margin-bottom:30px;
+    width:20px;
+    flex-grow:1;
+  }
+  .celestialbc {
+    width:858px;
+    display:flex;
+    margin:0 auto;
+    margin-bottom:50px;
+    padding:20px;
+    padding-top:50px;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+  }
+  .celestialboard {
+    width:400px;
+    height:230px;
+    position:relative;
+    margin-bottom:15px;
+  }
+  .celestialboardt {
+    text-align:right;
+    display:flex;
+  }
+  .celestialboardtt {
+    color:#fff;
+    line-height:100%;
+    font-family:'Roboto';
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:15px;
+    padding:10px;
+    border:1px solid #fff;
+    background:#86B8B7;
+    text-shadow:0px 3px 5px #888;
+    z-index:2;
+  }
+  .celestialboardtt a {
+    color:#fff;
+    font-family:'Roboto';
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:15px;
+    text-decoration:none;
+    text-shadow:0px 3px 5px #888;
+  }
+  .celestialboardl {
+    border-bottom:1px solid #fff;
+    position:relative;
+    margin-bottom:18px;
+    width:20px;
+    flex-grow:1;
+  }
+  .celestialboardl2 {
+    border-bottom:1px solid #fff;
+    position:relative;
+    margin-bottom:18px;
+    width:30px;
+  }
+  .celestialboardin {
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+    position:absolute;
+    left:0px;
+    top:18px;
+    height:210px;
+    width:398px;
+  }
+  .celestialboardin2 {
+    background:rgba(900,900,900,0.3);
+    position:absolute;
+    left:10px; top:10px;
+    height:191px;
+    width:379px;
+  }
+  .celestialblatest {
+    border:1px dashed #fff;
+    text-align:center;
+    font-family:Roboto;
+    font-weight:400;
+    font-size:8px;
+    background:rgba(900,900,900,0.6);
+    color:#444;
+    text-transform:uppercase;
+    padding:5px;
+    line-height:120%;
+    height:8px;
+    position:absolute;
+    top:17px; left:11px;
+    width:341px;
+    overflow:hidden;
+  }
+  .celestialblatest a {
+    color:#C9A747;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .celestialbread {
+    border:1px solid #fff;
+    position:absolute;
+    bottom:20px; left:21px;
+    padding:10px;
+    width:20px;
+    height:115px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:stretch;
+    background:#86B8B7;
+    text-shadow:0px 3px 5px #888;
+  }
+  .celestialbreadl {
+    width:1px;
+    min-height:35px;
+    background:#fff;
+  }
+  .celestialbreadi {
+    width:30px;
+    padding:10px;
+    color:#fff;
+    text-align:center;
+    line-height:100%;
+  }
+  .celestialbreadi i {
+    color:#fff;
+    font-size:20px;
+  }
+  .celestialbtopics {
+    font-size:15px;
+    width:15px;
+    height:15px;
+    padding:10px;
+    color:#fff;
+    line-height:100%;
+    text-shadow:0px 3px 5px #888;
+    position:absolute;
+    right:25px; top:53px;
+    background:#86B8B7;
+    border:1px solid #fff;
+  }
+  .celestialbreplies {
+    font-size:15px;
+    width:15px;
+    height:15px;
+    padding:10px;
+    color:#fff;
+    line-height:100%;
+    text-shadow:0px 3px 5px #888;
+    background:#86B8B7;
+    position:absolute;
+    right:25px; top:96px;
+    border:1px solid #fff;
+  }
+  .celestialbdesc {
+    width:260px;
+    height:80px;
+    background:rgba(900,900,900,0.6);
+    position:absolute;
+    top:53px; left:70px;
+    line-height:100%;
+  }
+  .celestialbdescin {
+    width:228px;
+    height:48px;
+    padding:10px;
+    border:1px solid #fff;
+    position:absolute;
+    top:5px; left:5px;
+    overflow:hidden;
+    line-height:100%;
+  }
+  .celestialbdescin2 {
+    width:228px;
+    height:50px;
+    position:absolute;
+    top:9px; left:9px;
+    padding-right:5px;
+    overflow:auto;
+    line-height:100%;
+    font-family:Roboto;
+    font-size:10px;
+    color:#444;
+    text-align:justify;
+  }
+  .celestialbdescin2 b {color:#C9A747;}
+  .celestialbdescin2::-webkit-scrollbar {width:2px;}
+  .celestialbdescin2::-webkit-scrollbar-thumb {background:#C9A747;}
+  .celestialbboards {
+    border-top:1px dashed #fff;
+    width:302px;
+    height:45px;
+    padding-top:5px;
+    display:flex;
+    flex-wrap:wrap;
+    position:absolute;
+    bottom:20px; right:25px;
+    overflow:auto;
+  }
+  .celestialbboardsb {
+    height:8px;
+    padding:5px;
+    border:1px solid #fff;
+    margin-right:3px;
+    margin-bottom:2px;
+    color:#fff;
+    font-family:Raleway;
+    font-weight:600;
+    letter-spacing:1px;
+    background:#86B8B7;
+    font-size:8px;
+    text-align:center;
+    text-transform:uppercase;
+    line-height:100%;
+  }
+  .celestialbst {
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-family:'Amethyst';
+    color:#fff;
+    font-size:25px;
+    letter-spacing:5px;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    background:rgba(900,900,900,0.2);
+    line-height:100%;
+    text-align:center;
+  }
+  .celestialbs {
+    padding:0px;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    height:450px;
+    position:relative;
+  }
+  .celestialbswelcome {
+    font-family:Roboto;
+    font-size:10px;
+    letter-spacing:5px;
+    width:100%;
+    color:#fff;
+    background:rgba(0,0,0,0.3);
+    text-align:center;
+    flex-grow:1;
+    padding:15px;
+    font-weight:300;
+    max-height:10px;
+    text-transform:uppercase;
+    line-height:100%;
+    position:relative;
+    top:0; left:0;
+  }
+  .celestialbswelcome a {
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+  }
+  .celestialbsinfo {
+    width:20%;
+    height:100px;
+    padding:30px;
+    background:#86B8B7;
+  }
+  .celestialbsinfot {
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    font-weight:400;
+    height:100px;
+    overflow:auto;
+    padding-right:5px;
+    line-height:13px;
+    text-transform:uppercase;
+    text-align:justify;
+  }
+  .celestialbsinfot::-webkit-scrollbar {width:2px;}
+  .celestialbsinfot::-webkit-scrollbar-thumb {background:#C9A747;}
+  .celestialbsinfot::-webkit-scrollbar-track {background:rgba(900,900,900,0.5);}
+  .celestialbsstats {
+    width:20%;
+    height:160px;
+    background:rgba(900,900,900,0.1);
+    display:flex;
+    flex-wrap:wrap;
+    overflow:hidden;
+  }
+  .celestialbsstatsin {
+    width:100%;
+    padding:15px;
+    padding-left:20px;
+    font-family:Roboto;
+    font-size:15px;
+    color:#fff;
+    font-weight:300;
+    text-align:left;
+    text-transform:uppercase;
+    line-height:110%;
+  }
+  .celestialbsstatsin i {
+    font-size:20px;
+    line-height:100%;
+    padding-right:10px;
+  }
+  .celestialbsonnow {
+    width:30%;
+    background:rgba(900,900,900,0.7);
+    padding:5px;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .celestialbsonnowt {
+    padding-left:10px;
+    font-family:Raleway;
+    font-size:15px;
+    font-weight:900;
+    padding:5px;
+    color:#C9A747;
+    text-transform:uppercase;
+    text-align:right;
+    border-bottom:1px dashed #C9A747;
+    letter-spacing:2px;
+    width:100%;
+    height:18px;
+  }
+  .celestialbsonnowt b {
+    font-weight:900;
+  }
+  .celestialbsonnowin {
+    width:100%;
+    padding:10px;
+    height:100px;
+    overflow:hidden;
+  }
+  .celestialbsonnowint {
+    font-family:Raleway;
+    font-weight:400;
+    text-align:justify;
+    color:#444;
+    text-transform:lowercase;
+    font-size:17px;
+    line-height:120%;
+    height:100px;
+    padding-right:10px;
+    overflow:auto;
+  }
+  .celestialbsonnowint::-webkit-scrollbar {width:2px;}
+  .celestialbsonnowint::-webkit-scrollbar-thumb {background:#C9A747;}
+  .celestialbsonnowint::-webkit-scrollbar-track {background:#fff;}
+  .celestialbsontoday {
+    width:20%;
+    flex-grow:1;
+    background:#86B8B7;
+    padding:5px;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .celestialbsontodayt {
+    font-family:Raleway;
+    font-size:15px;
+    font-weight:900;
+    padding:5px;
+    color:#fff;
+    text-transform:uppercase;
+    text-align:left;
+    border-bottom:1px dashed #fff;
+    letter-spacing:2px;
+    width:100%;
+    height:18px;
+    padding-left:10px;
+  }
+  .celestialbsontodayt b {
+    font-weight:900;
+  }
+  .celestialbsontodayin {
+    padding:10px;
+    height:100px;
+    overflow:hidden;
+  }
+   .celestialbsontodayint {
+    font-family:Inconsolata;
+    font-weight:400;
+    letter-spacing:1px;
+    text-align:justify;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:11px;
+    padding:5px;
+    line-height:100%;
+    height:90px;
+    padding-right:10px;
+    overflow:auto;
+  }
+  .celestialbsontodayint::-webkit-scrollbar {width:2px;}
+  .celestialbsontodayint::-webkit-scrollbar-thumb {background:#C9A747;}
+  .celestialbsontodayint::-webkit-scrollbar-track {background:rgba(900,900,900,0.6);}
+  .celestialbscensus {
+    width:100%;
+    position:relative;
+    display:flex;
+    flex-wrap:no-wrap;
+  }
+  .celestialbscensust {
+    font-family:'Roboto';
+    font-size:20px;
+    color:#C9A747;
+    border-right:5px solid #C9A747;
+    background:rgba(900,900,900,0.7);
+    text-align:center;
+    padding:5px;
+    height:20px;
+    padding-left:100px;
+    padding-right:10px;
+    line-height:100%;
+    font-weight:300;
+    text-transform:uppercase;
+  }
+  .celestialbscgroup1 {
+    flex-grow:18;
+    background:#8BC993;
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    height:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    line-height:100%;
+    text-transform:uppercase;
+  }
+  .celestialbscgroup2 {
+    flex-grow:32;
+    background:#F27038;
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    height:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    line-height:100%;
+    text-transform:uppercase;
+  }
+  .celestialbscgroup3 {
+    flex-grow:12;
+    background:#89B6F5;
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    height:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    line-height:100%;
+    text-transform:uppercase;
+  }
+  .celestialbscgroup4 {
+    flex-grow:21;
+    background:#A47DAB;
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    height:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    line-height:100%;
+    text-transform:uppercase;
+  }
+  .celestialbscgroup5 {
+    flex-grow:26;
+    background:#E8D974;
+    font-family:Roboto;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    height:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    line-height:100%;
+    text-transform:uppercase;
+  }
+  .celestialbsevent {
+    width:420px;
+    height:220px;
+    position:relative;
+    overflow:hidden;
+  }
+  .celestialbseventt {
+    font-family:'Raleway';
+    font-size:25px;
+    text-align:center;
+    padding-top:100px;
+    padding-bottom:100px;
+    line-height:100%;
+    color:#fff;
+    text-shadow: 0px 3px 5px #000;
+    font-weight:300;
+    letter-spacing:10px;
+    background:Rgba(0,0,0,0.3);
+  }
+  .celestialbseventt a {
+    font-family:'Raleway';
+    font-size:25px;
+    text-align:center;
+    padding-top:100px;
+    padding-bottom:100px;
+    line-height:100%;
+    color:#fff;
+    text-shadow: 0px 3px 5px #000;
+    font-weight:300;
+    letter-spacing:10px;
+    text-decoration:none;
+  }
+  .celestialbsclicks {
+    width:220px;
+    height:220px;
+    line-height:100%;
+    position:relative;
+    background:rgba(900,900,900,0.2);
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .celestialbsclick {
+    background:transparent;
+    padding:10px;
+    width:90px;
+    height:90px;
+    color:#fff;
+    text-align:center;
+    line-height:100%;
+  }
+  .celestialbsclick2 {
+    background:#C9A747;
+    padding:10px;
+    width:90px;
+    height:90px;
+    text-align:center;
+    color:#fff;
+    line-height:100%;
+  }
+  .celestialbsclick i {
+    font-size:40px;
+    padding:25px;
+    line-height:90%;
+    text-shadow: 0px 2px 5px #666;
+  }
+  .celestialbsclick2 i {
+    font-size:40px;
+    padding:25px;
+    line-height:90%;
+    text-shadow: 0px 2px 5px #666;
+  }
+  .celestialbsstaff {
+    height:220px;
+    width:180px;
+    background:rgba(900,900,900,0.5);
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .celestialbsstafft {
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+    line-height:90%;
+    font-family:'Inconsolata';
+    font-size:15px;
+    color:#fff;
+    border-bottom:1px solid #fff;
+    font-weight:300;
+    letter-spacing:3px;
+    background:#86B8B7;
+    width:101%;
+  }
+  .celestialbsstaffs {
+    width:100px;
+    height:90px;
+  }
+  .celestialbsstaffs img {
+    width:80px;
+    height:80px;
+    border:5px solid #fff;
+  }
+  .celestialbsstaffpics {
+    width:170px;
+    height:170px;
+    text-align:center;
+    border-spacing:10px;
+    margin-top:5px;
+  }
+  .celestialbsstaffpics img {
+    width:60px;
+    height:60px;
+    border:1px solid #fff;
+    padding:5px;
+    filter:grayscale(100%);
+    transition:all 0.5s ease-in-out;
+  }
+  .celestialbsstaffpics img:hover {
+    filter:grayscale(0%);
+  }
+</style>
+
+<body>
+  <div class="celestialhead">
+   <div class="celestialminititle">we are</div>
+    <div class="celestialtitle">CELESTIAL</div>
+    <div class="celestiallinks">
+      <a href="">HOME</a>
+      <a href="">SETTING</a>
+      <a href="">RULES</a>
+      <a href="">GROUPS</a>
+      <a href="">APPLICATION</a>
+      <a href="">CLAIMS</a>
+      <a href="">DIRECTORY</a>
+      <a href="">AFFILIATE</a>
+      <a href="">ADVERTISE</a>
+    </div>
+  </div>
+  <div class="celestialubar">
+    <div class="celestialubaricon">
+      <img src="http://placehold.it/100">
+    </div>
+  </div>
+  
+  <div id="wrapper">
+    <div id="innerwrapper">
+    
+      <div class="celestialbtitle">
+        <div class="celestialbtitlel"></div>
+        <div class="celestialbtitlet">
+          BEGINNINGS
+        </div>
+        <div class="celestialbtitlel2"></div>
+      </div>
+      
+      <div class="celestialbc">
+      
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              GUIDEBOOK
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">takashi shirogane</a> posted in <a href="">we could be friends</a> on august 18 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  <b>description</b> of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so,<b> today</b>, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">notification</div>
+              <div class="celestialbboardsb">lore</div>
+              <div class="celestialbboardsb">FAQ</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              BULLETIN
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">apollo</a> posted in <a href="">opening event</a> on august 10 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  description of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so, today, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">past events</div>
+              <div class="celestialbboardsb">activity checks</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              REGISTRAR
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">bella discordia</a> posted in <a href="">arabella discordia</a> on august 21 2017, 12:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  <b>description</b> of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so,<b> today</b>, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">faceclaim</div>
+              <div class="celestialbboardsb">roman</div>
+              <div class="celestialbboardsb">greek</div>
+              <div class="celestialbboardsb">egyptian</div>
+              <div class="celestialbboardsb">norse</div>
+              <div class="celestialbboardsb">japanese</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              Development
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">apollo</a> posted in <a href="">opening event</a> on august 10 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  description of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so, today, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">past events</div>
+              <div class="celestialbboardsb">activity checks</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="celestialbtitle">
+        <div class="celestialbtitlel"></div>
+        <div class="celestialbtitlet">
+          camp halfblood
+        </div>
+        <div class="celestialbtitlel2"></div>
+      </div>
+      
+      <div class="celestialbc">
+      
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              cabins
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">takashi shirogane</a> posted in <a href="">we could be friends</a> on august 18 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  <b>description</b> of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so,<b> today</b>, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">greek</div>
+              <div class="celestialbboardsb">roman</div>
+              <div class="celestialbboardsb">japanese</div>
+              <div class="celestialbboardsb">norse</div>
+              <div class="celestialbboardsb">egyptian</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              dining hall
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">apollo</a> posted in <a href="">opening event</a> on august 10 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  description of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so, today, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">campfire</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              camp grounds
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">bella discordia</a> posted in <a href="">arabella discordia</a> on august 21 2017, 12:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  <b>description</b> of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so,<b> today</b>, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">lake aquaris</div>
+              <div class="celestialbboardsb">forest</div>
+              <div class="celestialbboardsb">colosseum</div>
+              <div class="celestialbboardsb">archery range</div>
+              <div class="celestialbboardsb">half-blood hill</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="celestialboard">
+          <div class="celestialboardt">
+            <div class="celestialboardl"></div>
+            <div class="celestialboardtt">
+              elsewhere
+            </div>
+            <div class="celestialboardl2"></div>
+          </div>
+          <div class="celestialboardin">
+            <div class="celestialboardin2">
+              <div class="celestialblatest">
+                <a href="">apollo</a> posted in <a href="">opening event</a> on august 10 2017, 08:25pm
+              </div>
+            </div>
+            <div class="celestialbread">
+              <div class="celestialbreadl"></div>
+              <div class="celestialbreadi">
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+              </div>
+              <div class="celestialbreadl"></div>
+            </div>
+            <div class="celestialbtopics" title="10 topics">
+              <i class="fa fa-folder-o"></i>
+            </div>
+            <div class="celestialbreplies" title="10 replies">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="celestialbdesc">
+              <div class="celestialbdescin">
+                <div class="celestialbdescin2">
+                  description of the board here. this is a guidebook, put all your information thingies in here.
+                 ensure everyone knows what is on your site and stuff. It is the first day of 
+                  November and so, today, someone will die. I like pina coladas and getting caught in the rain.
+                </div>
+              </div>
+            </div>
+            <div class="celestialbboards">
+              <div class="celestialbboardsb">labyrinth</div>
+              <div class="celestialbboardsb">mount olympus</div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      
+      
+      <div class="celestialbst">
+    BOARD STATS
+  </div>
+  <div class="celestialbs">
+    <div class="celestialbswelcome">
+      welcome, <a href="">NAME MCNAME</a>
+    </div>
+    <div class="celestialbsinfo">
+      <div class="celestialbsinfot"><b>CELESTIAL</b> is a fantasy roleplay created by <b>Jaronart</b> and <b>JAR</b>. Skin was coded by <b>JARON</b>. The site opened on <b>Septemer 11, 2017</b>. Background image by pixiv artist
+        <b>idontknowhwothisis</b>. Celesial makes <b>No claims</b> on any art used on the site. All writing belongs to the respective members.
+      </div>
+    </div>
+    <div class="celestialbsstats">
+      <div class="celestialbsstatsin" style="border-bottom:1px solid #fff;">
+        <i class="fa fa-user-o"></i> <b>123</b> Members
+      </div>
+      <div class="celestialbsstatsin" style="border-bottom:1px solid #fff;">
+        <i class="fa fa-folder-o"></i> <b>324</b> Topics
+      </div>
+      <div class="celestialbsstatsin">
+        <i class="fa fa-comments-o"></i> <b>532</b> Replies
+      </div>
+    </div>
+    <div class="celestialbsonnow">
+      <div class="celestialbsonnowt"><b>21</b> Online Now</div>
+      <div class="celestialbsonnowin">
+        <div class="celestialbsonnowint">
+          Name mcname, here, stuffy mcgee, lionel richie, luke skywalker, han solo, darth
+          vader, jaron artolius eckbert III, ender wiggin, Wade Owen Watts, Hamilton Ford, Desperado Hickens, Holly Black, Jason Bourne,
+          Happy Gilmore, Bowen Watson, Sherlock Holmes, Hello World
+         
+        </div>
+      </div>
+    </div>
+    <div class="celestialbsontoday">
+      <div class="celestialbsontodayt"><b>40</b> ONLINE TODAY</div>
+      <div class="celestialbsontodayin">
+        <div class="celestialbsontodayint">
+          Name mcname, here, stuffy mcgee, lionel richie, luke skywalker, han solo, darth
+          vader, jaron artolius eckbert III, ender wiggin, Wade Owen Watts, Hamilton Ford, Desperado Hickens, Holly Black, Jason Bourne,
+          Happy Gilmore, Bowen Watson, Sherlock Holmes, Hello World
+         
+        </div>
+      </div>
+    </div>
+    <div class="celestialbscensus">
+      <div class="celestialbscensust">
+        Census
+      </div>
+      <div class="celestialbscgroup1">18 GREEKS</div>
+      <div class="celestialbscgroup2">32 Romans</div>
+      <div class="celestialbscgroup3">12 Norse</div>
+      <div class="celestialbscgroup4">21 Japanese</div>
+      <div class="celestialbscgroup5">26 egyptians</div>
+    </div>
+    <div class="celestialbsevent" style="background:url(https://media.giphy.com/media/aqOUrkDo2fdyE/source.gif);background-size:cover;">
+      <div class="celestialbseventt">
+        <a href="">EVENT NAME</a>
+      </div>
+    </div>
+    <div class="celestialbsclicks">
+      <a href="" title="recent posts">
+      <div class="celestialbsclick">
+        <i class="fa fa-quote-right"></i>
+      </div>
+      </a>
+      <div class="celestialbsclick2" title="member list">
+        <i class="fa fa-sort-alpha-asc"></i>
+      </div>
+      <div class="celestialbsclick2" title="top posters">
+        <i class="fa fa-street-view"></i>
+      </div>
+      <div class="celestialbsclick" title="last click">
+        <i class="fa fa-magic"></i>
+      </div>
+    </div>
+    <div class="celestialbsstaff">
+      <div class="celestialbsstaffin">
+        <div class="celestialbsstafft">
+          MEET THE STAFF
+        </div>
+        <table class="celestialbsstaffpics">
+          <tr><td><img src="https://thumbs.imgbox.com/7c/23/GVtOMbSh_b.jpg"></td>
+            <td><img src="https://thumbs.imgbox.com/7c/23/GVtOMbSh_b.jpg"></td>
+          </tr>
+          <tr><td><img src="https://thumbs.imgbox.com/7c/23/GVtOMbSh_b.jpg"></td>
+            <td><img src="https://thumbs.imgbox.com/7c/23/GVtOMbSh_b.jpg"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+    
+  </div>
+</body>
