@@ -1,0 +1,1387 @@
+<style>
+body {
+  background:#111;
+}
+.jrebsideimg {
+  width:300px;
+  height:100%;
+  position:fixed;
+  top:0; left:0;
+  background:url(https://i.pinimg.com/564x/0e/e6/25/0ee625b539b61f3e82204d7ff98898be.jpg);
+  background-size:cover;
+  background-position:center center;
+}
+.jrebtitle {
+  position:absolute;
+  top:290px; left:290px;
+  line-height:110px;;
+  font-size:150px;
+  color:#cc3322;
+  font-family:Poppins;
+  font-weight:700;
+  letter-spacing:-5px;
+}
+
+/**icon**/
+.jrebicon {
+  width:90px;
+  height:90px;
+  overflow:hidden;
+  position:absolute;
+  top:25px; left:360px;
+  border:15px solid #fff;
+  box-shadow:-5px -5px 0px #cc3322, 5px 5px 0px #888;
+  border-radius:100%;
+}
+.jrebicon img {
+  width:90px;
+}
+
+
+/**user quote**/
+.jrebquotebr {
+  position:absolute;
+  top:135px; left:320px;
+  font-family:Times New Roman;
+  color:#666;
+  font-size:120px;
+  font-weight:900;
+  letter-spacing:40px;
+}
+.jrebquotet {
+  width:115px;
+  height:100px;
+  position:absolute;
+  top:31.5px; left:45px;
+  font-family:Poppins;
+  font-weight:600;
+  font-style:italic;
+  line-height:13px;
+  font-size:10px;
+  color:#fff;
+  text-transform:lowercase;
+  text-align:center;
+  letter-spacing:0px;
+  overflow:hidden;
+}
+
+
+/***welcome message**/
+.jrebhi {
+  width:510px;
+  padding:5px;
+  padding-left:0px;
+  border-bottom:5px solid #cc3322;
+  position:absolute;
+  top:35px; left:530px;
+  font-family:Poppins;
+  font-weight:900;
+  font-size:20px;
+  color:#fff;
+  text-transform:uppercase;
+  line-height:100%;
+}
+.jrebhi a {
+  color:#cc3322;
+  text-decoration:none;
+  font-family:Poppins;
+  font-weight:900;
+  margin-left:5px; margin-right:5px;
+}
+
+
+/***menu***/
+
+.jrebmenu {
+  position:absolute;
+  bottom:12px; right:15px;
+  width:100px;
+  display:flex;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+.jrebmenusel {
+  margin-bottom:3px;
+  background:#111;
+  color:#fff;
+  font-family:Poppins;
+  font-weight:700;
+  padding:5px;
+  padding-left:10px;
+  padding-right:10px;
+  text-align:center;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:crosshair;
+  transition:0.1s ease-in-out;
+}
+.jrebmenu a {
+  font-family:Poppins;
+  font-weight:700;
+  color:#fff;
+  text-decoration:none;
+}
+.jrebmenusel:hover {
+  background:#cc3322;
+  color:#fff;
+  border-right:5px solid #fff;
+}
+
+/**user links**/
+.jrebuserl {
+  width:200px;
+  line-height:100%;
+  position:absolute;
+  top:73px; left:840px;
+  color:#ccc;
+  font-size:15px;
+  display:flex;
+  justify-content:flex-end;
+}
+.jrebuserl a {
+  color:#ccc;
+  font-family:Poppins;
+  text-transform:uppercase;
+  font-size:15px;
+  font-weight:900;
+  line-height:100%;
+}
+.jrebuserlin {
+  width:15px;
+  height:15px;
+  padding:5px;
+  text-align:center;
+  margin-right:2px;
+  transition:all 0.1s ease-in-out;
+  cursor:crosshair;
+}
+.jrebuserlin:hover {
+  color:#fff;
+}
+
+
+/**log in/out**/
+.jreblogin {
+  width:100px;
+  position:absolute;
+  top:73px; left:530px;
+  display:flex;
+  jsutify-content:flex-start;
+}
+.jreblogin a {
+  color:#ccc;
+  font-family:Poppins;
+  text-transform:uppercase;
+  font-size:15px;
+  font-weight:900;
+  line-height:100%;
+}
+
+
+/**BIG BOMB**/
+.jrebbomb {
+  color:#333;
+  font-size:430px;
+  position:absolute;
+  top:155px; left:410px;
+  z-index:-1;
+  transform:rotate(-45deg);
+}
+
+/**subtitle & description**/
+.jrebsubtitle {
+  position:absolute;
+  top:110px; left:530px;
+  width:510px;
+  text-align:right;
+  color:#fff;
+  font-family:Poppins;
+  font-weight:900;
+  font-size:30px;
+  letter-spacing:1px;
+}
+.jrebdesc {
+  width:360px;
+  max-height:100px;
+  position:absolute;
+  top:150px;
+  left:680px;
+  font-family:Poppins;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:600;
+  font-size:9px;
+  line-height:12px;
+  color:#ccc;
+  text-align:right;
+  overflow:auto;
+  padding-right:10px;
+}
+.jrebdesc::-webkit-scrollbar {width:10px;}
+.jrebdesc::-webkit-scrollbar-thumb {background:#cc3322;}
+.jrebdesc b {
+  color:#cc3322;
+}
+
+/**staff**/
+.jrebstaff {
+  font-family:Poppins;
+  font-weight:900;
+  font-size:45px;
+  color:#cc3322;
+  position:absolute;
+  top:275px; left:950px;
+  text-transform:uppercase;
+  transform:rotate(45deg);
+}
+.jrebstaffc {
+  width:390px;
+  display:flex;
+  justify-content:flex-end;
+  height:130px;
+  position:absolute;
+  left:580px; top:265px;
+}
+.jrebstaffs {
+  position:relative;
+  margin-left:10px;
+  transition:all 0.2s ease-in-out;
+}
+.jrebstafficon {
+  width:70px;
+  height:70px;
+  border:10px solid #fff;
+  margin:0 auto;
+  border-radius:100%;
+  overflow:hidden;
+  transform:rotate(10deg);
+  transition:all 0.2s ease-in-out;
+}
+.jrebstafficon img {
+  width:70px;
+  height:70px;
+}
+.jrebstaffn {
+  background:#cc3322;
+  color:#fff;
+  text-align:center;
+  font-family:Poppins;
+  font-weight:600;
+  font-size:10px;
+  padding:3px;
+  line-height:100%;
+  letter-spacing:2px;
+  margin-top:10px;
+  transition:all 0.2s ease-in-out;
+  transform:rotate(-10deg);
+}
+.jrebstaffs:hover .jrebstaffn {
+  transform:rotate(10deg);
+}
+.jrebstaffs:hover .jrebstafficon {
+  transform:rotate(-10deg);
+}
+
+/**arrow & event**/
+.jrebarrow {
+  width:470px;
+  height:100px;
+  background:#cc3322;
+  position:absolute;
+  top:400px; left:580px;
+  -webkit-clip-path: polygon(0 10%, 90% 10%, 90% 0, 100% 50%, 90% 100%, 90% 90%, 0 90%);
+clip-path: polygon(0 10%, 90% 10%, 90% 0, 100% 50%, 90% 100%, 90% 90%, 0 90%);
+overflow:hidden;
+}
+.jrebeventt {
+  width:420px;
+  font-family:Poppins;
+  font-weight:900;
+  letter-spacing:10px;
+  font-size:55px;
+  line-height:100%;
+  color:#fff;
+  position:absolute;
+  bottom:0px; left:0px;
+  text-align:right;
+}
+.jrebeventin {
+  width:320px;
+  height:120px;
+  position:absolute;
+  top:490px; left:650px;
+  border:5px solid #ccc;
+  overflow:hidden;
+}
+.jrebeventb {
+  width:320px;
+  height:120px;
+  background:rgba(0,0,0,0.7);
+  position:absolute;
+  top:-120px; left:0;
+  transition:all 0.3s ease-in-out;
+}
+.jrebeventin:hover .jrebeventb {
+  top:0px; left:0;
+}
+.jrebeventdesc {
+  width:300px;
+  height:100px;
+  padding-right:10px;
+  position:absolute;
+  top:10px; left:10px;
+  overflow:auto;
+  font-family:Roboto;
+  line-height:13px;
+  font-size:10px;
+  color:#fff;
+  text-align:justify;
+}
+.jrebeventdesc b {
+  color:#cc3322;
+}
+.jrebeventdesct {
+  font-size:15px;
+  color:#fff;
+  text-decoration:none;
+  line-height:100%;
+  float:left;
+  background:#cc3322;
+  font-family:Poppins;
+  font-size:10px;
+  font-weight:900;
+  padding:10px;
+  margin-right:10px;
+  margin-bottom:5px;
+}
+.jrebeventdesct a {
+  text-decoration:none;
+  color:#fff;
+  font-family:Poppins;
+  font-weight:900;
+  font-size:15px;
+}
+.jrebeventdesc::-webkit-scrollbar {width:10px;}
+.jrebeventdesc::-webkit-scrollbar-thumb {background:#cc3322;}
+
+
+/**wrapper**/
+#wrapper {
+  width:760px;
+  background:#333;
+  position:absolute;
+  top:620px; left:300px;
+}
+
+/**category headers**/
+.jrebcath {
+  padding:40px;
+  background:#cc3322;
+  text-align:right;
+  color:#fff;
+  font-family:Poppins;
+  font-weight:700;
+  font-size:10px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  border-top:10px solid #222;
+  margin-top:20px;
+}
+
+/**boards**/
+.jrebboardsc {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+  padding:20px;
+  margin-top:5px;
+}
+.jrebboard {
+  width:350px;
+  height:200px;
+  background:#222;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:5px;
+}
+.jrebboardr {
+  width:350px;
+  background:#cc3322;
+  position:absolute;
+  bottom:0px; left:0px;
+  height:40px;
+  overflow:hidden;
+}
+.jrebboardt {
+  font-family:Poppins;
+  font-weight:700;
+  color:#fff;
+  letter-spacing:-2px;
+  position:absolute;
+  bottom:-5px; left:-2px;
+  font-size:28px;
+  line-height:100%;
+}
+.jrebboardt a {
+  font-family:Poppins;
+  font-weight:700;
+  color:#fff;
+  letter-spacing:-2px;
+  font-size:28px;
+  line-height:100%;
+  text-decoration:none;
+}
+.jrebboardread {
+  position:absolute;
+  bottom:15px; right:15px;
+  width:50px;
+  height:50px;
+  padding:5px;
+  text-align:center;
+  font-size:50px;
+  line-height:100%;
+  background:#ccc;
+  color:#cc3322;
+  border:5px solid #fff;
+  border-radius:5px;
+  z-index:2;
+}
+.jrebboardtop {
+  position:absolute;
+  top:12px; right:15px;
+  width:65px;
+  height:25px;
+  padding-bottom:10px;
+  padding-top:10px;
+  color:#fff;
+  font-size:25px;
+  text-align:center;
+  line-height:100%;
+  font-family:Poppins;
+  font-weight:700;
+  border-left:5px solid #cc3322;
+  border-bottom:5px solid #cc3322;
+  transition:all 0.2s ease-in-out;
+}
+.jrebboardtop:hover {
+  color:#111;
+  background:#fff;
+}
+.jrebboardrep {
+  position:absolute;
+  top:62px; right:15px;
+  width:65px;
+  height:25px;
+  padding-bottom:10px;
+  padding-top:10px;
+  color:#fff;
+  font-size:25px;
+  text-align:center;
+  line-height:100%;
+  font-family:Poppins;
+  font-weight:700;
+  border-right:5px solid #cc3322;
+}
+.jrebboardrep:hover {
+  color:#111;
+  background:#fff;
+}
+.jrebboardthread {
+  width:245px;
+  height:20px;
+  position:absolute;
+  top:12px; left:12px;
+  border-bottom:2px solid #666;
+  line-height:100%;
+  overflow:hidden;
+}
+.jrebboardthreadt {
+  font-family:Poppins;
+  font-weight:900;
+  color:#fff;
+  line-height:20px;
+  font-size:11px;
+  letter-spacing:2px;
+  text-align:right;
+  text-transform:uppercase;
+}
+.jrebboardthreadt a {
+  font-family:Poppins;
+  font-weight:900;
+  color:#fff;
+  line-height:20px;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:all 0.1s ease-in-out;
+}
+.jrebboardthreadt a:hover {
+  color:#ccc;
+}
+.jrebboarddate {
+  position:absolute;
+  top: 33px; left:12px;
+  font-family:Poppins;
+  font-size:9px;
+  color:#fff;
+  font-weight:400;
+  height:20px; width:245px;
+  line-height:20px;
+  overflow:hidden;
+}
+.jrebboarddate a {
+  text-decoration:none;
+  font-weight:700;
+  transition:all 0.1s ease-in-out;
+  color:#cc3322;
+}
+.jrebboarddesc {
+  padding:15px;
+  position:absolute;
+  top:55px; left:12px;
+  width:204px;
+  height:40px;
+  border-left:15px solid #cc3322;
+}
+.jrebboarddescin {
+  width:214px;
+  height:50px;
+  position:absolute;
+  top:10px; left:10px;
+  overflow:auto;
+  font-family:Roboto;
+  color:#fff;
+  font-size:10px;
+  font-weight:400;
+  text-align:justify;
+  line-height:13px;
+  padding-right:5px;
+}
+.jrebboarddescin::-webkit-scrollbar {width:5px;}
+.jrebboarddescin::-webkit-scrollbar-thumb {background:#666;border:1px solid #333;}
+.jrebboarddescin::-webkit-scrollbar-track {background:#333;}
+.jrebsubboards {
+  width:240px;
+  height:25px;
+  position:absolute;
+  top:128px; left:12px;
+  line-height:100%;
+  overflow:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  align-items:center;
+}
+.jrebsubboards::-webkit-scrollbar {display:none}
+.jrebsubboardsin{
+  font-family:Poppins;
+  font-weight:700;
+  font-size:10px;
+  line-height:100%;
+  height:10px;
+  border:2px solid #ccc;
+  color:#fff;
+  text-align:center;
+  padding:2px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-right:5px;
+  margin-top:5px;
+}
+
+
+/**board stats**/
+.jrebstatst {
+  width:100%;
+  height:95px;
+  background:#cc3322;
+  position:relative;
+  overflow:hidden;
+  margin-top:10px;
+  border-top:20px solid #222;
+}
+.jrebstatsin {
+  width:100%;
+  position:absolute;
+  line-height:100%;
+  bottom:-18px; left:0px;
+  text-align:center;
+  letter-spacing:-5px;
+  font-family:Poppins;
+  font-weight:700;
+  color:#fff;
+  font-size:80px;
+}
+.jrebstats {
+  width:760px;
+  height:450px;
+  background:#222;
+  position:relative;
+}
+.jrebnewuser {
+  width:392px;
+  padding:10px;
+  background:#cc3322;
+  position:absolute;
+  top:10px; left:0px;
+  font-family:Poppins;
+  color:#fff;
+  text-align:right;
+  font-size:15px;
+  font-weight:700;
+  line-height:100%;
+  border-radius:0px 100px 100px 0px;
+  padding-right:20px;
+}
+.jrebnewuser a {
+  text-decoration:none;
+  color:#222;
+}
+.jrebonline {
+  width:411px;
+  height:200px;
+  position:absolute;
+  top:55px; left:10px;
+  background:#333;
+  border-radius:10px;
+  overflow:hidden;
+}
+.jrebonlinet {
+  width:350px;
+  background:#cc3322;
+  padding:5px;
+  line-height:100%;
+  text-align:right;
+  font-family:Poppins;
+  font-weight:700;
+  position:absolute;
+  right:-2px; bottom:-18px;
+  color:#fff;
+  font-size:50px;
+  border-radius:100px 0px 0px 0px;
+  border:2px solid #666;
+}
+.jrebonlinein {
+  width:365px;
+  height:107px;
+  overflow:auto;
+  position:absolute;
+  top:20px; left:20px;
+  border-radius:5px;
+  font-family:Poppins;
+  font-size:18px;
+  font-weight:400;
+  color:#ccc;
+  line-height:22px;
+  text-align:justify;;
+  text-transform:lowercase;
+  padding-right:10px;
+}
+.jrebonlinein a {
+  text-decoration:none;
+  font-family:Poppins;
+  font-size:18px;
+  color:#ccc;
+}
+.jrebonlinein::-webkit-scrollbar {width:10px;}
+.jrebonlinein::-webkit-scrollbar-thumb {background:#cc3322;}
+.jrebonlines {
+  font-family:Roboto;
+  font-size:10px;
+  color:#fff;
+  position:absolute;
+  top:137px; left:15px;
+  text-transform:uppercase;
+  width:385px;
+  text-align:right;
+  letter-spacing:1px;
+}
+.jrebcensus {
+  width:315px;
+  height:241px;
+  border-radius:10px;
+  border:2px solid #666;
+  position:absolute;
+  top:10px; left:430px;
+  overflow:hidden;
+}
+.jrebcensusin {
+  position:absolute;
+  top:10px; left:10px;
+  overflow:hidden;
+  display:flex;
+  align-content:center;
+  justify-content:space-evenly;
+}
+.jrebcensussub {
+  width:295px;
+  margin-top:5px;
+  margin-left:10px;
+  display:flex;
+  overflow:hidden;
+}
+.jrebcensussubin {
+  padding:10px;
+  font-family:Poppins;
+  color:#fff;
+  text-align:left;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  line-height:100%;
+  border-radius:10px 50px 50px 10px;
+}
+.jrebcensussubin2 {
+  padding:10px;
+  font-family:Poppins;
+  color:#fff;
+  text-align:left;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  line-height:100%;
+}
+.jrebcensust {
+  padding:20px;
+  background:#cc3322;
+  color:#fff;
+  font-family:Poppins;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:2px;
+  line-height:100%;
+  margin-bottom:15px;
+  border-bottom:2px solid #666;
+}
+.jrebontoday {
+  width:230px;
+  height:172px;
+  border-radius:10px;
+  border:2px solid #666;
+  position:absolute;
+  top:265px; left:10px;
+}
+.jrebontodayin {
+  position:absolute;
+  top:15px; left:15px;
+  height:140px;
+  width:200px;
+  padding-right:10px;
+  font-family:Roboto;
+  font-size:10px;
+  color:#ccc;
+  text-transform:uppercase;
+  font-weight:700;
+  overflow:auto;
+  text-align:justify;
+}
+.jrebontodayin::-webkit-scrollbar {width:5px;}
+.jrebontodayin::-webkit-scrollbar-thumb {background:#cc3322;}
+.jrebqclick {
+  width:175px;
+  height:175px;
+  position:absolute;
+  left:255px; top:265px;
+  background:#3c3c3c;
+  overflow:hidden;
+}
+.jrebqclickin {
+  width:47.5px;
+  height:45.5px;
+  position:absolute;
+  color:#fff;
+  font-size:40px;
+  padding:20px;
+  text-align:center;
+  padding-top:22px;
+}
+.jrebsort {
+  padding:10px;
+  font-family:Poppins;
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:10px;
+  text-align:center;
+  color:#fff;
+  position:absolute;
+  top:265px; left:440px;
+  width:290px;
+  background:#cc3322;
+  border-radius:10px;
+}
+.jrebtotals {
+  width:310px;
+  height:131px;
+  position:absolute;
+  top:309px; left:440px;
+  display:flex;
+  flex-wrap:no-wrap;
+  background:#3c3c3c;
+  border-radius:10px;
+}
+.jrebtotalsin {
+  flex-grow:1;
+  flex-shrink:1;
+  position:relative;
+  text-align:center;
+  font-family:Poppins;
+  font-weight:600;
+  padding-top:40px;
+  font-size:28px;
+  color:#fff;
+  line-height:100%;
+}
+.jrebtotalsint {
+  font-family:Poppins;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#fff;
+  padding-top:5px;
+  text-align:center;
+  font-weight:400;
+  text-transform:uppercase;
+  flex-grow:1;
+  flex-shrink:1;
+}
+
+
+/**cbox**/
+.jrebcbox {
+  width:760px;
+  height:280px;
+  position:relative;
+  margin-bottom:30px;
+}
+.jrebcboxb {
+  width:450px;
+  height:270px;
+  position:absolute;
+  top:20px; left:20px;
+  border:1px solid #fff;
+  vertical-align:center;
+  color:#fff;
+  text-align:center;
+  font-family:Poppins;
+}
+.jrebdiscord {
+  width:60px;
+  height:60px;
+  padding:5px;
+  position:absolute;
+  top:20px; left:483px;
+  background:#cc3322;
+  padding-bottom:3px;
+  color:#fff;
+  line-height:100%;
+  border-radius:10px;
+}
+.jrebdiscord img {
+  width:60px;
+  height:60px;
+}
+.jrebrulest {
+  width:160px;
+  height:40px;
+  padding:10px;
+  position:absolute;
+  top:20px; right:0px;
+  font-family:Poppins;
+  letter-spacing:3px;
+  padding-right:20px;
+  font-size:30px;
+  background:#cc3322;
+  color:#fff;
+  text-align:right;
+  border:5px solid #ccc;
+  border-right:0px;
+  line-height:44px;
+  border-radius:100px 0px 0px 100px;
+}
+.jrebrules {
+  width:245px;
+  height:188px;
+  padding-right:10px;
+  position:absolute;
+  top:100px; left:495px;
+  font-family:Roboto;
+  font-size:11px;
+  color:#fff;
+  text-align:justify;
+  line-height:13px;
+  overflow:auto;
+}
+.jrebrules b {
+  font-family:Poppins;
+  font-weight:700;
+  letter-spacing;1px;
+  font-size:18px;
+}
+.jrebrules::-webkit-scrollbar {width:10px;}
+.jrebrules::-webkit-scrollbar-thumb {background:#cc3322;}
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,900|Poppins:400,600,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  
+  <div class="jrebsideimg">
+    <div class="jrebmenu">
+      <a href=""><div class="jrebmenusel">HOME</div></a>
+      <a href=""><div class="jrebmenusel">RULES</div></a>
+      <a href=""><div class="jrebmenusel">PREMISE</div></a>
+      <a href=""><div class="jrebmenusel">DIRECTORY</div></a>
+      <a href=""><div class="jrebmenusel">APPLICATION</div></a>
+      <a href=""><div class="jrebmenusel">FACECLAIM</div></a>
+      <a href=""><div class="jrebmenusel">WANTEDS</div></a>
+      <a href=""><div class="jrebmenusel">AFFILIATE</div></a>
+    </div>
+  </div>
+  <a href="siteurlhere"><div class="jrebtitle"><span style="letter-spacing:-5px;"><span style="color:#fff;">R</span>EB</span><br><span style="letter-spacing:7px;">E<span style="color:#fff">L</span>U</span><br><span style="letter-spacing:-5px;">TIO<span style="color:#fff;">N</span></span></div></a>
+  <div class="jrebicon">
+    <img src="https://5-s.imgbox.com/d90lAJlg.jpg">
+  </div>
+  <div class="jrebquotebr">
+    { }
+    <table class="jrebquotet">
+      <tr><td style="">this is a text quote yeah baby</td></tr>
+    </table>
+  </div>
+  <div class="jrebbomb">
+    <i class="fa fa-bomb"></i>
+  </div>
+  <div class="jrebhi">'SUP, <a href="">KEITH KOGANE</a>!</div>
+  <div class="jreblogin">
+    <a href=""><div class="jrebuserlin"><i class="fa fa-user-plus"></i></div></a>
+    <a href=""><div class="jrebuserlin"><i class="fa fa-sign-out"></i></div></a>
+  </div>
+  <div class="jrebuserl">
+    <a href=""><div class="jrebuserlin"><i class="fa fa-gear"></i></div></a>
+    <a href=""><div class="jrebuserlin"><i class="fa fa-paper-plane"></i></div></a>
+    <a href=""><div class="jrebuserlin"><i class="fa fa-inbox"></i></div></a>
+    <a href=""><div class="jrebuserlin"><i class="fa fa-bell-o"></i></div></a>
+    <a href=""><div class="jrebuserlin"><i class="fa fa-shopping-basket"></i></div></a>
+  </div>
+  <div class="jrebsubtitle">
+    WE WILL <span style="color:#cc3322;">FIGHT</span>.
+  </div>
+  <div class="jrebdesc">
+    In <b>flanders fields</b> the poppies blow, between the crosses, row by row. That mark our place and
+    in the <b>sky</b>, the larks still bravely singing, <b>fly</b>. Scarce heard amid the <b>guns</b> below.
+    <p>We are the <b>dead</b>. Short days ago, we lived, felt dawn, saw sunset glow. <b>loved, and were loved</b>, and
+      now we lie in flanders fields.
+  </div>
+  <div class="jrebstaff">STAFF<span style="color:#ccc">.</span></div>
+  <div class="jrebstaffc">
+    <div class="jrebstaffs">
+      <div class="jrebstafficon">
+        <img src="https://8-s.imgbox.com/SJjPN2D4.jpg">
+      </div>
+      <div class="jrebstaffn">LANCE</div>
+    </div>
+    <div class="jrebstaffs">
+      <div class="jrebstafficon">
+        <img src="https://78.media.tumblr.com/cd56cbef508720bc15819ecfea99ac40/tumblr_ol4ti1d7X51spxtflo6_500.png">
+      </div>
+      <div class="jrebstaffn">PIDGE</div>
+    </div>
+    <div class="jrebstaffs">
+      <div class="jrebstafficon">
+        <img src="https://s-media-cache-ak0.pinimg.com/236x/e9/40/e1/e940e1a94d99cae05a4afc26b8eb8919--voltron-hunk-form.jpg">
+      </div>
+      <div class="jrebstaffn">HUNK</div>
+    </div>
+    <div class="jrebstaffs">
+      <div class="jrebstafficon">
+        <img src="http://78.media.tumblr.com/db6c7e00dba8470a351cac1233b179f2/tumblr_ovywvcn49z1vt38uho3_400.jpg">
+      </div>
+      <div class="jrebstaffn">ALLURA</div>
+    </div>
+  </div>
+  <div class="jrebarrow">
+    <div class="jrebeventt"><span style="color:#111;">E</span>VENT</div>
+  </div>
+  <div class="jrebeventin" style="background:url(https://media.giphy.com/media/rpA8qJOIOZFni/giphy.gif);background-size:cover;background-position:center center;">
+    <div class="jrebeventb">
+      <div class="jrebeventdesc">
+        <div class="jrebeventdesct"><a href="">FIGHT CLUB</a></div>
+        Welcome to <b>Fight Club</b>. The first rule of Fight Club is: you do not talk about Fight Club. The second rule of Fight Club is: you DO NOT talk about Fight Club! Third rule of Fight Club: someone yells "stop!", goes limp, taps out, the fight is over.
+        <br><br>
+        <div class="jrebeventdesct"><a href="">NIGHT CRIME</a></div>
+        Take up our quarrel with the foe! To you, our flailing hands we throw the torch! Be it yours to hold up high, if ye have faith in us who die. We shall not sleep, though poppies blow in Flanders Fields.
+      </div>
+    </div>
+  </div>
+  
+  <div id="wrapper">
+    <div class="jrebcath">YOU TALK OF <span style="color:#111">BATTLES</span> TO BE WON</div>
+    
+    <div class="jrebboardsc">
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            INFORMATION
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          3
+        </div>
+        <div class="jrebboardrep" title="replies">
+          27
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">THIS IS THE BEGINNER STUFF</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">SHIROGANE TAKAHASHI</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            BULLETINS
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb" style="color:#000;"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          6
+        </div>
+        <div class="jrebboardrep" title="replies">
+          10
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">08. TOPIC MODERATION</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">ALLURA</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            APPLICATIONS
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          32
+        </div>
+        <div class="jrebboardrep" title="replies">
+          37
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">PEPPER SHAKER, MUSKETEER RECRUIT</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">PEPPER SHAKER</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            SITE ROSTER
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          44
+        </div>
+        <div class="jrebboardrep" title="replies">
+          60
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">JAMIE SWANN, VIPERS MINIBOSS</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">PIDGE GUNDERSON</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="jrebcath">YOU TALK OF <span style="color:#111">BATTLES</span> TO BE WON</div>
+    
+    <div class="jrebboardsc">
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            INFORMATION
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          3
+        </div>
+        <div class="jrebboardrep" title="replies">
+          27
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">THIS IS THE BEGINNER STUFF</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">SHIROGANE TAKAHASHI</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            BULLETINS
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb" style="color:#000;"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          6
+        </div>
+        <div class="jrebboardrep" title="replies">
+          10
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">08. TOPIC MODERATION</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">ALLURA</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+      <div class="jrebboard">
+        <div class="jrebboardr">
+          <div class="jrebboardt">
+            APPLICATIONS
+          </div>
+        </div>
+        <div class="jrebboardread">
+          <i class="fa fa-bomb" style="color:#000;"></i>  
+        </div>
+        <div class="jrebboardtop" title="topics">
+          32
+        </div>
+        <div class="jrebboardrep" title="replies">
+          37
+        </div>
+        <div class="jrebboardthread">
+          <div class="jrebboardthreadt">
+            <a href="">PEPPER SHAKER, MUSKETEER RECRUIT</a>
+          </div>
+        </div>
+        <div class="jrebboarddate">BY <a href="">PEPPER SHAKER</a> ON YESTERDAY AT 12:54PM</div>
+        <div class="jrebboarddesc">
+          <div class="jrebboarddescin">
+            This is the description of the board. Y'know — the one that contains anything and everything you need to know. Flanders fields and whatnot.
+            Talk to me, baby. I'm going blind from this sweet, sweet craving whoa-oh. Let's lose our minds and go fucking crazy.
+          </div>
+        </div>
+        <div class="jrebsubboards">
+          <div class="jrebsubboardsin">RULES</div>
+          <div class="jrebsubboardsin">INFORMATION</div>
+          <div class="jrebsubboardsin">GANGS</div>
+          <div class="jrebsubboardsin">SETTING</div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="jrebstatst">
+      <div class="jrebstatsin">
+        <span style="color:#000;">B</span>OARD <span style="color:#000;">S</span>TATS
+      </div>
+    </div>
+    <div class="jrebstats">
+      <div class="jrebnewuser">
+        WELCOME, <a href="">SHIROGANE TAKASHI</a>
+      </div>
+      <div class="jrebonline">
+        <div class="jrebonlinet">
+          ONLINE
+        </div>
+        <div class="jrebonlines">5 members, 12 guests, 0 anons</div>
+        <div class="jrebonlinein">
+          PEPPER SHAKER, SHIROGANE TAKASHI, KEITH KOGANE, PIDGE GUNDERSON, ALLURA, CORAN, MATT HOLT
+          , DWAYNE JOHNSON, holly black, gordon ramsay, hunk garrett, alabama shakes, sean kendrick,
+          matthew malvern, puck conolly
+        </div>
+      </div>
+      <div class="jrebcensus">
+        <div class="jrebcensust">CENSUS</div>
+        <table class="jrebcensusin">
+          <div class="jrebcensussub">
+            <div class="jrebcensussubin" style="background:#ff0000;flex-grow:15;">MUSKETEERS</div>
+            <div class="jrebcensussubin2" style="flex-grow:6;">15</div>
+          </div>
+          <div class="jrebcensussub">
+            <div class="jrebcensussubin" style="background:#bb33aa;flex-grow:20;">DREADNAUTS</div>
+            <div class="jrebcensussubin2" style="flex-grow:1;">20</div>
+          </div>
+          <div class="jrebcensussub">
+            <div class="jrebcensussubin" style="background:#aabb33;flex-grow:18;">VIPER HEAD</div>
+            <div class="jrebcensussubin2" style="flex-grow:3;">18</div>
+          </div>
+          <div class="jrebcensussub">
+            <div class="jrebcensussubin" style="background:#ffaa33;flex-grow:12;">YELLOW JACKETS</div>
+            <div class="jrebcensussubin2" style="flex-grow:9;">12</div>
+          </div>
+        </table>
+      </div>
+      <div class="jrebontoday">
+        <div class="jrebontodayin">
+          PEPPER SHAKER, SHIROGANE TAKASHI, KEITH KOGANE, PIDGE GUNDERSON, ALLURA, CORAN, MATT HOLT
+          , DWAYNE JOHNSON, holly black, gordon ramsay, hunk garrett, alabama shakes, sean kendrick,
+          matthew malvern, puck conolly
+        </div>
+      </div>
+      <div class="jrebqclick">
+        <div class="jrebqclickin" style="position:absolute;top:0;left:0px;">
+          <i class="fa fa-universal-access"></i>
+        </div>
+        <div class="jrebqclickin" style="position:absolute;top:0;right:0;background:#cc3322;">
+          <i class="fa fa-street-view"></i>
+        </div>
+        <div class="jrebqclickin" style="position:absolute;top:87.5px;left:0;background:#cc3322;">
+          <i class="fa fa-users"></i>
+        </div>
+        <div class="jrebqclickin" style="position:absolute;top:87.5px;left:87.5;">
+          <i class="fa fa-comments-o"></i>
+        </div>
+      </div>
+      <div class="jrebsort">
+        SORT BY <span style="color:#222">MEMBER NAME</span> OR <span style="color:#222;">LAST POSTER</span>
+      </div>
+      <div class="jrebtotals">
+        <div class="jrebtotalsin" style="background:#cc3322;">
+          107
+          <div class="jrebtotalsint">
+            MEMBERS
+          </div>
+        </div>
+        <div class="jrebtotalsin" style="background:#333;">
+          14375
+          <div class="jrebtotalsint">
+            POSTS
+          </div>
+        </div>
+        <div class="jrebtotalsin" style="background:#cc3322;">
+          38
+          <div class="jrebtotalsint">
+            ON TODAY
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="jrebcbox">
+      <table class="jrebcboxb">
+        <tr><td>
+          450x270
+        </td></tr>
+      </table>
+      <div class="jrebdiscord">
+        <a href=""><img src="http://www.rob2e.com/wp-content/uploads/2017/02/Discord-Logo-White.png"></a>
+      </div>
+      <div class="jrebrulest">
+        RULES
+      </div>
+      <div class="jrebrules">
+        <B>PLAY NICE.</B> Be respectful towards your fellow members, staff, and guests. Don't form cliques, and try to make everyone feel welcome! 
+<br><br>
+<b>BE YOURSELF.</b> The cbox is for OOC chat, so please don't post as your character or impersonate other members here. 
+<br><br>
+<b>NO DRAMA.</b> Keep the cbox a lighthearted and fun place for all, and take personal issues to IM. 
+<br><br>
+<b>NO ADVERTISING.</b> Please don't post links to other sites in the cbox. That's what the advertising board is for.
+      </div>
+    </div>
+    
+  </div>
+</body>
