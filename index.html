@@ -1,16 +1,273 @@
+<style>
+
+body {
+  position:relative;
+  background: #1c1c1c;
+  overflow-x:hidden;
+  margin:0px;
+  --accent:#FF006D;
+  --headimg:url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80);
+}
+
+body::-webkit-scrollbar {
+  width:8px;
+}
+body::-webkit-scrollbar-track {
+  background:#111;
+}
+body::-webkit-scrollbar-thumb {
+  width:5px;
+  background:var(--accent);
+}
+
+.lacuna {
+  --bg:url(https://i.gyazo.com/9665a5e5712ed41395b6905c741f3f46.jpg);
+}
+.cabeswater {
+  --bg:url(https://i.gyazo.com/631a68060155bef54c7c1a7a6c5d03e4.png);
+}
+
+.ppwd-head {
+  width:100vw;
+  height:100vh;
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  align-content:center;
+  justify-content:center;
+  justify-items:center;
+}
+.ppwd-head::before {
+  content:'';
+  position:absolute;
+  top:0px; left:0px;
+  width:100%;
+  height:100%;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),var(--headimg);
+  background-size: cover;
+  background-position:center center;
+  background-attachment:fixed;
+  filter: grayscale(100%);
+  z-index:-1;
+}
+.ppwd-t {
+  width:100%;
+  text-align:center;
+  font-size:5vw;
+  font-family:'Roboto Condensed',Arial;
+  color:#ddd;
+  font-weight:600;
+  text-transform:uppercase;
+  margin:0px 25vw;
+  line-height:100%;
+  color:#fafafa;
+}
+.ppwd-t b {
+  color:var(--accent);
+}
+.ppwd-line {
+  width:100px;
+  height:5px;
+  background:var(--accent);
+  margin:2vh;
+}
+.ppwd-hdesc {
+  width:100%;
+  margin:0px 20vw;
+  text-align:center;
+  font-family:'Cabin',Arial;
+  font-size:20px;
+  color:#ccc;
+  line-height:40px;
+}
+.ppwd-hdesc b {
+  border-bottom:1px solid var(--accent);
+  font-weight:normal;
+  padding-bottom:2px;
+}
+
+
+/** project asides **/
+
+.ppwd-proj {
+  width:100vw;
+  height:100vh;
+  position:relative;
+}
+.one {
+  left:0px;
+}
+.two {
+  right:0px;
+}
+.ppwd-pdesc {
+  position:absolute;
+  top:0px; 
+  width:50vw;
+  height:100vh;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  align-content:center;
+  color:#ddd;
+}
+.ppwd-pdesc h1 {
+  text-transform:uppercase;
+  font-family:'Roboto Condensed',Arial;
+  font-size:4vw;
+  text-align:left;
+  padding:0px 20%;
+  width:100%;
+  margin:0px;
+}
+.ppwd-pdesc h1 a {
+  text-decoration:none;
+  color:#ddd;
+  font-family:'Roboto Condensed',Arial;
+  transition:filter 0.5s ease-in-out;
+}
+.ppwd-pdesc h1 a:hover {
+  filter:brightness(60%);
+}
+.ppwd-pdesc hr {
+  width: 50px;
+  height:5px;
+  background:var(--accent);
+  border:none;
+  margin:3vh 0px;
+  margin-left:20%;
+}
+.ppwd-pdesc p {
+  text-align:left;
+  font-family:'Cabin',Arial;
+  font-weight:400;
+  font-size:15px;
+  line-height:20px;
+  width:100%;
+  padding:0px 20%;
+  color:#ccc;
+  margin:0px;
+  margin-bottom:10px;
+}
+.ppwd-pdesc p b {
+  color:var(--accent);
+  font-weight:normal;
+}
+.ppwd-pdesc span {
+  color:#888;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-family:'Roboto Condensed';
+  font-size:14px;
+  margin-right:10px;
+}
+.ppwd-pdesc span:before {
+  content:'#';
+  color:var(--accent);
+  font-weight:bold;
+  margin-right:3px;
+}
+.ppwd-pimg {
+  position:absolute;
+  top:0px;
+  width:50vw;
+  height:100vh;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  align-content:center;
+  justify-items:center;
+  justify-content:center;
+}
+.ppwd-pimg::before {
+  content:'';
+  background:var(--bg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+  position:absolute;
+  top:0px; left:0px;
+  width:100%;
+  height:100%;
+  filter: grayscale(100%) brightness(30%) contrast(95%);
+  z-index:-1;
+}
+.ppwd-pimg img {
+  width:90%;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.3);
+  border:10px solid #555;
+}
+
+.ppwd-pdate {
+  padding:15px 20px;
+  background:var(--accent);
+  color:#ddd;
+  font-family:'Roboto Condensed',Arial;
+  font-size:18px;
+  font-weight:400;
+  position:absolute;
+  top:0px;
+}
+</style>
+
 <head>
-  <style>
-    body {
-      font-family:'Calibri', Arial;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,600,700,800|Roboto:300,400,500,600,700,800,900|Cabin:400" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+  <link href="//dl.dropbox.com/s/9s289mbhxpdhb3l/starry.css" rel="stylesheet">
 </head>
 
 <body>
-  <center>
-    <b>work in progress</b>
-  </center>
+  <div class="ppwd-head">
+    <div class="ppwd-t">web dev <b>p</b>rojects</div>
+    <div class="ppwd-line"></div>
+    <div class="ppwd-hdesc">
+      These projects consist of <b>explorative web designs</b> with the purpose of increasing my knowledge of <b>HTML, CSS, JavaScript, jQuery, BootStrap</b>, and other web dev languages. Much of these were coded extracurricularly; some of these codes date back to 2015.
+      <br><br>
+      This is still a work in progress.
+    </div>
+  </div>
+  
+  <div class="ppwd-proj cabeswater">
+    <div class="ppwd-pdesc two">
+      <div class="ppwd-pdate one">
+        2019
+      </div>
+      <h1><a href="">Cabeswater</a></h1>
+      <hr>
+      <p>
+        A full-page design exploring <b>vh</b> and <b>vw</b> units as well as <b>fixed backgrounds</b> and <b>filters</b>. This design also takes into consideration user screen size without the use of max-media to create a responsive web page.
+      </p>
+      <p>
+        <span>html</span>
+        <span>css</span>
+      </p>
+    </div>
+    <div class="ppwd-pimg one">
+      <img src="https://i.gyazo.com/f20f18bd51fee5e8e9c4762726412a02.gif">
+    </div>
+  </div>
+  
+  <div class="ppwd-proj lacuna">
+    <div class="ppwd-pdesc one">
+      <div class="ppwd-pdate two">
+        2019
+      </div>
+      <h1><a href="">Lacuna</a></h1>
+      <hr>
+      <p>
+        A full-page design testing <b>vh</b> and <b>vw</b> units, as well as <b>x-overflow</b> and <b>transform</b>. This design considered responsiveness on varying screen sizes, and experimented with largely <b>transparent</b> elements on a background.
+      </p>
+      <p>
+        <span>html</span>
+        <span>css</span>
+      </p>
+    </div>
+    <div class="ppwd-pimg two">
+      <img src="https://i.gyazo.com/1ff642edff4bfe86c1672acc4b4fcf54.gif">
+    </div>
+  </div>
+  
 </body>
-
-<footer>
-</footer>
