@@ -1,0 +1,134 @@
+<style>
+body {
+  background:#eee;
+  margin:0px;
+  padding:0px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  --bg:url(https://static.zerochan.net/Juuyonkou.full.1486955.jpg);
+  --main-color:#8A94CE;
+}
+.jnk-bg {
+  z-index:-1;
+  position:fixed;
+  top:0px; left:0px;
+  width:100vw;
+  height:100vh;
+  background:var(--bg);
+  background-size:cover;
+  background-position:center bottom;
+  background-attachment:fixed;
+  filter:grayscale(100%) opacity(50%);
+}
+#top {
+  width:1000px;
+  margin:10px auto;
+  position:relative;
+}
+.jnk-head {
+  position:relative;
+}
+.jnk-title {
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-image:var(--bg);
+  background-size:cover;
+  background-position: center bottom;
+  background-attachment:fixed;
+  font-family:'Roboto',Arial;
+  font-size:250px;
+  line-height:200px;
+  font-weight:900;
+  text-transform:uppercase;
+  text-shadow:0px 0px 0px rgba(0,0,0,0.1);
+  width:100%;
+  text-align:left;
+}
+.jnk-info-c {
+  padding:5px;
+  border:1px solid #fff;
+}
+.jnk-info {
+  position:relative;
+  height:200px;
+  margin:0px auto;
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),var(--bg);
+  background-size:cover;
+  background-position: center bottom;
+  background-attachment:fixed;
+  color:#fff;
+  text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+  font-family:'Montserrat',Arial;
+  font-size:9px;
+  line-height:14px;
+  text-align:justify;
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:1px;
+}
+.jnk-plot {
+  position:absolute;
+  top:50px; left:50px;
+  width:300px;
+  height:100px;
+  overflow:auto;
+  padding:0px 10px;
+}
+.jnk-plot::-webkit-scrollbar {width:2px;}
+.jnk-plot::-webkit-scrollbar-thumb {background:#fff;}
+.jnk-plot::-webkit-scrollbar-track {background:rgba(250,250,250,0.3);}
+.jnk-icon {
+  border:1px solid #fff;
+  padding:10px;
+  border-radius:100%;
+  width:80px;
+  height:80px;
+  position:absolute;
+  top:50px; right:50px;
+  background:rgba(250,250,250,0.3)
+}
+.jnk-icon img {
+  width:80px;
+  height:80px;
+  border-radius:100%;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Roboto:400,600,800,900" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<body>
+  <div class="jnk-bg"></div>
+  <div id="top">
+    <div class="jnk-head">
+      <div class="jnk-title">
+        nirai<br>kanai
+      </div>
+    </div>
+    <div class="jnk-info-c">
+      <div class="jnk-info">
+        <div class="jnk-plot">
+          It is the first day of November and so, today, someone will die.
+          Even under the brightest sun, the frigid autumn sea is all
+          the colors of the night: dark blue and black and brown. I watch
+          the ever-changing patterns in the sand as it’s pummeled by
+          countless hooves.
+          They run the horses on the beach, a pale road between the
+          black water and the chalk cliffs. It is never safe, but it’s never so
+          dangerous as today, race day.
+          This time of year, I live and breathe the beach. My cheeks
+          feel raw with the wind throwing sand against them. My thighs
+          sting from the friction of the saddle. My arms ache from holding up two thousand pounds of horse. I have forgotten what it
+          is like to be warm and what a full night’s sleep feels like and
+          what my name sounds like spoken instead of shouted across
+          yards of sand.
+        </div>
+        <div class="jnk-icon">
+          <img src="https://i.pinimg.com/564x/dd/0a/e3/dd0ae3815dae7ca9f0aa87ad4b75f9ab.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
