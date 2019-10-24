@@ -1,0 +1,251 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  body {
+    background:#fff;
+    display:flex;
+  }
+  #wrapper {
+    margin-left:230px;
+    width:100%;
+    background:#fff;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+  }
+  .btbsidebar {
+    width:200px;
+    height:100%;
+    background:#FF7373;
+    position:fixed;
+    left:0; top:0;
+    z-index:100;
+  }
+  .btbsidebaricon {
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    position:absolute;
+    top:80px;
+    left:50px;
+  }
+  .btbsidebaricon img {
+    width:100px;
+    height:100px;
+    border-radius:100%;
+  }
+  .btbsbiconc {
+    width:120px;
+    height:120px;
+    border-radius:100%;
+    position:absolute;
+    top:60px; left:30px;
+    border:10px solid #FF7373;
+    border-left:10px solid #fff;
+    border-right:10px solid #fff;
+    -webkit-animation:spin 15s linear infinite;
+    -moz-animation:spin 15s linear infinite;
+    animation:spin 15s linear infinite;
+  }
+  
+ @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+ @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+ @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  
+  .btbsbiconc2 {
+    width:110px;
+    height:110px;
+    border-right:5px solid #E6205B;
+    border-top:5px solid #E6DF20;
+    border-left:5px solid #20C5E6;
+    border-bottom:5px solid #30D130;
+    position:absolute;
+    top:70px; left:40px;
+    border-radius:100%;
+    -webkit-animation:spin2 3s linear infinite;
+    -moz-animation:spin2 3s linear infinite;
+    animation:spin2 3s linear infinite;
+  }
+ @-moz-keyframes spin2 { 100% { -moz-transform: rotate(-360deg); } }
+ @-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+ @keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+  .btbt {
+    height:100%;
+    width:40px;
+    position:fixed;
+    top:0px; left:200px;
+    background:#444;
+    z-index:1000;
+    overflow:hidden;
+  }
+  .btbtn {
+    font-family:Montserrat;
+    font-weight:900;
+    color:#fff;
+    font-size:35px;
+    text-align:left;
+    letter-spacing:-2px;
+    line-height:25px;;
+    text-transform:uppercase;
+    position:absolute;
+    bottom:-3px; right:-5px;
+    text-align:right;
+  }
+  .btbcatname {
+    width:100%;
+    background:#fff;
+    height:180px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    border-bottom:10px solid #444;
+  }
+  .btbcatnamen {
+    font-family:Montserrat;
+    font-weight:900;
+    color:#444;
+    font-size:120px;
+    line-height:100%;
+    position:absolute;
+    right:-10px; bottom:-20px;
+    z-index:5;
+  }
+  .btbcatnamei {
+    font-size:300px;
+    color:#eee;
+    position:absolute;
+    right:0px; bottom:-100px;
+    line-height:100%;
+  }
+  .btbcatnamei i {
+    color:#eee;
+    font-size:300px;
+    line-height:100%;
+  }
+  
+  .btbboards {
+    height:250px;
+    overflow:hidden;
+    position:relative;
+    flex-grow:1;
+    display:flex;
+  }
+  .btbboarddesc {
+    width:400px;
+    height:250px;
+    display:flex;
+    flex-grow:1;
+    overflow:hidden;
+    position:relative;
+  }
+  .btbboardsn {
+    font-family:Montserrat;
+    font-size:70px;
+    color:#fff;
+    font-weight:900;
+    line-height:100%;
+    text-align:left;
+    position:absolute;
+    bottom:-15px; left:-10px;
+    letter-spacing:-3px;
+    z-index:2;
+  }
+  .btbboarddesct {
+    height:110px;
+    width:80%;
+    flex-grow:1;
+    overflow:auto;
+    padding-left:30px;
+    padding-right:20px;
+    margin-top:50px;
+    margin-right:190px;
+    margin-left:30px;
+    font-family:Montserrat;
+    font-weight:400;
+    font-size:13px;
+    line-height:18px;
+    text-align:justify;
+    color:#fff;
+    background:transparent;
+    z-index:2;
+  }
+  .btbboarddesct::-webkit-scrollbar {width:10px;}
+  .btbboarddesct::-webkit-scrollbar-thumb {background:#fff;}
+  .btbboarddesct::-webkit-scrollbar-track {background:rgba(900,900,900,0.5);}
+  .btbboardimg {
+    position:absolute;
+    right:0;top:0;
+    height:300px;
+    width:150px;
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+</style>
+
+<body>
+  <div class="btbsidebar">
+    <div class="btbsidebaricon">
+      <img src="http://placehold.it/100">
+    </div>
+    <div class="btbsbiconc"></div>
+    <div class="btbsbiconc2"></div>
+    
+    <div class="btbtn">
+      Beyond the<br>boundary
+    </div>
+    
+  </div>
+  <div class="btbt">
+    
+  </div>
+  <div id="wrapper">
+    <div class="btbcatname">
+      <div class="btbcatnamen">
+        START
+      </div>
+      <div class="btbcatnamei">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">BEGIN</div>
+      <div class="btbboarddesc" style="background:#6ac31a;">
+        <div class="btbboarddesct">
+          Description here do something here idk Kielbasa pastrami capicola, tri-tip filet mignon cupim bresaola. Capicola tri-tip tail, meatball picanha cow turkey ground round sirloin bresaola doner pork loin pancetta. Cupim salami tongue alcatra porchetta strip steak doner corned beef chuck flank ham hock venison meatball. Salami filet mignon rump short ribs jerky tongue pork loin.
+        </div>
+        <div class="btbboardimg" style="background:url(http://funguerilla.com/wp-content/uploads/2011/08/fantasybehance02-150x300.jpg);background-size:cover;background-position:center;"></div>
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">EVENT</div>
+      <div class="btbboarddesc" style="background:#23acd8">
+        <div class="btbboarddesct">
+          Description here do something here idk Kielbasa pastrami capicola
+        </div>
+        <div class="btbboardimg" style="background:url(http://i.imgur.com/SEhtAs0.gif);background-size:cover;background-position:center;"></div>
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">REGISTER</div>
+      <div class="btbboarddesc" style="background:#ff0a43">
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">PLOTS</div>
+      <div class="btbboarddesc" style="background:#ee42ca">
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">MEDIA</div>
+      <div class="btbboarddesc" style="background:#199">
+      </div>
+    </div>
+    <div class="btbboards">
+        <div class="btbboardsn">EXTRA</div>
+      <div class="btbboarddesc" style="background:#a93">
+      </div>
+    </div>
+    
+  </div>
+</body>
