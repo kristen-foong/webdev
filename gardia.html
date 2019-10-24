@@ -1,0 +1,532 @@
+<style>
+
+@font-face {
+  font-family:'gloss';
+  src:url(https://files.jcink.net/uploads/jt/Gloss_And_Bloom.ttf)format('truetype');
+}
+
+body {
+  background-color:#fafafa;
+  position:relative;
+  padding:0px;
+  margin:0px;
+  background:url(https://cdn.discordapp.com/attachments/396242044575678465/494035239866204160/linedpaper.png);
+  background-position:center center;
+  background-repeat:repeat;
+  font-family:'Nunito', Arial, sans-serif;
+}
+#jgimg {
+  width:30%;
+  height:100vh;
+  background-image:url(https://78.media.tumblr.com/68bd37a193368ed31d6460bf1ae8e420/tumblr_o2gqvj9OpJ1qja923o1_1280.gif);
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  position:fixed;
+  top:0px; left:0px;
+}
+#jgwrapper {
+  width:800px;
+  margin-left:30%;
+  line-height:100%;
+  position:relative;
+}
+#jghead {
+  position:relative;
+  width:100%;
+  height:400px;
+  line-height:100%;
+}
+#jgtitle {
+  font-size:130px;
+  color:#444;
+  font-family:'gloss';
+  position:absolute;
+  top:130px; left:0px;
+  line-height:100%;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.25);
+  width:100%;
+  text-align:center;
+}
+#jgtnote {
+  width:100%;
+  position:absolute;
+  top:0px; left:0px;
+  text-align:center;
+  padding:5px 0px;
+  font-family:'Overpass',Arial,sans-serif;
+  font-size:8px;
+  font-weight:400;
+  color:#aaa;
+  letter-spacing:5px;
+}
+#jgsubt {
+  font-family:'nunito';
+  font-size:9px;
+  color:#888;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  line-height:100%;
+  width:100%;
+  text-align:center;
+  position:absolute;
+  top:245px; left:0px;
+}
+#jgsubt b {
+  font-weight:700;
+  font-family:Arial;
+}
+#jguserlinks {
+  width:100%;
+  display:flex;
+  flex-wrap:no-wrap;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+  position:absolute;
+  position:absolute;
+  top:300px; left:0px;
+}
+.jguser {
+  font-size:15px;
+  width:15px;
+  height:15px;
+  line-height:100%;
+  border-radius:100%;
+  color:#333;
+  background:#ddd;
+  text-align:center;
+  margin:0px 10px;
+  padding:10px;
+  transition:all 0.5s ease-in-out;
+}
+.jguser a {
+  text-decoration:none;
+  color:#333;
+  transition:all 0.5s ease-in-out;
+}
+.jguser:hover {
+  background:#A5B5B2;
+}
+.jguser:hover a {
+  color:#fafafa;
+}
+
+#jgnav {
+  width:100%;
+  position:relative;
+  padding:5px 0px;
+  line-height:100%;
+  position:sticky;
+  top:0px;
+}
+#jgnavin {
+  line-height:100%;
+  margin:0px 50px;
+  text-align:left;
+  font-family:'Nunito';
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:1px;
+  color:#666;
+  text-transform:uppercase;
+}
+#jgnavin a {
+  color:#aaa;
+  text-decoration:none;
+  font-family:'Nunito';
+}
+
+.jgcattitle {
+  position:relative;
+  width:100%;
+  text-align:center;
+  font-weight:300;
+  font-family:Nunito;
+  text-transform:uppercase;
+  color:#444;
+  font-size:20px;
+  letter-spacing:15px;
+  line-height:100%;
+  margin-top:20px;
+}
+.jgcattitlein {
+  background:linear-gradient(to right,transparent,#eee,transparent);
+  padding:30px 0px;
+}
+.jgcattitlein::first-letter {
+  color:#A5B5B2;
+}
+
+.jgboardc {
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+  padding:10px;
+}
+.jgboard {
+  width:350px;
+  height:230px;
+  background:#eee;
+  position:relative;
+  margin:10px 5px;
+  overflow:hidden;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+.jgboardt {
+  position:absolute;
+  top:0px; left:0px;
+  height:15px;
+  width:260px;
+  padding:25px 25px 20px 5px;
+  background:#A5B5B2;
+  text-align:right;
+  color:#fff;
+  font-family:'Nunito';
+  font-weight:700;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  font-size:15px;
+  line-height:100%;
+}
+.jgboardt a {
+  text-decoration:none;
+  color:#fff;
+}
+.jgboardsym {
+  position:absolute;
+  top:0px; left:290px;
+  width:20px;
+  height:20px;
+  background:#666;
+  font-size:20px;
+  color:#fafafa;
+  padding:20px;
+}
+.jgboardthread {
+  width:320px;
+  line-height:100%;
+  padding:5px 15px;
+  border-top:5px solid #fafafa;
+  border-bottom:5px solid #fafafa;
+  position:absolute;
+  top:60px; left:0px;
+  color:#333;
+  font-family:'Overpass',Arial, sans-serif;
+  font-size:10px;
+  text-align:right;
+  border-left:none;
+  background:#fafafa;
+  height:10px;
+  line-height:14px;
+  overflow:hidden;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.jgboardthread a {
+  color:#95ADA9;
+  text-decoration:none;
+  font-family:'Overpass',Arial, sans-serif;
+  font-size:10px;
+}
+.jgboardts {
+  width:150px;
+  background:#666;
+  color:#fafafa;
+  height:9px;
+  line-height:100%;
+  text-transform:uppercase;
+  font-size:9px;
+  font-family:'Overpass',arial,sans-serif;
+  padding:5px 15px;
+  position:absolute;
+  top:90px; left:0px;
+  text-align:left;
+  overflow:hidden;
+}
+.jgboardtop {
+  width:65px;
+  padding:5px 10px;
+  height:9px;
+  font-family:'Overpass',arial,sans-serif;
+  font-size:9px;
+  color:#fafafa;
+  line-height:100%;
+  overflow:hidden;
+  position:absolute;
+  left:180px; top:90px;
+  background:rgba(0,0,0,0.3);
+  text-align:center;
+  text-transform:uppercase;
+  overflow:hidden;
+}
+.jgboardtop b {
+  font-weight:700;
+}
+.jgboardrep {
+  width:65px;
+  padding:5px 10px;
+  height:9px;
+  font-family:'Overpass',arial,sans-serif;
+  font-size:9px;
+  color:#fafafa;
+  line-height:100%;
+  overflow:hidden;
+  position:absolute;
+  left:265px; top:90px;
+  background:#A5B5B2;
+  overflow:hidden;
+  text-align:center;
+  text-transform:uppercase;
+}
+.jgboardrep b {
+  font-weight:700;
+}
+.jgboarddesc {
+  width:350px;
+  height:100px;
+  background:#fafafa;
+  position:absolute;
+  top:110px; left:0px;
+}
+.jgboarddin {
+  width:300px;
+  height:60px;
+  position:absolute;
+  top:20px; left:20px;
+  overflow-y:auto;
+  font-size:11px;
+  font-family:'Nunito',arial,sans-serif;
+  text-align:justify;
+  line-height:15px;
+  color:#333;
+  padding-right:6px;
+}
+.jgboarddin::-webkit-scrollbar {
+  width:2px;
+}
+.jgboarddin::-webkit-scrollbar-thumb {
+  background:#A5B5B2;
+}
+.jgboarddin::-webkit-scrollbar-track {
+  background:rgba(0,0,0,0.1);
+}
+.jgboardsb {
+  width:350px;
+  position:absolute;
+  top:210px; left:0px;
+  background:rgba(0,0,0,0.1);;
+  height:20px;
+  font-size:10px;
+  line-height:100%;
+  display:flex;
+  flex-wrap:no-wrap;
+  overflow:auto;
+  justify-content:flex-start;
+  align-items:center;
+}
+.jgboardsb::-webkit-scrollbar {display:none;}
+.jgboardsb a {
+  background:#A5B5B2;
+  padding:5px 8px;
+  margin-right:1px;
+  color:#fff;
+  font-family:'Overpass';
+  font-size:10px;
+  font-weight:700;
+  line-height:100%;
+  text-transform:uppercase;
+  text-align:center;
+  text-decoration:none;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,500,600,700|Overpass:200,300,400,600,700" rel="stylesheet">
+<link href="//dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+<body>
+  <div id="jgimg"></div>
+  <div id="jgwrapper">
+    <div id="jghead">
+      <div id="jgtnote">A PERSONAL STORAGE SITE</div>
+      <div id="jgtitle">
+        Caesura
+      </div>
+      <div id="jgsubt">
+        <b>/sɪˈzjʊəɹə/</b> a break in the flow of sound in a verse
+      </div>
+      <div id="jguserlinks">
+        <div class="jguser">
+          <a href="">
+            <span class="th th-login-o"></span>
+          </a>
+        </div>
+        <div class="jguser">
+          <a href="">
+            <span class="th th-settings-1-o"></span>
+          </a>
+        </div>
+        <div class="jguser">
+          <a href="">
+            <span class="th th-user-o"></span>
+          </a>
+        </div>
+        <div class="jguser">
+          <a href="">
+            <span class="sf sf-tags-o"></span>
+          </a>
+        </div>
+        <div class="jguser">
+          <a href="">
+            <span class="sf sf-envelope-2-o"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="jgnav">
+      <div id="jgnavin">
+        things
+      </div>
+    </div>
+    
+    <div class="jgcattitle">
+      <div class="jgcattitlein">
+        Discourse
+      </div>
+    </div>
+    
+    <div class="jgboardc">
+      <div class="jgboard">
+        <div class="jgboardt">
+          Rules & Guidelines
+        </div>
+        <div class="jgboardsym">
+          <span class="th th-compass-2-o"></span>
+        </div>
+        <div class="jgboardthread">
+          <a href="">title of thread</a> by <a href="">jedediah harebo</a>
+        </div>
+        <div class="jgboardts">
+          September 10, 2018, 07:35PM
+        </div>
+        <div class="jgboardtop">
+          <b>60</b> topics
+        </div>
+        <div class="jgboardrep">
+          <b>190</b> replies
+        </div>
+        <div class="jgboarddesc">
+          <div class="jgboarddin">
+                    <b>"It is the first day of November and so, today, someone will die."</b>
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: dark blue and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by hooves.
+They run the horses on the beach, a pale road between the
+black water and the chalk cliffs. It is never safe, but it’s never so
+dangerous as today, race day.
+          </div>
+        </div>
+        <div class="jgboardsb">
+          <a href="">claims</a>
+          <a href="">faq</a>
+          <a href="">idek</a>
+        </div>
+      </div>
+      
+      
+    <div class="jgcattitle">
+      <div class="jgcattitlein">
+        Resources
+      </div>
+    </div>
+    
+    <div class="jgboardc">
+      <div class="jgboard">
+        <div class="jgboardt">
+          Codes
+        </div>
+        <div class="jgboardimg" style="background:url(https://i.gifer.com/1VUr.gif);"></div>
+        <div class="jgboardsym">
+          <span class="th th-compass-2-o"></span>
+        </div>
+        <div class="jgboardthread">
+          <a href="">title of thread</a> by <a href="">jedediah harebo</a>
+        </div>
+        <div class="jgboardts">
+          September 10, 2018, 07:35PM
+        </div>
+        <div class="jgboardtop">
+          <b>60</b> topics
+        </div>
+        <div class="jgboardrep">
+          <b>190</b> replies
+        </div>
+        <div class="jgboarddesc">
+          <div class="jgboarddin">
+                    <b>"It is the first day of November and so, today, someone will die."</b>
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: dark blue and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by hooves.
+They run the horses on the beach, a pale road between the
+black water and the chalk cliffs. It is never safe, but it’s never so
+dangerous as today, race day.
+          </div>
+        </div>
+        <div class="jgboardsb">
+          <a href="">post</a>
+          <a href="">plotter</a>
+          <a href="">tracker</a>
+          <a href="">site</a>
+          <a href="">misc</a>
+        </div>
+      </div>
+
+
+    <div class="jgboardc">
+      <div class="jgboard">
+        <div class="jgboardt">
+          Face Claims
+        </div>
+        <div class="jgboardimg" style="background:url(https://i.gifer.com/1VUr.gif);"></div>
+        <div class="jgboardsym">
+          <span class="th th-compass-2-o"></span>
+        </div>
+        <div class="jgboardthread">
+          <a href="">title of thread</a> by <a href="">jedediah harebo</a>
+        </div>
+        <div class="jgboardts">
+          September 10, 2018, 07:35PM
+        </div>
+        <div class="jgboardtop">
+          <b>60</b> topics
+        </div>
+        <div class="jgboardrep">
+          <b>190</b> replies
+        </div>
+        <div class="jgboarddesc">
+          <div class="jgboarddin">
+                    <b>"It is the first day of November and so, today, someone will die."</b>
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: dark blue and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by hooves.
+They run the horses on the beach, a pale road between the
+black water and the chalk cliffs. It is never safe, but it’s never so
+dangerous as today, race day.
+          </div>
+        </div>
+        <div class="jgboardsb">
+          <a href="">male</a>
+          <a href="">female</a>
+          <a href="">master list</a>
+        </div>
+      </div>
+
+    
+  </div>
+</body>
