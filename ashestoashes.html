@@ -1,0 +1,574 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,900|Material+Icons|Raleway:300,400,600,700,900|Playfair+Display:400,700,900|Montserrat:300,400,600,700,900" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+  body {
+    background:url(http://www.designyourway.net/diverse/darkpat/COLOURlovers.com-Gothic_Wallpaper.jpg);
+    background-attachment:fixed;
+  }
+  
+  /****head****/
+  
+  .ataban {
+    width:100%;
+    height:600px;
+    background:url(https://wallpaperscraft.com/image/black_background_pattern_light_texture_55291_3840x2400.jpg);
+    background-size:cover;
+    position:relative;
+    overflow:hidden;
+    margin-top:30px;
+  }
+  .ataban img {
+    position:absolute;
+    bottom:0; right:-100px;
+    max-height:600px;
+    filter:brightness(75%);
+    z-index:4;
+  }
+  .atadir {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:50px;
+    background:#111;
+    border-bottom:1px solid #333;
+    font-family:Montserrat;
+    font-weight:600;
+    font-size:10px;
+    color:#ddd;
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    z-index:5;
+    line-height:100%;
+  }
+  .atadir a {
+    text-decoration:none;
+    color:#ddd;
+    border-bottom:1px solid #ffcc00;
+  }
+  .atadir a:hover {
+    color:#aaa;
+  }
+  .atatitle {
+    font-family:Raleway;
+    font-weight:900;
+    font-size:180px;
+    color:#000;
+    text-shadow:-1px 1px #ddd, 1px 1px #ffcc00, -1px -1px #ddd, 1px -1px #ffcc00;
+    width:90%;
+    text-align:center;
+    line-height:74%;
+    position:absolute;
+    top:150px;
+  }
+  .atasub {
+    font-family:Raleway;
+    font-weight:900;
+    font-size:25px;
+    color:#fff;
+    text-shadow:1px 1px #000,-1px -1px #000;
+    border-bottom:10px solid #ffcc00;
+    text-align:center;
+    z-index:2;
+    position:absolute;
+    line-height:100%;
+    top:265px; left:44%;
+    text-transform:uppercase;
+  }
+  
+  /****descriptions****/
+  
+  .atadesc {
+    background:#111;
+    width:100%;
+    display:flex;
+    padding-top:25px;
+    padding-bottom:25px;
+  }
+  
+  .atadesct {
+    font-family:Roboto;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:9px;
+    color:#777;
+    line-height:110%;
+    text-align:justify;
+    width:15%;
+    border:1px solid #333;
+    letter-spacing:1px;
+    padding:25px;
+    margin-left:3%;
+    margin-right:15px;
+    flex-grow:1;
+    flex-basis:10%;
+  }
+  
+  .atadesct b {
+    color:#FFD000;
+    font-family:Raleway;
+    font-weight:900;
+    letter-spacing:1px;
+  }
+  
+  .ataevent {
+    width:20%;
+    border:1px solid #333;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(http://24.media.tumblr.com/b1828e37101aac3897a989b8e78220c1/tumblr_mzf3g1cR391sfcj70o2_500.gif);
+    background-size:cover;
+    overflow:hidden;
+    position:relative;
+    margin-right:15px;
+    flex-grow:1;
+    flex-basis:20%;
+  }
+  
+  .ataeventlink {
+    background:rgba(0,0,0,0.5);
+    background-size:cover;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0; left:0;
+    opacity:0;
+    transition:all 0.3s ease-in-out;
+  }
+  
+  .atadesc:hover .ataeventlink{
+    opacity:1;
+  }
+  
+  .ataeventlinkc {
+    width:100%;
+    position:absolute;
+    top:40%; left:0;
+    text-align:center;
+  }
+  
+  .ataeventlinkc a {
+    font-family:Raleway;
+    font-weight:900;
+    font-size:20px;
+    letter-spacing:1px;
+    color:#ddd;
+    border-bottom:5px solid #ffd000;
+    text-decoration:none;
+  }
+  
+  /****menu****/
+  
+  .atamenu {
+    overflow:hidden;
+    position:relative;
+    margin-right:20px;
+    flex-grow:1;
+    flex-basis:15%;
+    border:1px solid #333;
+    padding:25px;
+    padding-left:30px;
+    padding-right:30px;
+    display:flex;
+    flex-wrap:wrap;
+    line-height:105%;
+    margin-right:3%;
+    align-content:flex-start;
+  }
+  .atamenuin {
+    flex-grow:1;
+    margin-left:2px;
+    margin-right:2px;
+    border-bottom:1px solid #ffcc00;
+    padding:5px;
+    padding-left:0px;
+    padding-right:0px;
+    text-align:center;
+  }
+  .atamenu a {
+    font-family:Montserrat;
+    font-size:10px;
+    font-weight:600;
+    color:#ddd;
+    text-decoration:none;
+    margin-right:10px;
+    line-height:10px;
+  }
+  .atamenu a:hover {
+    color:#aaa;
+  }
+  
+  /****updates****/
+  
+  .ataupdate {
+    font-family:Roboto;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:9px;
+    color:#777;
+    letter-spacing:1px;
+    line-height:110%;
+    text-align:justify;
+    width:20%;
+    border:1px solid #333;
+    padding:25px;
+    margin-right:20px;
+    flex-grow:1;
+    flex-basis:8%;
+  }
+  .ataupdate strong {
+    font-size:15px;
+    color:#ffcc00;
+    font-family:Raleway;
+    font-weight:900;
+  }
+  
+  /***staff***/
+  
+  .atastaff {
+    flex-wrap:wrap;
+    align-content:flex-start;
+    flex-direction:row;
+    width:130px;
+    margin-right:15px;
+  }
+  
+  .atastaffimg {
+    display:inline;
+    width:50px;
+    height:50px;
+    flex-grow:1;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .atastaffimg img {
+    width:50px;
+    height:50px;
+    padding:5px;
+    border:1px solid #333;
+    line-height:100%;
+  }
+  
+  .atastafft {
+    font-family:Playfair Display;
+    color:#eee;
+    border-top:5px solid #ffcc00;
+    line-height:100%;
+    text-align:center;
+    font-weight:900;
+    font-size:14px;
+    max-width:130px;
+  }
+  
+  .atastaffb {
+    background:rgba(0,0,0,0.5);
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:-42px; left:6px;
+    opacity:0;
+    transition:all 0.3s ease-in-out;
+  }
+  
+  .atastaffimg:hover .atastaffb {
+    opacity:1;
+  }
+  
+  .atastaffname {
+    font-family:Raleway;
+    font-size:10px;
+    font-weight:900;
+    color:#ddd;
+    border-bottom:3px solid #ffcc00;
+    width:100%;
+    text-align:center;
+    position:absolute;
+    left:0; top:18px;
+    line-height:100%;
+  }
+  
+  /****wrapper****/
+  
+  #wrapper {
+    width:900px;
+    padding:40px;
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://c1.staticflickr.com/7/6212/6329838116_f0916669a2_b.jpg);
+    margin:0 auto;
+  }
+  
+  /****boards****/
+  
+  .atacat {
+    width:820px;
+    background:url(http://www.designbolts.com/wp-content/uploads/2012/11/Awesome-Gun-metal-Black-Pattern-for-background.jpg);
+    background-size:300px;
+    background-position:50% 50%;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:82px;
+    margin:0 auto;
+    margin-bottom:20px;
+  }
+  
+  .atacat a {
+    color:#eee;
+    border-bottom:5px solid #ffcc00;
+    text-decoration:none;
+    font-family:Raleway;
+    font-weight:900;
+    font-size:15px;
+  }
+  
+  .atacat a:hover {
+    color:#aaa;
+  }
+  
+  .ataboardsc {
+    width:851px;
+    height:172px;
+    margin:0 auto;
+    padding:10px;
+    position:relative;
+  }
+  .ataboards {
+    width:680px;
+    height:190px;
+    position:absolute;
+    right:0; top:0;
+    background:#111;
+  }
+  .ataboardsin {
+    width:658px;
+    height:168px;
+    background:#222;
+    position:absolute;
+    top:10px; left:10px;
+    border:1px dotted #333;
+  }
+  .ataboardsname {
+    padding:15px;
+    padding-bottom:20px;
+    padding-left:30px;
+    padding-right:30px;
+    background:#111;
+    width:200px;
+    height:20px;
+    position:absolute;
+    top:10px; left:-200px;
+    border:1px solid #333;
+  }
+  .ataboardsnamet {
+    font-family:Playfair Display;
+    font-size:18px;
+    color:#fff;
+    text-transform:uppercase;
+    text-align:center;
+    line-height:100%;
+  }
+  .ataboardsnamet a {
+    font-family:Playfair Display;
+    font-weight:900;
+    font-size:18px;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid #ffcc00;
+  }
+  .ataboardsnamet a:hover {color:#ccc;}
+  .ataboardsdesc {
+    width:260px;
+    background:rgba(0,0,0,0.5);
+    position:absolute;
+    bottom:10px; left:-200px;
+    height:85px;
+    border:1px solid #333;
+  }
+  .ataboardsdescin {
+    width:229px;
+    height:54px;
+    padding:5px;
+    overflow:auto;
+    background:#1c1c1c;
+    font-family:Raleway;
+    font-weight:400;
+    font-size:10px;
+    color:#ccc;
+    border:0.5px dotted #333;
+    text-align:justify;
+    position:absolute;
+    left:10px; top:10px;
+    line-height:100%;
+  }
+  .ataboardsdescin::-webkit-scrollbar {width:1px;}
+  .ataboardsdescin::-webkit-scrollbar-thumb {background:#ffcc00;}
+  .ataboardsdescin b {color:#ffcc00;font-weight:400;}
+  .ataboardsimgc {
+    width:250px;
+    height:126px;
+    position:absolute;
+    padding:10px;
+    border:1px solid #333;
+    background:#111;
+    left:70px; top:10px;
+  }
+  .ataboardsimgc img {
+    width:250px;
+    height:126px;
+  }
+  .ataboardsread {
+    font-family:Montserrat;
+    font-size:20px;
+    font-weight:600;
+    color:#ffcc00;
+    width:20px;
+    height:20px;
+    padding:10px;
+    line-height:100%;
+    position:absolute;
+    top:14px; left:350px;
+    background:#111;
+    border:1px solid #333;
+    text-align:center;
+  }
+  .ataboardsread i {
+    font-size:20px;
+  }
+  .ataboardstopics {
+    font-family:Montserrat;
+    font-size:12px;
+    font-weight:600;
+    color:#eee;
+    width:20px;
+    height:20px;
+    padding:10px;
+    line-height:170%;
+    position:absolute;
+    top:63px; left:350px;
+    background:#111;
+    border:1px solid #333;
+    text-align:center;
+  }
+  .ataboardsreplies {
+    font-family:Montserrat;
+    font-size:12px;
+    font-weight:600;
+    color:#eee;
+    width:20px;
+    height:20px;
+    padding:10px;
+    line-height:180%;
+    position:absolute;
+    bottom:14px; left:350px;
+    background:#111;
+    border:1px solid #333;
+    text-align:center;
+  }
+  .ataboardsthreads {
+    width:245px;
+    height:146px;
+    position:absolute;
+    right:10px; bottom:10px;
+    border:1px solid #333;
+    background:rgba(0,0,0,0.3);
+  }
+
+</style>
+
+<body>
+<div class="atadir"><a href="">HOME</a></div>
+  <div class="ataban">
+    <div class="atabanimg">
+      <img src="http://orig03.deviantart.net/1332/f/2013/200/d/f/anime_render_6___anime_deviant_id_by_fujisakiro31-d6e5hq6.png">
+    </div>
+    <div class="atatitle">ASHES<br>ASHES</div>
+    <div class="atasub">to</div>
+  </div>
+  <div class="atadesc">
+    <div class="atadesct">
+      It is the first day of <b>November</b> and so, today, someone will die.
+Even under the brightest sun, the frigid autumn sea is all
+the colors of the night: <b>dark blue</b> and black and brown. I watch
+the ever-changing patterns in the sand as it’s pummeled by
+countless hooves.
+    </div>
+    <div class="ataevent">
+      <div class="ataeventlink">
+        <div class="ataeventlinkc">
+          <a href="">INFERNO</a>
+        </div>
+      </div>
+    </div>
+    <div class="ataupdate">
+      <strong>01.23 //</strong> Here's an Update! Officially opened on September 11, 2016, ASHES TO ASHES is hosting its first event! It is the first day of November and so, today, someone will die.<br><br>
+      <strong>03.31 //</strong> supa beeg doesn't scroll
+    </div>
+    <div class="atastaff">
+      <div class="atastaffimg">
+        <img src="http://scontent.cdninstagram.com/t51.2885-15/e35/13573461_260472927649047_1748969704_n.jpg?ig_cache_key=MTI4NDI5NDQzNjExMjY2MDE0Ng%3D%3D.2">
+        <div class="atastaffb">
+          <div class="atastaffname">HARU</div>
+        </div>
+      </div>
+      <div class="atastaffimg">
+        <img src="https://a.wattpad.com/useravatar/nanasenpai.256.605549.jpg">
+        <div class="atastaffb">
+          <div class="atastaffname">RIN</div>
+        </div>
+      </div>
+      <div class="atastaffimg">
+        <img src="http://www.cosplayisland.co.uk/files/costumes/1751/84772/icon/Screen%20Shot%202013-11-01%20at%2012.39.43.png">
+        <div class="atastaffb">
+          <div class="atastaffname">REI</div>
+        </div>
+      </div>
+      <div class="atastaffimg">
+        <img src="https://pbs.twimg.com/media/CZbaHFqWIAE0yj_.jpg">
+        <div class="atastaffb">
+          <div class="atastaffname">MAKO</div>
+        </div>
+      </div>
+      <div class="atastafft">MEET THE STAFF</div>
+    </div>
+    <div class="atamenu">
+      <a href=""><div class="atamenuin">HOME</div></a>
+      <a href=""><div class="atamenuin">RULES</div></a>
+      <a href=""><div class="atamenuin">SETTING</div></a>
+      <a href=""><div class="atamenuin">PREMISE</div></a>
+      <a href=""><div class="atamenuin">GROUPS</div></a>
+      <a href=""><div class="atamenuin">APPLICATION</div></a>
+      <a href=""><div class="atamenuin">WANTEDS</div></a>
+      <a href=""><div class="atamenuin">FACECLAIMS</div></a>
+      <a href=""><div class="atamenuin">DIRECTORY</div></a>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div class="atacat">
+      <a href="">REGISTRY</a>
+    </div>
+    <div class="ataboardsc">
+      <div class="ataboards">
+        <div class="ataboardsin">
+          <div class="ataboardsname">
+            <div class="ataboardsnamet">
+              <a href="">guidebook</a>
+            </div>
+          </div>
+            <div class="ataboardsdesc">
+              <div class="ataboardsdescin">
+                board desc here anything really tbh <b>go completely ham</b> in what u write here.
+              </div>
+            </div>
+            <div class="ataboardsimgc">
+              <img src="http://s3images.coroflot.com/user_files/individual_files/original_231827_ehZoieXdEFTtYJTbdkOSQWq_P.jpg">
+            </div>
+            <div class="ataboardsread">
+              <i class="fa fa-bomb"></i>
+            </div>
+            <div class="ataboardstopics" title="topics">4</div>
+            <div class="ataboardsreplies" title="replies">30</div>
+            <div class="ataboardsthreads">
+              
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
