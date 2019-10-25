@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb {
 
 .lacuna {
   --bg:url(https://i.gyazo.com/9665a5e5712ed41395b6905c741f3f46.jpg);
-  --accent:#B79A43;
+  --accent:#4D8990;
 }
 .cabeswater {
   --bg:url(https://i.gyazo.com/631a68060155bef54c7c1a7a6c5d03e4.png);
@@ -91,6 +91,11 @@ body::-webkit-scrollbar-thumb {
   border-bottom:1px solid var(--accent);
   font-weight:normal;
   padding-bottom:2px;
+}
+.ppwd-hdesc a {
+  text-decoration:none;
+  border-bottom:1px solid var(--accent);
+  color:#ccc;
 }
 
 
@@ -214,12 +219,36 @@ body::-webkit-scrollbar-thumb {
   background:var(--accent);
   color:#000;
   font-family:'Roboto Condensed',Arial;
-  font-size:15px;
+  font-size:18px;
   font-weight:600;
   position:absolute;
   top:0px;
   text-transform:uppercase;
   line-height:100%;
+}
+.ppwd-back {
+  position:fixed;
+  top:10px; left:10px;
+  padding:10px 15px;
+  color:#fff;
+  font-family:'Roboto Condensed',Arial;
+  font-weight:600;
+  font-size:12px;
+  text-transform:uppercase;
+  background:rgba(0,0,0,0.5);
+  z-index:10;
+  transition:all 0.5s ease-in-out;
+}
+.ppwd-back a {
+  color:#ccc;
+  text-decoration:none;
+  transition:all 0.5s ease-in-out;
+}
+.ppwd-back:hover {
+  background:var(--accent);
+}
+.ppwd-back:hover a {
+  color:#fff;
 }
 </style>
 
@@ -232,12 +261,18 @@ body::-webkit-scrollbar-thumb {
 </head>
 
 <body>
+  <a href="https://kristen-foong.github.io">
+    <div class="ppwd-back">
+      back to main page
+    </div>
+  </a>
   <div class="ppwd-head">
     <div class="ppwd-t">web dev <b>p</b>rojects</div>
     <div class="ppwd-line"></div>
     <div class="ppwd-hdesc">
       These projects consist of <b>explorative web designs</b> with the purpose of increasing my knowledge of <b>HTML, CSS, JavaScript, jQuery, BootStrap</b>, and other web dev languages. Much of these were coded extracurricularly; some of these codes date back to 2015.
-      <br><br>This page is a work in progress.
+      <br><br>
+      This site is a work in progress, and best viewed in chrome, on a computer. You can view a full list of projects (and their codes) <a href="https://github.com/kristen-foong/pp-webdev">here</a>.
     </div>
   </div>
   
