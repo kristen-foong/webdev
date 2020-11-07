@@ -2,8 +2,9 @@
 
   body {
     margin:0px;
+    padding:0px;
     background:#33373A;
-    background:var(--black);
+    background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),var(--black);
     overflow-y:auto;
     overflow-x:hidden;
     --black:#33373A;
@@ -37,10 +38,10 @@
     min-height:700px;
     max-height:800px;
     overflow:hidden;
-    background:url(https://cdn.discordapp.com/attachments/519722970826932246/652649425545592832/Blue_Crash.jpg);
+    background:var(--bg);
     background-size:cover;
     background-attachment:fixed;
-    background-position:center center;
+    background-position:center 40%;
     line-height:100%;
     display:flex;
     flex-align:center;
@@ -52,7 +53,7 @@
     margin-top:-3.5%;
     width:400px;
     height:400px;
-    background:rgba(129,143,204,0.5);
+    background:var(--blue-rgb);
     border-radius:100%;
     position:relative;
   }
@@ -597,11 +598,12 @@
     width:100%;
     padding:10px 0px;
     font-family:'Rajdhani',Arial;
-    font-size:12px;
+    font-size:13px;
     line-height:100%;
     text-transform:uppercase;
     letter-spacing:2px;
     color:var(--yellow);
+    font-weight:500;
     z-index:100;
     position:fixed;
     top:0px;
@@ -609,7 +611,7 @@
   }
   #jdmi-nav-in {
     padding:0px 30px;
-    height:12px;
+    height:13px;
   }
   #jdmi-nav-in a {
     text-decoration:none;
@@ -624,9 +626,13 @@
   
   /** wrapper **/
   #wrapper {
-    width:100vw;
+    width:1080px;
+    margin:0px auto;
+    border:1px solid rgba(250,250,250,0.05);
+    border-top:none;
     background:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),var(--black);
     z-index:10;
+    margin-bottom:50px;
   }
   
   
@@ -655,10 +661,10 @@
     position:relative;
   }
   .jdmi-catt {
-    width:1100px;
+    width:1000px;
     text-align:center;
     position:absolute;
-    top:34px; left:-470px;
+    top:34px; left:-425px;
     font-family:'Rajdhani',Arial;
     font-size:50px;
     line-height:100%;
@@ -897,7 +903,7 @@
   
   .jdmi-b-auth {
     width:87px;
-    max-height:75px;
+    max-height:81px;
     position:absolute;
     bottom:70px; left:31px;
     color:rgba(250,250,250,0.4);
@@ -1023,7 +1029,9 @@
     background:rgba(0,0,0,0);
     transition:all 0.5s ease-in-out;
   }
-  
+  #jdmi-mainb .jdmi-board:hover .jdmi-boardt-d {
+    background:rgba(0,0,0,0.25);
+  }
   #jdmi-mainb .jdmi-board:hover .jdmi-b-name a {
     color:var(--yellow);
   }
@@ -1047,6 +1055,7 @@
     width:30px;
     height:30px;
     padding:20px;
+    background:var(--blue-rgb);
   }
   #jdmi-mainb .jdmi-b-readc {
     width: 85px;
@@ -1073,6 +1082,7 @@
     clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%);
     top:100px;
     overflow:hidden;
+    transition:all 0.7s ease-in-out;
   }
   #jdmi-mainb .jdmi-b-update:before {
     display:none;
@@ -1088,6 +1098,10 @@
     height:18px;
     line-height:100%;
     padding:8px;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
   }
   #jdmi-mainb .jdmi-b-topics:hover {
     background:var(--blue-rgb);
@@ -1133,6 +1147,10 @@
     line-height:100%;
     text-align:center;
     transition:all 0.5s ease-in-out;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
   }
   #jdmi-mainb .jdmi-b-replies:hover {
     background:var(--blue-rgb);
@@ -1248,6 +1266,9 @@
     font-size:25px;
     line-height:100%;
   }
+  #jdmi-mainb .jdmi-b-th a:hover {
+    filter:brightness(80%);
+  }
   #jdmi-mainb .jdmi-b-line {
     top:173px; left:130px;
     width:280px;
@@ -1268,7 +1289,7 @@
   }
   #jdmi-mainb .jdmi-b-sub {
     position:absolute;
-    bottom:115px; left:970px;
+    bottom:115px; left:800px;
     width:130px;
     height:90px;
     overflow-x:hidden;
@@ -1281,33 +1302,34 @@
     letter-spacing:1px;
     text-align:center;
     display:flex;
-    transition:all 0.7s ease-in-out;
+    opacity:0;
+    transition:all 0.6s ease-in-out;
   }
   
   #jdmi-mainb .jdmi-board:hover .jdmi-b-sub {
-    left:800px;
+    opacity:1;
   }
   #jdmi-mainb .jdmi-b-sub a {
-    background:rgba(0,0,0,0.25);
+    background:rgba(0,0,0,0);
     width:100%;
     border-radius:0px;
     margin:2px 0px;
     line-height:100%;
     padding:7px 5px 5px 5px;
-    border:1px solid transparent;
+    border:1px solid var(--yellow-rgb);
+    color:#eaeaea;
     transition:all 0.5s ease-in-out;
   }
   #jdmi-mainb .jdmi-b-sub a:hover {
-    background:rgba(0,0,0,0.25);
+    background:rgba(0,0,0,0.3);
     color:#fafafa;
     font-weight:400;
-    border:1px solid var(--yellow-rgb);
   }
   #jdmi-mainb .jdmi-b-sub::-webkit-scrollbar {
     width:1.5px;
   }
-  #jdmi-mainb .jdmi-b-sub::-webkit-scrollbar-thumb {f
-    background:var(--yellow-rgb);
+  #jdmi-mainb .jdmi-b-sub::-webkit-scrollbar-thumb {
+    background:rgba(250,250,250,0.5);
     border-radius:10px;
   }
   #jdmi-mainb .jdmi-b-sub::-webkit-scrollbar-track {
@@ -1325,10 +1347,6 @@
   }
   #jdmi-mainb #jdmi-b1:hover .jdmi-boardt {
     background-size:1100px;
-    border-bottom:1px solid var(--yellow-rgb);
-  }
-  #jdmi-mainb #jdmi-b1:hover .jdmi-boardt-d {
-    background:rgba(0,0,0,0.25);
   }
   
   #jdmi-mainb #jdmi-b2 .jdmi-boardt {
@@ -1340,12 +1358,7 @@
   }
   #jdmi-mainb #jdmi-b2:hover .jdmi-boardt {
     background-size:1100px;
-    border-bottom:1px solid var(--yellow-rgb);
   }
-  #jdmi-mainb #jdmi-b2:hover .jdmi-boardt-d {
-    background:rgba(0,0,0,0.25);
-  }
-  
   #jdmi-mainb #jdmi-b3 .jdmi-boardt {
     background:linear-gradient(rgba(50,50,50,0.6),rgba(50,50,50,0.6)),url(https://static.zerochan.net/Dimitri.Alexandre.Bladud.full.2810849.jpg);
     background-size:1000px;    
@@ -1355,11 +1368,31 @@
   }
   #jdmi-mainb #jdmi-b3:hover .jdmi-boardt {
     background-size:1100px;
-    border-bottom:1px solid var(--yellow-rgb);
   }
-  #jdmi-mainb #jdmi-b3:hover .jdmi-boardt-d {
-    background:rgba(0,0,0,0.25);
+  #jdmi-mainb #jdmi-b4 .jdmi-boardt {
+    background:linear-gradient(rgba(50,50,50,0.70),rgba(50,50,50,0.70)),url(https://pbs.twimg.com/media/EFpoY17WsAYVKKl?format=jpg&name=4096x4096);
+    background-size:1000px;    
+    background-position:center 36%;
+    background-repeat:no-repeat;
+    transition:all 0.7s ease-in-out;
   }
+  #jdmi-mainb #jdmi-b4:hover .jdmi-boardt {
+    background-size:1100px;
+  }
+  
+  
+  /** board stats **/
+  
+  #jdmi-b-statsc {
+    width:1000px;
+    height:450px;
+    position:relative;
+    margin:0px auto;
+    border-left:1px solid var(--black);
+    border-right:1px solid var(--black);
+    background:rgba(0,0,0,0.05);
+  }
+  
 </style>
 
 <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,800|Work+Sans:200,300,400,500,600,800" rel="stylesheet">
@@ -1549,7 +1582,7 @@
       <div class="jdmi-catc">
         <div class="jdmi-cat-circ"></div>
         <div class="jdmi-catt">
-          beginning.
+          beginning
         </div>
       </div>
     </div>
@@ -1592,7 +1625,7 @@
           <div class="jdmi-b-authin"><a href="">bob</a></div>
           
           <div class="jdmi-b-th">
-            <a href="">hey now you're an all star</a>
+            <a href="">hey now you're an all star get your game</a>
           </div>
         </div>
         <div class="jdmi-b-sub">
@@ -1691,7 +1724,7 @@
       <div class="jdmi-catc">
         <div class="jdmi-cat-circ"></div>
         <div class="jdmi-catt">
-          resources.
+          resources
         </div>
       </div>
     </div>
@@ -1787,6 +1820,47 @@
         <div class="jdmi-boardt">
           <div class="jdmi-boardt-d"></div>
           <div class="jdmi-b-name">
+            <a href="link">trackers</a>
+          </div>
+        </div>
+        <div class="jdmi-b-readc"></div>
+        <div class="jdmi-b-read">
+          <span class="th th-swords-o"></span>
+        </div>
+        <div class="jdmi-b-wedge"></div>
+        <div class="jdmi-b-update">
+          january 3, 2020 at 5:46pm
+        </div>
+        <div class="jdmi-b-topics">
+          <span class="th th-envelope"></span>
+          <b>6</b>
+        </div>
+        <div class="jdmi-b-replies">
+          <span class="th th-pencil"></span>
+          <b>6</b>
+        </div>
+        <div class="jdmi-b-desc">
+          It is the first day of November and so, today, someone will die.
+          Even under the brightest sun. 
+        </div>
+        <div class="jdmi-b-line"></div>
+        <div class="jdmi-b-line2"></div>
+        <div class="jdmi-b-auth">
+          <div class="jdmi-b-authin"><a href="">felix</a></div>
+          <div class="jdmi-b-th">
+            <a href="">boomboomboom</a>
+          </div>
+        </div>
+        <div class="jdmi-b-sub">
+        
+        </div>
+      </div>
+      
+      
+      <div class="jdmi-board" id="jdmi-b4">
+        <div class="jdmi-boardt">
+          <div class="jdmi-boardt-d"></div>
+          <div class="jdmi-b-name">
             <a href="link">miscellaneous</a>
           </div>
         </div>
@@ -1833,6 +1907,10 @@
           statistics
         </div>
       </div>
+    </div>
+    
+    <div id="jdmi-b-statsc">
+      
     </div>
     
   </div>
