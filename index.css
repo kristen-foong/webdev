@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
   --accent:#818FCC;
 }
 .gradient {
-  --bg:radial-gradient(circle at bottom right, #2ebf91, #8360c3);
+  --bg:url(https://i.gyazo.com/1bda3493d5915dcd73dc66654ee2b833.png);
   --accent:#2ebf91;
 }
 
