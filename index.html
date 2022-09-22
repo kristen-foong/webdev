@@ -1,260 +1,3 @@
-<style>
-
-body {
-  position:relative;
-  background: #1c1c1c;
-  overflow-x:hidden;
-  margin:0px;
-  --accent:#FF006D;
-  --headimg:url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80);
-}
-
-body::-webkit-scrollbar {
-  width:8px;
-}
-body::-webkit-scrollbar-track {
-  background:#111;
-}
-body::-webkit-scrollbar-thumb {
-  width:5px;
-  background:var(--accent);
-}
-
-.lacuna {
-  --bg:url(https://i.gyazo.com/9665a5e5712ed41395b6905c741f3f46.jpg);
-  --accent:#4D8990;
-}
-.cabeswater {
-  --bg:url(https://i.gyazo.com/631a68060155bef54c7c1a7a6c5d03e4.png);
-  --accent:#DF9E75;
-}
-.tempo {
-  --bg:url(https://i.gyazo.com/e60a3ef94c104b0053155183fcc1b677.jpg);
-  --accent:#ffcc00;
-}
-.blue-lion {
-  --bg:url(https://i.gyazo.com/514f752779f3d46018541e97352dc26d.jpg);
-  --accent:#818FCC;
-}
-
-.ppwd-head {
-  width:100vw;
-  height:100vh;
-  position:relative;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  align-content:center;
-  justify-content:center;
-  justify-items:center;
-}
-.ppwd-head::before {
-  content:'';
-  position:absolute;
-  top:0px; left:0px;
-  width:100%;
-  height:100%;
-  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),var(--headimg);
-  background-size: cover;
-  background-position:center center;
-  background-attachment:fixed;
-  filter: grayscale(100%);
-  z-index:-1;
-}
-.ppwd-t {
-  width:100%;
-  text-align:center;
-  font-size:5vw;
-  font-family:'Roboto Condensed',Arial;
-  color:#ddd;
-  font-weight:600;
-  text-transform:uppercase;
-  margin:0px 25vw;
-  line-height:100%;
-  color:#fafafa;
-}
-.ppwd-t b {
-  color:var(--accent);
-}
-.ppwd-line {
-  width:100px;
-  height:5px;
-  background:var(--accent);
-  margin:2vh;
-}
-.ppwd-hdesc {
-  width:100%;
-  margin:0px 20vw;
-  text-align:center;
-  font-family:'Cabin',Arial;
-  font-size:20px;
-  color:#ccc;
-  line-height:40px;
-}
-.ppwd-hdesc b {
-  border-bottom:1px solid var(--accent);
-  font-weight:normal;
-  padding-bottom:2px;
-}
-.ppwd-hdesc a {
-  text-decoration:none;
-  border-bottom:1px solid var(--accent);
-  color:#ccc;
-}
-
-
-/** project asides **/
-
-.ppwd-proj {
-  width:100vw;
-  height:100vh;
-  position:relative;
-}
-.one {
-  left:0px;
-}
-.two {
-  right:0px;
-}
-.ppwd-pdesc {
-  position:absolute;
-  top:0px; 
-  width:50vw;
-  height:100vh;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  align-content:center;
-  color:#ddd;
-}
-.ppwd-pdesc h1 {
-  text-transform:uppercase;
-  font-family:'Roboto Condensed',Arial;
-  font-size:4vw;
-  text-align:left;
-  padding:0px 20%;
-  width:100%;
-  margin:0px;
-}
-.ppwd-pdesc a {
-  text-decoration:none;
-  color:#ddd;
-  transition:filter 0.5s ease-in-out;
-}
-.ppwd-pdesc a:hover {
-  filter:brightness(60%);
-}
-.ppwd-pdesc hr {
-  width: 50px;
-  height:5px;
-  background:var(--accent);
-  border:none;
-  margin:3vh 0px;
-  margin-left:20%;
-}
-.ppwd-pdesc p {
-  text-align:left;
-  font-family:'Cabin',Arial;
-  font-weight:400;
-  font-size:15px;
-  line-height:20px;
-  width:100%;
-  padding:0px 20%;
-  color:#ccc;
-  margin:0px;
-  margin-bottom:10px;
-}
-.ppwd-pdesc p b {
-  color:var(--accent);
-  font-weight:normal;
-}
-.ppwd-pdesc p a {
-  color:#ccc;
-  text-decoration:none;
-  border-bottom:1px solid var(--accent);
-}
-.ppwd-pdesc span {
-  color:#888;
-  text-transform:uppercase;
-  font-weight:bold;
-  font-family:'Roboto Condensed';
-  font-size:14px;
-  margin-right:10px;
-}
-.ppwd-pdesc span:before {
-  content:'#';
-  color:var(--accent);
-  font-weight:bold;
-  margin-right:3px;
-}
-.ppwd-pimg {
-  position:absolute;
-  top:0px;
-  width:50vw;
-  height:100vh;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  align-content:center;
-  justify-items:center;
-  justify-content:center;
-}
-.ppwd-pimg::before {
-  content:'';
-  background:var(--bg);
-  background-size:cover;
-  background-position:center center;
-  background-attachment:fixed;
-  position:absolute;
-  top:0px; left:0px;
-  width:100%;
-  height:100%;
-  filter: grayscale(100%) brightness(30%) contrast(95%);
-  z-index:-1;
-}
-.ppwd-pimg img {
-  width:90%;
-  box-shadow:0px 0px 10px rgba(0,0,0,0.3);
-  border:10px solid #555;
-}
-
-.ppwd-pdate {
-  padding:15px 20px;
-  background:var(--accent);
-  color:#000;
-  font-family:'Roboto Condensed',Arial;
-  font-size:18px;
-  font-weight:600;
-  position:absolute;
-  top:0px;
-  text-transform:uppercase;
-  line-height:100%;
-}
-.ppwd-back {
-  position:fixed;
-  top:10px; left:10px;
-  padding:10px 15px;
-  color:#fff;
-  font-family:'Roboto Condensed',Arial;
-  font-weight:600;
-  font-size:12px;
-  text-transform:uppercase;
-  background:rgba(0,0,0,0.5);
-  z-index:10;
-  transition:all 0.5s ease-in-out;
-}
-.ppwd-back a {
-  color:#ccc;
-  text-decoration:none;
-  transition:all 0.5s ease-in-out;
-}
-.ppwd-back:hover {
-  background:var(--accent);
-}
-.ppwd-back:hover a {
-  color:#fff;
-}
-</style>
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,600,700,800|Roboto:300,400,500,600,700,800,900|Cabin:400" rel="stylesheet">
@@ -262,6 +5,7 @@ body::-webkit-scrollbar-thumb {
   <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
   <link href="//dl.dropbox.com/s/9s289mbhxpdhb3l/starry.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -279,16 +23,40 @@ body::-webkit-scrollbar-thumb {
       This site is a work in progress, and best viewed in chrome, on a computer. You can view a full list of projects (and their codes) <a href="https://github.com/kristen-foong/pp-webdev">here</a>.
     </div>
   </div>
-  
+
+  <div class="ppwd-proj blue-lion">
+    <div class="ppwd-pdesc one">
+      <div class="ppwd-pdate two">
+        2019
+      </div>
+      <h1><a href="">Cool Gradient</a></h1>
+      <hr>
+      <p>
+        This was my past personal website design, which focused on gradients and on having a shifting gradient background, as well as using flex elements and JavaScript buttons.
+      </p>
+      <p>
+        You can view this project <a href="https://kristen-foong.github.io/pp-webdev/personal/gradient/gradient.html">here</a>.
+      </p>
+      <p>
+        <span>html</span>
+        <span>css</span>
+        <span>jQuery</span>
+      </p>
+    </div>
+    <div class="ppwd-pimg one">
+      <img src="https://i.gyazo.com/316e90f15b0b063501fb650f847710fb.gif">
+    </div>
+  </div>
+
   <div class="ppwd-proj blue-lion">
     <div class="ppwd-pdesc two">
       <div class="ppwd-pdate one">
-        2020 // ONGOING
+        2020
       </div>
       <h1><a href="">Blue Lion</a></h1>
       <hr>
       <p>
-        For this design, I wanted to create a window-like effect with the use of <b>fixed backgrounds</b> and <b>linear-gradients</b>, as well as play around with <b>CSS animation</b> and <b>pseudo-elements</b>. 
+        For this design, I wanted to create a window-like effect with the use of <b>fixed backgrounds</b> and <b>linear-gradients</b>, as well as play around with <b>CSS animation</b> and <b>pseudo-elements</b>.
       </p>
       <p>
         Inspired by Fire Emblem's <b><i>Blue Lions</i></b>. Header art credit goes to <b>Fajyobore</b> and all the art credit goes to their respective artists.
@@ -306,8 +74,8 @@ body::-webkit-scrollbar-thumb {
       <img src="https://i.gyazo.com/d4b345bf92ea1495aac2732ace2bea9e.gif">
     </div>
   </div>
-  
-  
+
+
   <div class="ppwd-proj tempo">
     <div class="ppwd-pdesc one">
       <div class="ppwd-pdate two">
@@ -334,7 +102,7 @@ body::-webkit-scrollbar-thumb {
       <img src="https://i.gyazo.com/537531be8d83882fdada729692234f1a.gif">
     </div>
   </div>
-  
+
 
   <div class="ppwd-proj cabeswater">
     <div class="ppwd-pdesc two">
@@ -362,7 +130,7 @@ body::-webkit-scrollbar-thumb {
       <img src="https://i.gyazo.com/f20f18bd51fee5e8e9c4762726412a02.gif">
     </div>
   </div>
-  
+
   <div class="ppwd-proj lacuna">
     <div class="ppwd-pdesc one">
       <div class="ppwd-pdate two">
@@ -386,5 +154,5 @@ body::-webkit-scrollbar-thumb {
       <img src="https://i.gyazo.com/1ff642edff4bfe86c1672acc4b4fcf54.gif">
     </div>
   </div>
-  
+
 </body>
