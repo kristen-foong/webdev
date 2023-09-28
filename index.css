@@ -41,11 +41,11 @@ body::-webkit-scrollbar-thumb {
   --accent:#2ebf91;
 }
 .beringia {
-  --bg:url(/images/beringia-bg.png);
+  --bg:url(../images/beringia-bg.png);
   --accent:#74949f;
 }
 .warm-sea {
-  --bg:url(/images/warm-sea-bg.png);
+  --bg:url(../images/warm-sea-bg.png);
   --accent:#c6d590;
 }
 
