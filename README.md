@@ -1,6 +1,6 @@
 # Personal Web Dev & Design Projects
 
-Languages: HTML, CSS, JavaScript, Flex, jQuery, BootStrap
+Languages: HTML, CSS, JavaScript, Flex, jQuery, BootStrap, React
 
 > [link to site here](https://kristen-foong.github.io/pp-webdev/)
 
