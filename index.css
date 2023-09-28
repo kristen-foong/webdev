@@ -40,6 +40,14 @@ body::-webkit-scrollbar-thumb {
   --bg:url(https://i.gyazo.com/1bda3493d5915dcd73dc66654ee2b833.png);
   --accent:#2ebf91;
 }
+.beringia {
+  --bg:url(/images/beringia-bg.png);
+  --accent:#74949f;
+}
+.warm-sea {
+  --bg:url(/images/warm-sea-bg.png);
+  --accent:#c6d590;
+}
 
 .ppwd-head {
   width:100vw;
