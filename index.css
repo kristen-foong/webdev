@@ -41,11 +41,11 @@ body::-webkit-scrollbar-thumb {
   --accent:#2ebf91;
 }
 .beringia {
-  --bg:url(../images/beringia-bg.png);
+  --bg:url(https://i.gyazo.com/bed56892000544a6db64183ec8bfb18c.jpg);
   --accent:#74949f;
 }
 .warm-sea {
-  --bg:url(../images/warm-sea-bg.png);
+  --bg:url(https://i.gyazo.com/d7ce3d455794cd7c600e48f03812113f.jpg);
   --accent:#c6d590;
 }
 
